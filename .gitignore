@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.md
+!public/
+!public/*
+!public/ie/*
+!public/img/*

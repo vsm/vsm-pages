@@ -1,0 +1,655 @@
+<html>
+<head>
+  <title>VSM - Examples</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" id="google_fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CDroid+Sans%7CPT+Sans+Narrow&#038;ver=4.7.4" type="text/css" media="all">
+  <link rel="stylesheet" id="fp-font-awesome-css" href="http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/css/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.4" type="text/css" media="all">
+
+  <meta name="keywords"    content="simplified knowledge representation, curation, ontologies, semantic web"/>
+  <meta name="description" content="A simple curation tool with high flexibility."/>
+
+  <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
+  <meta itemprop="description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stcruy">
+  <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
+  <meta name="twitter:description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta name="twitter:creator" content="@stcruy">
+  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+
+  <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://scicura.org/vsm" />
+  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
+  <meta property="og:description" content="VSM: A seriously fun way to teach our future overlords." />
+  <meta property="og:site_name" content="The VSM-pages" />
+  <meta property="fb:admins" content="404986372864030" />
+  <script src="code.js"></script>
+  <script>window.onload = function() { setTimeout(function() { var a=['i.png','tp.cur','tp@2x.cur'], i, e;  for(i in a)  {e=new Image(); e.src='img/'+a[i]; a[i]=e;} }, 1000); }</script>
+</head>
+<body>
+
+<div id="ttTestWH"></div><div id="inDiffEnv"></div><div id="x"></div>
+<!--[if lt IE 9]><div style="position:absolute;z-index:9"> Please use a modern browser.</div><![endif]-->
+
+<div id="topnavmenu" class="topnav openvert">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbarIcon()">
+    <div class="l">Menu</div>
+    <div class="r">&#9776;</div>
+  </a>
+  <div class="topnavblock">
+    <a class="_fill" href="">&nbsp;</a>
+    <!--
+    <div class="dropdown">
+      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <div class="dropcont">
+        <a href="intro.html#fun-intro">General Intro</a>
+        <a href="intro.html#deeper-intro">Deeper Intro</a>
+      </div>
+    </div>
+    -->
+    <a id="intro"      href="intro.html">Introduction</a>
+    <a id="vsm"        href="vsm.html">How VSM works</a>
+    <a id="summary"    href="summary.html">Summary</a>
+    <a id="examples"   href="examples.html">Examples</a>
+    <a id="discussion" href="discussion.html">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
+    <a id="scicura"    href="scicura.html">SciCura</a>
+    <a id="about"      href="about.html">About</a>
+  </div>
+</div>
+<img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
+<script>
+var tnbiThrottle = 0;
+function toggleNavbarIcon() {
+  if(!tnbiThrottle) {
+    tnbiThrottle = 1;
+    var x = document.getElementById('topnavmenu');
+    if(x.className == 'topnav')  x.className += ' openvert';
+    else  x.className = 'topnav';
+    setTimeout(function() { tnbiThrottle = 0;},  200);
+  }
+}
+function setNavbarAActive(id) {
+  document.getElementById(id).className += ' active';
+  document.getElementById('infv').src += '/infv/' + id;
+}
+</script>
+<script>setNavbarAActive('examples');</script>
+
+<div id="content" class="content examples">
+  <h2>4. &nbsp; <span class="caps">VSM</span> Examples</h2>
+
+
+
+
+
+
+
+
+
+
+
+<p>It&#8217;s time for lots of explained, <strong>interactive</strong> examples.</p>
+<p>Make sure to have read the&nbsp; <a href="summary.html">&#8216;VSM in a nutshell&#8217; summary</a> &nbsp; at least! :</p>
+<p><a href="summary.html"><img class="vsm i15" src="img/summary-thumb.png" alt="" /></a></p>
+<h3>Contents</h3>
+<ol>
+	<li class="cnt1">&nbsp;<a href="examples.html#vsm-box"><strong>How to play with <em><span class="caps">VSM</span>-boxes</em> !</strong></a></li>
+	<li class="cnt1">&nbsp;<a href="examples.html#basic"><strong>Short Story examples</strong></a>
+	<ul>
+		<li>&nbsp;<a href="examples.html#chicken">Tridents: John and the chicken</a></li>
+		<li>&nbsp;<a href="examples.html#chicken-showcase">Two chicken showcases</a></li>
+		<li>&nbsp;<a href="examples.html#bio-simple">Tridents: a simple biological case</a></li>
+		<li>&nbsp;<a href="examples.html#bio-showcase">The biological showcase</a></li>
+	</ul></li>
+	<li class="cnt1">&nbsp;<a href="examples.html#further"><strong>Full Story and Various examples</strong></a>
+	<ul>
+		<li>&nbsp;<a href="examples.html#bidents">Bidents</a></li>
+		<li>&nbsp;<a href="examples.html#bidents-more">Bidents: more examples</a></li>
+		<li>&nbsp;<a href="examples.html#bidents-numbers">Bidents: with numbers</a>, &nbsp;<span class="smaller">and more on &#8216;implicit vs explicit &#8216;context&#8217;</span></li>
+		<li>&nbsp;<a href="examples.html#tridents-more">Tridents: various examples</a> &nbsp;to give you some more inspiration</li>
+		<li>&nbsp;<a href="examples.html#tridents-bio">Tridents: biological examples</a></li>
+		<li>&nbsp;<a href="examples.html#list-connector">List connector</a></li>
+		<li>&nbsp;<a href="examples.html#coreference">Coreference connector</a></li>
+		<li>&nbsp;<a href="examples.html#interchangeable">Interchangeable vs. non-interchangeable connections</a></li>
+		<li>&nbsp;<a href="examples.html#templates">Templates</a></li>
+		<li>&nbsp;<a href="examples.html#head">Head: semantic point of view</a></li>
+		<li>&nbsp;<a href="examples.html#term-types">General and Data term types</a></li>
+		<li>&nbsp;<a href="examples.html#further-various">Further examples</a>
+		<ul>
+			<li>&nbsp;<a href="examples.html#add-connectors">Add-the-connectors-yourself example</a></li>
+			<li>&nbsp;<a href="examples.html#paraphrases">Compacted terms, semantically equivalent structures: <em>paraphrases</em></a></li>
+			<li>&nbsp;<a href="examples.html#unwrapping">Unwrapping a GO term, leading to Semantic Structure Transparency</a></li>
+			<li>&nbsp;<a href="examples.html#special-terms">English special terms</a></li>
+			<li>&nbsp;<a href="examples.html#logics">Quantifiers for logics and mathematics</a></li>
+			<li>&nbsp;<a href="examples.html#styled-terms">Styled <span class="caps">VSM</span>-terms</a></li>
+		</ul></li>
+	</ul></li>
+	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Biological use-cases</strong></a>: &nbsp;inspired by you</li>
+</ol>
+
+
+
+<p><a name="vsm-box"></a></p>
+<h3>1. How to interact with the <em><span class="caps">VSM</span>-box</em> prototype</h3>
+
+
+
+
+
+
+
+
+
+
+
+<script> addvsm([], [], 0, 'nm'); </script>
+<ul>
+	<li>To enter a <span class="caps">VSM</span>-term:
+	<ul>
+		<li>Just <strong>type and select</strong> an item from the Autocomplete list.</li>
+		<li>Only a few &#8216;toy&#8217; terms are preloaded in this page&#8217;s dictionaries. But you can type, and then <strong>select Autocomplete&#8217;s last item</strong> to add new terms!</li>
+		<li>Double-click an existing <span class="caps">VSM</span>-term to edit it. Press <code>Esc</code> twice to cancel.</li>
+	</ul></li>
+	<li>To add a <span class="caps">VSM</span>-connector:
+	<ul>
+		<li><strong>Trident</strong>:&nbsp; 1)&nbsp;click above the term that functions as the subunit&#8217;s <em>subject</em>,&nbsp;
+2)&nbsp;then above the one that functions as its <em>relation</em>,&nbsp; 3)&nbsp;and then its <em>object</em>.&nbsp; This assigns a &#8216;triple&#8217;.</li>
+		<li><strong>Bident with no subject</strong>:&nbsp; 1)&nbsp;click twice above the relation term (this skips the subject),&nbsp; 2)&nbsp;click above the object.</li>
+		<li><strong>Bident with no relation</strong>:&nbsp; 1)&nbsp;click above the subject,&nbsp; 2)&nbsp;click twice above the object (skips the relation).</li>
+		<li><strong>Bident with no object</strong>:&nbsp; 1)&nbsp;click above subject,&nbsp; 2)&nbsp;click above object,&nbsp;
+3)&nbsp;press <code>Esc</code> or click outside the <span class="caps">VSM</span>-box (skips the object). <span class="smaller"></span></li>
+		<li><b>List</b>-connector:&nbsp; 1)&nbsp;<code>Shift</code> + click above the list-relation,&nbsp; 2)&nbsp;click above each list-element,&nbsp;
+3)&nbsp;press <code>Esc</code> or click outside the <span class="caps">VSM</span>-box (this finishes the list).</li>
+		<li><strong>Coreference</strong>:&nbsp; 1)&nbsp;<code>Ctrl</code> + click above the child term,&nbsp; 2)&nbsp;click above the parent term.</li>
+	</ul></li>
+	<li>To remove:
+	<ul>
+		<li><span class="caps">VSM</span>-term: <code>Backspace</code> to remove the last one, or hover and select Remove from the menu.</li>
+		<li><span class="caps">VSM</span>-connector: mouse-hover it and click the <code>x</code> that appeared on its top right.</li>
+	</ul></li>
+	<li>To reorder:
+	<ul>
+		<li>You can drag a <span class="caps">VSM</span>-term around (e.g. after adding a new one at the end).&nbsp; Each connector leg stays attached to its own <span class="caps">VSM</span>-term.&nbsp;
+Connector stacking order is auto-reoptimized.</li>
+	</ul></li>
+	<li class="smaller">Advanced:
+	<ul>
+		<li class="smaller">To assign a <strong>Head</strong>:&nbsp; <code>Alt</code> + click above the <span class="caps">VSM</span>-term.</li>
+		<li class="smaller">To change <strong>term type</strong> (specific/general/data):&nbsp; <code>Ctrl</code> + click on the <span class="caps">VSM</span>-term itself.</li>
+	</ul></li>
+</ul>
+
+<p><a name="basic"></a></p>
+<h3>2. Short Story examples, and more</h3>
+<p><a name="chicken"></a></p>
+<h4>Tridents:&nbsp; John and the chicken</h4>
+<script> addvsm( ['John', 'eats', 'chicken', 'with', 'fork'],  [ [0,0,1,2], [0,1,3,4] ],  0, 'nm' ); </script>
+<ul>
+	<li>Connector 1: John eats chicken.<br /></li>
+	<li>Connector 2: That &#8216;eating&#8217; (of chicken, by John): it happens with a fork.<br />
+So it&#8217;s specifically <em>the eating</em>, that happens &#8216;with&#8217;/&#8216;by use of&#8217; a fork!</li>
+</ul>
+<p>It&#8217;s not the chicken that would happen to be using the fork:</p>
+<script> addvsm( ['John', 'eats', 'chicken', 'with', 'fork'],  [ [0,0,1,2], [0,2,3,4] ],  0, 'nm' ); </script>
+<p><br />&#8230; nor John who is using the fork:</p>
+<script> addvsm( ['John', 'with', 'fork', 'eats', 'chicken'],  [ [0,0,1,2], [0,0,3,4] ],  0, 'nm' ); </script>
+<p><br />&#8230; using it for something else, as in this example:</p>
+<script> addvsm( ['John', 'using', 'fork', 'for|c:3', 'holding', 'tomato|d:3', 'eats', 'chicken'],
+                [ [0,0,1,2], [0,1,3,4], [0,-1,4,5], [0,0,6,7] ],  3, 'nm' ); </script>
+<p>Note:</p>
+<ul>
+	<li>Extra connector 1 = &#8220;the-use-of (&#8230;) &nbsp; has-purpose &nbsp; to-hold (&#8230;)&#8221;. &nbsp;(Hover the <span class="caps">VSM</span>-term <em>&#8220;for&#8221;</em> ).</li>
+	<li>Extra connector 2 = &#8220;to-hold &nbsp;tomato&#8221;.</li>
+	<li><em>&#8220;with&#8221;</em> (from the previous example) and <em>&#8220;using&#8221;</em> (here) have the same identifier! They represent the same &#8216;concept&#8217; or idea or &#8216;thing&#8217;.
+	<ul 0="strong" 1="Mouse-hover">
+		<li> over them both, and see they have the same Class ID.</li>
+		<li>Remember: a <span class="caps">VSM</span>-term is a coupled <em>literal term</em> + an <em><acronym title="identifier"><span class="caps">ID</span></acronym></em>.
+		<ul>
+			<li>In our prototype, the <em>coupled ID</em> is represented by a long number called <em>Class ID</em>,</li>
+			<li>and the <em>coupled term</em> is simply a piece of text, but in our prototype it is also represented by its own number: its <em>term ID</em>.</li>
+		</ul></li>
+		<li>So here, &#8220;with&#8221; and &#8220;using&#8221; have the same Class ID, but a different Term ID.</li>
+		<li class="smaller">(As said before: these IDs are only stored in a temporary example-dictionary, embedded in this web page, and not in an online database).</li>
+	</ul></li>
+</ul>
+
+
+<p><a name="chicken-showcase"></a></p>
+<h4>Two chicken showcases</h4>
+<script> addvsm( ['chicken|c:7000104', 'eats', 'chicken', 'with|c:107', 'Na+Cl-', 'with', 'fork'],  [ [0,0,1,2], [0,2,3,4], [0,1,5,6] ],  3 ); </script>
+<ul>
+	<li>We have two different types of &#8220;chicken&#8221; here: the type of person, and the type of animal.<br /><strong>Mouse-hover</strong> each to verify.</li>
+	<li>Also, we have two different meanings for &#8220;with&#8221; here: the first one means &#8216;accompanied with&#8217;,
+and the second one means &#8216;using&#8217;. (So we could also have used the synonym &#8220;using&#8221;, like earlier).</li>
+</ul>
+
+<script> addvsm( ['John', 'reading', 'newspaper', 'eats', 'very', 'burnt', 'chicken', 'with', 'dirty', 'fork'],
+        [ [0,0,1,2], [0,0,3,6], [0,6,-1,5], [0,5,-1,4], [0,3,7,9], [0,9,-1,8] ], 4 ); </script>
+<p><strong>= Key demo:</strong> &nbsp;You can always add more context details, to any <span class="caps">VSM</span>-term. You do this by adding more terms,
+and by attaching them with a tri/bident. And you can do this recursively! &nbsp;
+<br />Like: &#8220;chicken&#8221; &rarr; &#8220;burnt chicken&#8221; (or: &#8220;chicken [is / has_attribute] burnt&#8221;), and &#8220;burnt&#8221; &rarr; &#8220;very burnt&#8221;.
+Likewise you could say something more about &#8220;newspaper&#8221;; or about any other term.</p>
+<p><a name="bio-simple"></a></p>
+<h4>Tridents:&nbsp; a simple biological case</h4>
+<script> addvsm( ['A', 'activates', 'B', 'in', 'C'],  [ [0,0,1,2], [0,1,3,4] ], 0, 'nm' ); </script>
+<p>&#8230;as on the <span class="caps">VSM</span> summary page.</p>
+<script> addvsm( ['A', 'activates', 'B', 'is located in', 'C'],  [ [0,0,1,2], [0,1,3,4] ] ); </script>
+<p>This is the very same example, &nbsp;only to
+demonstrate that the preposition <em>in</em> was just an easier-to-read <strong>&#8216;avatar&#8217; for the same concept</strong>  <em>is-located-in</em>.<br />
+(Again, you can mousehover to verify that they have the same Class ID).</p>
+<script> addvsm( ['A', 'bound to', 'D', 'activates', 'B', 'in', 'C'],  [ [0,0,1,2], [0,0,3,4], [0,3,5,6] ],  3 ); </script>
+<p>Here we added a little more context to &#8216;A&#8217;.</p>
+<p><a name="bio-showcase"></a></p>
+<h4>The biological showcase</h4>
+<script> addvsm( [ 'leaf lamina|d:3|x:a Plant Ontology term', 'is', 'twisted|d:3|x:a Plant Trait Ontology term',
+          'in|c:111', 'Oryza|d:3|x:The species \'rice\'', 'underexpressing|d:3|x:a form of \'to underexpress\'', 'YAB3|d:3|x:rice gene',
+          'by|d:3|x:using, by means of', 'RNAi|d:3|x:RNA interference experiment'],  [ [0,0,1,2], [0,1,3,4], [0,4,5,6], [0,5,7,8] ],  0, 'nm' ); </script>
+<ul>
+	<li>To spell this out, it says: &#8220;The being-twisted-of-a-leaf-blade &nbsp; pertains-to Rice, &nbsp; which was modified to underexpress the <span class="caps">YAB3</span> gene,
+&nbsp; performed by using an RNAi experiment type.&#8221;<br />
+(Hover over each term to see their definitions!)<br /></li>
+	<li>By capturing context information like this, one can e.g. use particular contexts (like experimental evidence) to calculate a confidence level,
+and then biologists can rank of filter query results by that confidence level!</li>
+	<li>Note: here, the term <em>in</em> means &nbsp;&#8216;pertains to&#8217;, &nbsp;not &#8216;is located in&#8217;.<br />
+Mousehover the &#8216;<em>in</em>&#8216; here and the one above, to see that they have a different definition and Class ID, but same Term ID.<br />
+	<ul>
+		<li>Also try <strong>Autocomplete to select the intended meaning</strong> of a term &#8216;<em>in</em>&#8216;.<br />
+(<strong>Click to the right of the last term</strong> to enter an extra term).</li>
+	</ul></li>
+</ul>
+
+
+<p><a name="further"></a></p>
+<h3>3. Full Story and Various examples</h3>
+<p><a name="bidents"></a></p>
+<h4>Bidents</h4>
+<p>The trident can miss any of its three legs, and become a bident:</p>
+<p>&#9679;  Bident without Object leg: &nbsp;(for relations that have no object):</p>
+<script> addvsm( ['plant', 'grows'],  [ [0,0,1,-1] ],  0, 'nm' ); </script>
+
+<p><br />&#9679;  Bident without Subject leg. &#8211; And compare the structural similarity with the case where a Subject <em>is</em> known:</p>
+<script> addvsm( ['X', 'stimulates', 'A', 'activates', 'B'],  [ [0,0,1,3], [0,2,3,4] ],  0, 'nm' ); </script>
+<script> addvsm( ['X', 'stimulates', 'activation', 'B'],  [ [0,0,1,2], [0,-1,2,3] ],  0, 'nms' ); </script>
+<p><br />&#8230;and how artificial it would be, to capture this if bidents were not available:</p>
+<script> addvsm( ['X', 'stimulates', 'activation', 'having activatee', 'B'],  [ [0,0,1,2], [0,2,3,4] ],  0, 'nm' ); </script>
+<p><br />&#9679;  Bident without Relation leg: &nbsp;(or: with an <em>implicit relation</em>):</p>
+<script> addvsm( ['white|x:the color white', 'mouse|d:3|F'],  [ [0,1,-1,0] ],  0, 'nm' ); </script>
+<p><br />&#8230;from which the computer can easily infer: (once it knows that the term &#8216;white&#8217; (or its ID) is classified as a Color):</p>
+<script> addvsm( ['mouse|F', 'having color', 'white'],  [ [0,0,1,2] ],  0, 'nm' ); </script>
+<p>Note: we indicated the <strong>head</strong> <span class="caps">VSM</span>-term in the above two <span class="caps">VSM</span>-phrases, with dashes above it.
+Because &#8220;mouse&#8221; is the concept that we &#8216;focus on&#8217;; and whose meaning is equivalent in both examples.</p>
+<p><a name="bidents-more"></a></p>
+<h4>Bidents: more examples</h4>
+<script> addvsm( ['striking', 'match', 'creates', 'flame'],  [ [0,-1,0,1], [0,0,2,3] ],  0, 'nm' ); </script>
+<p>This shows a bident that specifies: &#8220;to-strike &nbsp;a-match&#8221;. &nbsp;<span class="smaller">(Or more precisely: &#8220;a-striking<i>(-of)</i> &nbsp; a-match&#8221;).</span>
+<br />It is not said who strikes the match, so this subunit has no Subject term.</p>
+<script> addvsm( ['very', 'big', 'bird|F'],  [ [0,2,-1,1], [0,1,-1,0] ] ); </script>
+<script> addvsm( ['bird|F', 'has size', 'big', 'having qualifier', 'very'],  [ [0,0,1,2], [0,2,3,4] ],  0, 'nms' ); </script>
+<p>Two implicit relations made explicit, based on the fact that &#8220;big&#8221; represents a &#8216;size&#8217;, and &#8220;very&#8221; represents a &#8216;qualifier&#8217;.
+As explained in the <a href="vsm.html#bident-relationless">main text</a>.</p>
+<script> addvsm( ['gene A|d:3|x:Some gene', 'expression|d:3|x:gene expression'],  [ [0,1,-1,0] ] ); </script>
+<script> addvsm( ['expression', 'of', 'gene A'],  [ [0,0,1,2] ],  0, 'nms' ); </script>
+<p>Here (as mentioned in the <a href="vsm.html#bident-relationless">main text</a>),
+the made-explicit relation is associated with the attribute &#8220;gene&#8221;&#8216;s base concept &#8220;expression&#8221; instead.
+&nbsp;For this to be a valid sentence, the software that supports the interpretation of this type of deduction should know about such a rule, though.</p>
+<script> addvsm( ['most', 'X', 'quickly', 'escape'],  [ [0,1,-1,0], [0,3,-1,2], [0,1,3,-1] ] ); </script>
+<p>An example with two types of bidents.</p>
+<p><a name="bidents-numbers"></a></p>
+<h4>Bidents: with numbers</h4>
+<script> addvsm( ['5', 'X|F'],  [ [0,1,-1,0] ],  0,  'nm' ); </script>
+<script> addvsm( ['X|F', 'having count', '5'],  [ [0,0,1,2] ],  0, 'nms' ); </script>
+<p>The implicit relation in the 1st sentence was made explicit in the second sentence: it is
+&#8220;having&nbsp;count&#8221;, based on the fact that “5” represents a numeric concept.</p>
+
+<script> addvsm( ['approximately', '5', 'X'],  [ [0,1,-1,0], [0,2,-1,1] ] ); </script>
+<p>The term &#8220;approximately&#8221; modifies the term “5”.</p>
+<p>Note! :&nbsp; this illustrates that “5” is not always a concept that represents ‘an exact 5’ !
+<br />&bull;&nbsp; It is <strong>the idea of a &#8216;Five&#8217;, which can be placed in a certain context</strong>.
+This context can be &#8220;exactly &#8230;&#8221;, and one could make that the default assumed context. Or it could for example be &#8220;approximately &#8230;&#8221;,
+or a &#8216;five&#8217; with some specified error margin (see a bit further).
+<br />&bull;&nbsp; <span class="smaller">(This is also why we represent “5” as a &#8216;specific concept&#8217; here (blue <span class="caps">VSM</span>-term),
+and not as a red &#8216;Data&#8217; term. (See later)).</span>
+<br />&bull;&nbsp; One could quip:&nbsp; &laquo; It&#8217;s <em>Five&nbsp;</em>, Jim, but not as we know it! &raquo;</p>
+<script> addvsm( ['5', 'mg/l', 'X'],  [ [0,1,-1,0], [0,2,-1,1] ] ); </script>
+<script> addvsm( ['5', 'having count', 'mg/l', 'having concentration', 'X'],  [ [0,2,1,0], [0,4,3,2] ],  0,  'nms' ); </script>
+<p>An implicit-vs-explicit example of measurement units and values, expressed with <span class="caps">VSM</span>.</p>
+<ol>
+	<li><strong>The simple explanation</strong> (this is enough for most people):
+<br />This says:&nbsp; &#8220;X&#8221; is declared to have a certain concentration, given in &#8220;mg/l&#8221;; and that concentration is declared to have the amount &#8220;5&#8243;.
+<br /><br /></li>
+	<li><strong>A deeper explanation of the semantics</strong> behind it. And thoughts on <strong><span class="undl">implicit vs. explicit context</span></strong>.
+<br /><span class="smaller">(See also <a href="vsmgraph.html#principle-4">The Fourth Principle of <span class="caps">VSM</span></a>, later on the VSMGraphs page).</span>&nbsp;
+<br />Conceptually, this phrase is built up like this:
+	<ul>
+		<li>Step 1. Consider the <span class="caps">VSM</span>-term &#8220;X&#8221;, before it is connected, i.e. while it stands on its own.
+At that point it is not yet stated explicitly how many / how much / what kind / etc. of &#8220;X&#8221; we are dealing with here.
+Because it is not yet placed in (connected with) any <strong>explicit context</strong>. So it could be anything.
+Still, it is a blue <span class="caps">VSM</span>-term and thus it is a specific &#8220;X&#8221;, meaning that it comes embedded in some <strong>implicit context</strong>.
+So it is not &#8220;X&#8221; in general, but some specific (amount/kind/&#8230;) &#8220;X&#8221; that we have in mind. &#8211; So
+next, we will connect other <span class="caps">VSM</span>-terms to it, and make <em>some</em> of that implicit context explicit.</li>
+		<li>Step 2. By connecting the rightmost bident, we specify (make explicit) that it&#8217;s an &#8220;X&#8221; that comes in some concentration,
+and that it&#8217;s one that will be given in a unit: &#8220;mg/l&#8221;.</li>
+		<li>Step 3. By connecting the leftmost bident, we specify that this concentration (which also could have been anything up till then) has the amount of &#8220;5&#8243;.</li>
+		<li>Note: <em>any term always has more implicit context</em>, much of which we may never even be able to make explicit.
+For example: What temperature was X at? Which other molecules or impurities interacted with X during the experiment?
+Did X come from a particular manufacturer? Was it pre-processed? How, and by who?
+And even: what isotopes did X&#8217;s atoms consist of? Etc. &#8211; So there is always more &#8216;context&#8217; present.
+<br /><strong>All these things are what make up <span class="undl">any</span> specific <span class="caps">VSM</span>-term&#8217;s <em>implicit context</em></strong>.
+They are absent details, but they are still what make the <span class="caps">VSM</span>-term a &#8216;specific thing&#8217; in our minds.</li>
+	</ul></li>
+</ol>
+<script> addvsm( ['approximately', '5', 'mg', 'X', 'dissolves'],  [ [0,1,-1,0], [0,2,-1,1], [0,3,-1,2], [0,3,4,-1] ],  4 ); </script>
+<p>It is straightforward to represent such things with <span class="caps">VSM</span>. &#8211; Though still:</p>
+<ul>
+	<li>It could be helpful to have software that automatically suggests simple connectors like these.</li>
+	<li>Software should be able to add <strong>numeric concepts</strong> to its internal dictionaries, right when needed.
+Because a dictionary can never be pre-loaded with all possible numbers, let alone numbers with a decimal separator like here:</li>
+</ul>
+<script> addvsm( ['5', '±', '1.2', 'mg', 'X', 'dissolves'],  [ [0,0,1,2], [0,3,-1,0], [0,4,-1,3], [0,4,5,-1] ],  4,  'nms' ); </script>
+<p>This illustrates an error margin given to a measurement.</p>
+<script> addvsm( ['small', 'percentage'],  [ [0,1,-1,0] ] ); </script>
+<script> addvsm( ['5', '%', 'equals', '0.05'],  [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
+<p>Some percentage examples. &nbsp;(Note again that &#8220;percentage&#8221; and &#8220;%&#8221; have the same Class ID).</p>
+<p><a name="tridents-more"></a></p>
+<h4>Tridents: various examples</h4>
+<script> addvsm( [ 'at least', 'five', 'professors', 'at|c:125', 'NTNU|x:Norwegian University of Science and Technology, in Trondheim, Norway',
+          'are younger than|x:is younger than, are younger than, to be younger than, being younger than', '40', 'years'],
+        [ [0,1,-1,0], [0,2,-1,1], [0,2,3,4], [0,2,5,7], [0,7,-1,6] ],  4, 'nm' ); </script>
+<script> addvsm( [ 'Steven', 'designed', 'VSM', 'from time', 'August', 'of', '2008|x:the year 2008', 'to time', '2017|x:the year 2017' ],
+        [ [0,0,1,2], [0,1,3,4], [0,4,5,6], [0,1,7,8] ],  3 ); </script>
+<script> addvsm( [ 'acceleration', 'of', 'bear', 'is', '3', 'm/s2' ],  [ [0,0,1,2], [0,0,3,5], [0,5,-1,4] ] ); </script>
+<script> addvsm( [ 'speed', 'of', 'A', 'reacts to', 'B', 'is', '5', 'mol/s' ],  [ [0,0,1,3], [0,2,3,4], [0,0,5,7], [0,7,-1,6] ],  3 ); </script>
+<p>Remember that any <span class="caps">VSM</span>-term represents a &#8216;noun&#8217;-concept. So here, &#8220;reacts-to&#8221; (after being connected with A and B like that) represents: &#8220;the reaction of A to B&#8217;.</p>
+<script> addvsm( [ 'Tom|i:601', 'believes|i:602', 'Mary|i:603', 'wants|i:604', 'she|R:603|i:605', 'marries|i:606', 'sailor|i:608'],
+        [ [0,0,1,3], [0,2,3,5], [0,4,5,6], [2,4,2]  ],  4 ); </script>
+<ul>
+	<li>This sentence is based on the Conceptual Graph (CG) in this <a href="https://www.w3.org/DesignIssues/CG.html"><span class="caps">W3C</span></a>
+<a href="https://www.w3.org/DesignIssues/Sowa/cgstand_files/tombelv.gif">example figure</a>,
+which represents: &#8216;Tom believes that Mary wants to marry a sailor&#8217;.</li>
+	<li>Note: a &#8220;she&#8221; was inserted (in both CG and <span class="caps">VSM</span>-sentence) to make the subject of &#8220;to-marry&#8221; clear for computation.<br /></li>
+	<li>Note: A CG would require the curator to insert meta-information around relations, like the &#8216;Agent&#8217;, &#8216;Theme&#8217;, &#8216;Instrument&#8217;, &#8216;Destination&#8217;,
+which <span class="caps">VSM</span> does not require. Because in <span class="caps">VSM</span> such semantics would be encapsulated in (/could be inferred from) the relation-term that the curator selected.</li>
+</ul>
+
+<p><a name="tridents-bio"></a></p>
+<h4>Tridents: biological examples</h4>
+<script> addvsm( [ 'expression|d:3', 'of', 'YAB3|d:3|x:rice gene', 'is', 'reduced|d:3', 'in|c:111', 'Oryza', 'overexpressing|d:3', 'WOX3|d:3|x:rice gene'],
+        [ [0,0,1,2], [0,0,3,4], [0,3,5,6], [0,6,7,8] ],  3,  'nms' ); </script>
+<script> addvsm( [ 'HsCdc6|d:3', 'translocates to|d:3', 'cytoplasm|d:3', 'at', 'start', 'of', 'S phase|d:3', 'via', 'Crm1|d:3', 'depending|x:to depend on', 'transport'],
+        [ [0,0,1,2], [0,1,3,4], [0,4,5,6], [0,1,7,10], [0,10,9,8] ],  3 ); </script>
+<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3', 'is', 'induced', 'at', '5', 'DAI|d:3|x:days after inoculation', 'in|c:111',
+          'Arabidops|d:3', 'infected by|d:3', 'TuMV|d:3|x:Turnip mosaic virus'],
+        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4 ); </script>
+<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3|x:A. thaliana gene', 'is', 'induced|d:3', 'at|c:115', '5', 'DAI|d:3|x:Days After Inoculation',
+          'in|c:111', 'TuMV|d:3|x:Turnip mosaic virus', 'infected-by|d:3', 'Arabidopsis|d:3|x:Plant species Arabidopsis thaliana'],
+        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,11], [0,11,10,9] ],  4 ); </script>
+<script> addvsm( [ 'approximately', '500', 'tumor cells|d:3', 'placed in', 'solution|d:3', 'containing', '5', 'mg/l', 'drug X|d:3' ],
+        [ [0,1,-1,0], [0,2,-1,1], [0,2,3,4], [0,4,5,8], [0,7,-1,6], [0,8,-1,7] ],  4 ); </script>
+<p>(A first shot at creating one line of some protocol description).<br />
+The bident that connects &#8216;<em>drug X</em>&#8216; and &#8216;<em>mg/l</em>&#8216; has the implicit relation &#8216;<em>having concentration</em>&#8216;,
+because the attribute term &#8216;<em>mg/l</em>&#8216; would have been classified as a &#8216;concentration&#8217;.</p>
+
+<p><a name="list-connector"></a></p>
+<h4>List connector</h4>
+<script> addvsm( ['and', 'A', 'B', 'C', 'react to', 'D'],  [ [1,0,1,2,3], [0,0,4,5] ],  0, 'nm' ); </script>
+<script> addvsm( ['A', 'B', 'and', 'C', 'react to', 'D'],  [ [1,2,0,1,3], [0,2,4,5] ],  0, 'nms' ); </script>
+<ul>
+	<li>The position of the list-relation does not matter.</li>
+	<li>The order of the list-elements may matter, depending on whether the list-relation is one for which order is important.
+E.g. &#8220;(ordered-list-)And&#8221; vs. &#8220;(unordered-set-)And&#8221;.&nbsp; &#8211; Therefore
+curation-software based on <span class="caps">VSM</span> should store the order of the list-elements as given by the curator. See:</li>
+</ul>
+<script> addvsm( ['X', 'binds to', 'ordered-and|c:112', 'A', 'B', 'C'],  [ [0,0,1,2], [1,2,3,4,5] ],  0, 'nms' ); </script>
+<script> addvsm( ['either or', 'A', 'B', 'C', 'binds to', 'D'],  [ [1,0,1,2,3], [0,0,4,5] ] ); </script>
+<p>Another list-relation. Since all <span class="caps">VSM</span>-terms should be thought of as nouns, or &#8216;thing&#8217;-concepts,
+this one should be thought of as something like &#8216;the either-or-ness of &#8230;&#8217;.</p>
+<script> addvsm( ['1', '+|x:sum of', '2', '3', '4', '=|x:equals', '10'],  [ [1,1,0,2,3,4], [0,1,5,6] ] ); </script>
+<script> addvsm( ['1', '+|x:sum of', '2', '3', '2', '*', '2', '=|x:equals', '10'],  [ [1,1,0,2,3,5], [0,4,5,6], [0,1,7,8] ],  3 ); </script>
+<script> addvsm( ['X', 'moves', 'between|c:141', 'A', 'B', 'and', 'C'],  [ [0,0,1,-1], [0,1,2,5], [1,5,3,4,6] ] ); </script>
+<p>Here, &#8220;between&#8221; is linked to the meaning &#8220;to-be-located-between&#8221;, or in noun-form: &#8220;<i>the-being-located</i>-between&#8221;.
+&nbsp;It could be read as: &#8220;the-moving (by X) &nbsp; is-located-between &nbsp; the-and&#8217;ness-of (&#8230;)&#8221;.</p>
+<script> addvsm( ['X', 'moves', 'at location', 'A', 'B', 'between|c:142', 'C'],  [ [0,0,1,-1], [0,1,2,5], [1,5,3,4,6] ],  0, 'nms' ); </script>
+<p>Another way. This &#8220;between&#8221; is linked to the meaning &#8220;<i>the-location</i>-between (a given list of items)&#8221;, which can be used as a list-relation.
+&nbsp;It could be read as: &#8220;the-moving (by X) &nbsp; is-located-at &nbsp; the-betweenness-of:&nbsp; A,&nbsp; B,&nbsp; C&#8221;.
+<br />Still, it may be best for a curation system to work with a vocabulary that only includes one of these two meanings for &#8220;between&#8221;,
+and to make it easy for a user to enter phrases like this uniformely.</p>
+<script> addvsm( ['Alice', 'eats', 'burnt', 'chicken', 'chips', 'and', 'salad', 'with', 'fork'],
+        [ [0,0,1,5], [0,3,-1,2], [1,5,3,4,6], [0,1,7,8] ],  4 ); </script>
+<script> addvsm( ['Alice', 'eats', 'best ever', 'pizza', 'covered with', 'chicken', 'salad', 'and', 'garlic sauce'],  // with|c:107
+        [ [0,0,1,3], [0,3,-1,2], [0,3,4,7], [1,7,5,6,8] ],  3, 'nms' ); </script>
+<p><a name="coreference"></a></p>
+<h4>Coreference connector</h4>
+<script> addvsm( [ 'A|i:771', 'ubiquitinates|d:3|i:772', 'protein B|c:1002000132|i:773', 'causes|i:774', 'it|t:11|i:775|c:1002000132|R:773', 'degrades|d:3|i:776' ],
+        [ [0,0,1,2], [0,1,3,5], [0,4,5,-1], [2,4,2] ],  3, 'nm' ); </script>
+<p>(New to biology? Hover the &#8220;ubiquitinates&#8221; term to see its description).</p>
+<script> addvsm( [ 'Bob|i:881', 'activates|c:7000014|i:882', 'device|i:883|c:7000017', 'in|c:115|i:884', 'evening|i:885',
+          'causes|i:886', 'it|t:11|i:887|c:7000017|R:883', 'beeps|i:888', 'in|c:115|i:889', 'morning|i:890' ],
+        [ [0,0,1,2], [0,1,3,4], [0,1,5,7], [0,6,7,-1], [0,7,8,9], [2,6,2] ],  4 ); </script>
+<p>This example was explained in detail in the <a href="vsm.html#coreference">Full Story</a> &#8211; &nbsp;read it!
+<br />In the following two <span class="caps">VSM</span>-sentences, we will make coreferences to terms in the above sentence.</p>
+<script> addvsm( [ 'Jane|i:891', 'charges|i:892', 'it|t:11|i:893|c:7000017|R:883'], [ [0,0,1,2] ],  0,  'nms' ); </script>
+<p>The &#8220;it&#8221; here refers to the Instance ID of the first occurrence in the previous sentence. &#8211; You can mouse-hover to check
+that the &#8220;it&#8221; term here has the same Class ID as the &#8220;device&#8221; term above), &#8230;<br />
+<span class="smaller">(Note: the demo here does not yet support adding inter-sentence links manually).</span></p>
+<script> addvsm( [ 'Bob|i:894', 'silences|i:895', 'device|i:896|c:7000017|R:887'], [ [0,0,1,2] ],  0,  'nms' ); </script>
+<p>&#8230; while the &#8220;device&#8221; term here, refers to the Instance ID of the second occurrence (the &#8220;device&#8221; that also beeps)
+(see <a href="vsm.html#coreference">Full Story</a>).</p>
+<ul>
+	<li>It doesn&#8217;t matter if the child term (surrounded in dashes) was given the label &#8220;it&#8221;, &#8220;device&#8221;, or anything else.
+It is only a label, for making a sentence more easily  human-readable.</li>
+	<li>Each child term (&#8220;it&#8221;/&#8220;device&#8221;/&#8230;) gets its own Instance ID and can be referred to again,
+in the same or in next sentences.</li>
+</ul>
+
+<script> addvsm( [ 'Eve|i:901', 'activates|c:7000014|i:902', 'device|i:903|c:7000017', 'in|c:7|i:904', 'China|i:905',
+          'causes|i:906', 'it|t:11|i:907|c:7000017|R:903', 'explodes|i:908'],
+        [ [0,0,1,2], [0,2,3,4], [0,1,5,7], [0,6,7,-1], [2,6,2]  ],  4 ); </script>
+<p>Note that here, the term &#8220;device&#8221; (and not &#8220;activates&#8221;) is connected to &#8220;in&nbsp; China&#8221;.
+So this sentence expresses not necessarily that Eve is in China too (she could activate it remotely, via the internet),
+nor necessarily that the activation is in China (the activation-switch could happen anywhere cyberspace).&nbsp; &#8211; Sure
+one may argue that the activation is in China too (it could be inferred), but definitely, this sentence does not say that Eve is there too). &#8211; This
+illustrates again why <span class="caps">VSM</span> connectors connect to single terms specifically, and not to entire &#8216;triples&#8217; as in <span class="caps">RDF</span>.</p>
+<script> addvsm( [ 'Alice|i:661', 'writes|i:662', 'book|i:663', 'means|i:664',
+          'she|i:665|R:661|c:7000500|t:30', 'is author of|i:666', 'book|i:667|R:773|c:126'],
+        [ [0,0,1,2], [0,1,3,5], [0,4,5,6], [2,4,0], [2,6,2] ],  4 ); </script>
+<script> addvsm( [ 'Alice|i:771', 'writes|i:772', 'book|i:773', 'means|i:774',
+          'she|i:775|R:771|c:7000500|t:30', 'is|i:776', 'author|i:777', 'of|i:778', 'book|i:779|R:773|c:126'],
+        [ [0,0,1,2], [0,1,3,5], [0,4,5,6], [0,6,7,8], [2,4,0], [2,8,2] ],  5, 'nms' ); </script>
+
+<script> addvsm( [ 'Eve|i:1111', 'says|i:1112', 'she|R:1111|i:1113', 'sees|i:1114', 'flying|i:1115', 'pigs|i:1116'],
+                [ [0,0,1,3], [0,2,3,5], [0,5,-1,4], [2,2,0] ] ); </script>
+<script> addvsm( [ 'that|t:8|i:1121|c:69|R:1114', 'is|i:1122', 'untrue|i:1123', 'according to|i:1124', 'Alice|i:1125'],
+                [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<p>These show that <span class="caps">VSM</span> can be used to store any &#8216;information&#8217;, in the sense of: &#8216;anything one can <em>think</em> of&#8217;, or &#8216;any idea that you can form in your mind&#8217;- The
+second sentence shows that one can express that another sentence, or even something specific in another sentence, is untrue&#8230;
+<br />(Mouse-hover to check that &#8220;that&#8221;&#8216;s Referring-InstanceID refers to &#8220;sees&#8221;&#8216;s InstanceID above).</p>
+<script> addvsm( [ 'it|t:11|i:1131|c:69|R:1114', 'is|i:1132', 'unlikely|i:1133', 'according to|i:1134', 'Bob|i:1135'],
+                [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<p>&#8230; or one can assign a likelihood to the above, because (as in real life) things are rarely black and white.</p>
+<p><a name="interchangeable"></a></p>
+<h4>Interchangeable vs. non-interchangeable connections</h4>
+<p>Advanced topic. &nbsp;See the <a href="vsm.html#non-interchangeable-connections">main text</a> for a detailed explanation!
+<br />These are the main text&#8217;s examples, but as interactive <span class="caps">VSM</span>-boxes:</p>
+<script> addvsm( ['big', 'white', 'mouse'],  [ [0,2,-1,0], [0,2,-1,1] ],  0, 'nm' ); </script>
+<script> addvsm( ['white', 'big', 'mouse'],  [ [0,2,-1,0], [0,2,-1,1] ],  0, 'nms' ); </script>
+<script> addvsm( ['black', 'half of', 'dogs', 'escape'],  [ [0,2,-1,0], [0,2,-1,1], [0,2,3,-1] ],  3 ); </script>
+<script> addvsm( ['half of', 'them|R', 'black', 'dogs', 'escape'],  [ [0,1,-1,0], [0,3,-1,2], [2,1,3], [0,1,4,-1] ],  3,  'nms' ); </script>
+<script> addvsm( ['black', 'them|R', 'half of', 'dogs', 'escape'],  [ [0,1,-1,0], [0,3,-1,2], [2,1,3], [0,1,4,-1] ],  3,  'nms' ); </script>
+<script> addvsm( ['black', 'ones of the|s:i|R', 'female', 'half of', 'dogs', 'escape'],  [ [0,1,-1,0], [0,4,-1,3], [2,1,4], [0,1,5,-1], [0,4,-1,2] ],  4 ); </script>
+<p>&#8230; which just uses another label for the child concept, and adds some extra specifying context (&#8220;female&#8221;) to the parent concept.</p>
+<p><a name="templates"></a></p>
+<h4>Templates</h4>
+<script> addvsm( [ '|w:60,60,|dd:2,3',     'activates|dd:3|fd:2000014,2000015,2000016',     '|w:60,60,|dd:3', 'in|c:7', '|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,1,3,4] ],  0,  'nm' ); </script>
+<p>Filling it in:</p>
+<script> addvsm( [ 'YAB3|w:60,60,|dd:2,3', 'activates|dd:3|fd:2000014,2000015,2000016',     '|w:60,60,|dd:3', 'in|c:7', '|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,1,3,4] ],  0,  'nm' ); </script>
+<script> addvsm( [ 'YAB3|w:60,60,|dd:2,3', 'activates|dd:3|fd:2000014,2000015,2000016', 'WOX3|w:60,60,|dd:3', 'in|c:7', '|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<script> addvsm( [ 'YAB3|w:60,60,|dd:2,3', 'activates|dd:3|fd:2000014,2000015,2000016', 'WOX3|w:60,60,|dd:3', 'in|c:7', 'cytoplasm|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<script> addvsm( [ 'YAB3|w:60,60,|dd:2,3', 'activates|dd:3|fd:2000014,2000015,2000016', 'WOX3|w:60,60,|dd:3', 'in|c:7',
+          'plasmolyzed|dd:3', 'cytoplasm|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,5,-1,4], [0,1,3,5] ] ); </script>
+<p>The user can still extend template, with extra terms and connectors.</p>
+<script> addvsm( [ 'ETS1|w:60,60,|dd:2,3', 'activates|dd:3|fd:2000014,2000015,2000016', 'JUNB|w:60,60,|dd:3', 'in|c:7', 'HeLa cell|w:120,120,140|dd:3'],
+        [ [0,0,1,2], [0,1,3,4] ] ); </script>
+<p>A second example of the same template filled in.</p>
+<script> addvsm( [ '|w:70,70,|dd:2,3', '|F|w:120,120,|dd:3|fd:2000014,2000015,2000016',     '|w:70,70,|dd:3', 'in|c:7', '|w:120,120,140|dd:3',
+          'according to', '|w:120,120,140|dd:2'],
+        [ [0,0,1,2], [0,1,3,4], [0,1,5,6] ],  3 ); </script>
+<p>Another template. Click on the second empty field to see that autocomplete can really make life easy for curators.
+Here it would immediately suggest three often-used terms. Still, any other term can still be entered by typing it as usual.</p>
+<p><a name="head"></a></p>
+<h4>Head: semantic point of view</h4>
+<script> addvsm( ['John', 'eats|F', 'chicken', 'with', 'fork'],  [ [0,0,1,2], [0,1,3,4] ],  0, 'nm' ); </script>
+<p>Written in natural language like that, &#8220;eats&#8221; would be the &#8216;head&#8217; or focal concept of the sentence:
+the term one you&#8217;d really refer to if you&#8217;d follow it up with e.g. &#8216;I saw <em>that</em>&#8216;.</p>
+<script> addvsm( ['John|F', 'eats', 'chicken', 'with', 'fork'],  [ [0,0,1,2], [0,1,3,4] ] ); </script>
+<p>But also &#8220;John&#8221; can be the head concept. The sentence here says:<br />
+&#8216;The John, who eats a chicken with a fork&#8217; (e.g. as answer to a question).<br />
+It conveys the same information, but stresses another one of the five concepts.</p>
+<p>And the same goes for the other three terms. E.g.: &#8216;The chicken, that is eaten by John with a fork&#8217;, etc.:</p>
+<script> addvsm( ['John', 'eats', 'chicken|F', 'with', 'fork'],  [ [0,0,1,2], [0,1,3,4] ],  0,  'nm' ); </script>
+<script> addvsm( ['John', 'eats', 'chicken', 'with', 'fork|F'],  [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<script> addvsm( ['John', 'eats', 'chicken', 'with|F', 'fork'],  [ [0,0,1,2], [0,1,3,4] ],  0,  'nms' ); </script>
+<script> addvsm( ['John', 'eats', 'chicken', 'using', 'fork', 'resembles|F', 'abuse'],  [ [0,0,1,2], [0,1,3,4], [0,3,5,6] ],  3 ); </script>
+<p>This illustrate that yes, it can make sense to focus on the &#8216;with&#8217; (=&#8216;using&#8217;) concept too. Just like you can focus on any concept in a <span class="caps">VSM</span>-sentence.</p>
+<script> addvsm( ['use of', 'fork', 'John', 'resembles|F', 'abuse'],  [ [0,2,0,1], [0,0,3,4] ],  0,  'nms' ); </script>
+<p>This rephrases part of the earlier sentence, saying that &#8216;The use of the fork, by John, resembles abuse&#8217;.</p>
+<p><a name="term-types"></a></p>
+<h4>General and Data term types <em>&nbsp;(experimental ideas)</em></h4>
+<p>These sentences will be clear once you understand <a href="vsmgraph.html">VSMGraphs</a>, which I may write more about in the future.
+As mentioned before, the blue / yellow / red colored <span class="caps">VSM</span>-terms represent Specific (=default) / General / Data terms, respectively.
+(And black / white / rectangular nodes in VSMGraphs).</p>
+<script> addvsm( ['duck|C', 'is a type of', 'bird|C'],  [ [0,0,1,2] ],  0, 'nm' ); </script>
+<p>A classification as in an ontology, or concept hierarchy. Between general concepts, not specific ones.</p>
+<script> addvsm( ['duck|C', 'is a type of', 'bird|C', 'according to', 'NEWT Taxonomy v1.2'],  [ [0,0,1,2], [0,1,3,4] ] ); </script>
+<p>A classification, with as context the taxonomy version that declares this relation.</p>
+<script> addvsm( ['bird|C', 'has', '2', 'wings'],  [ [0,0,1,3], [0,3,-1,2] ] ); </script>
+<p>A description of a general concept.</p>
+<script> addvsm( [ 'm/s|C', 'is defined as', 'meter', 'per|x:... divided by ..., division of ... by ..., fraction of ... and ...', 'second' ],
+        [ [0,0,1,3], [0,2,3,4] ]  ); </script>
+<script> addvsm( ['chicken|C', 'has alias', 'hen|D'],  [ [0,0,1,2] ] ); </script>
+<p>A general concept has a label. It could be connected to many different labels like this.
+<br />It could be connected to a standardized name for it, with a &#8220;has-main-alias&#8221; relation.</p>
+
+<script> addvsm( ['protein X', 'has sequence', 'TDRMCRDREACEQCAKESWF|D|w:200,,70'],  [ [0,0,1,2] ] ); </script>
+<p><a name="further-various"></a></p>
+<p><a name="add-connectors"></a></p>
+<h4>Add-the-connectors-yourself example</h4>
+<script> addvsm( [ 'A', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'B',
+          'in|c:7', 'chloroplast|d:3|x:cellular compartment', 'during', 'G2|d:3|x:cell cycle phase'],
+        [ [0,0,1,2], [0,0,4,6], [0,4,-1,3], [0,6,-1,5], [0,4,7,8], [0,4,9,10] ],  4, 'nm' ); </script>
+<p><br />Because it&#8217;s easy and fun to add <span class="caps">VSM</span>-connectors &nbsp;(if you know a bit of the biology).
+<br />It&#8217;s like <a href="https://en.wikipedia.org/wiki/Sentence_diagram">diagramming sentences</a> in high school, but simpler :</p>
+<script> addvsm( [ 'A', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'B',
+          'in|c:7', 'chloroplast|d:3|x:cellular compartment', 'during', 'G2|d:3|x:cell cycle phase'],  [],  0,  'nms' ); </script>
+<p><a name="paraphrases"></a></p>
+<h4>Compacted terms, semantically equivalent structures: <em>paraphrases</em></h4>
+<script> addvsm( ['A', 'located in', 'nucleus', 'signals', 'B'],  [ [0,0,1,2], [0,0,3,4] ],  0,  'nm' ); </script>
+<script> addvsm( ['nuclear', 'A', 'signals', 'B'],  [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
+<script> addvsm( ['nuclear A', 'signals', 'B'],  [ [0,0,1,2] ],  0,  'nms' ); </script>
+<p>This should be mappable onto each other using some graph-equivalency algorithm.</p>
+
+
+
+<script> addvsm( ['A', 'phosphorylates', 'B'],  [ [0,0,1,2 ] ] ); </script>
+<script> addvsm( ['A', 'transforms', 'B', 'into', 'phosphorylated', 'B'],  [ [0,0,1,2], [0,1,3,5], [0,5,-1,4] ],  0,  'nms' ); </script>
+<script> addvsm( ['A', 'catalyzes', 'B', 'reacts to', 'phosphorylated B'],  [ [0,0,1,3], [0,2,3,4] ],  0,  'nms' ); </script>
+<p>Mapping these and others sentences for which the equivalence needs some &#8216;reasoning&#8217;, may be more programming work.
+Like also the three &#8216;Levels&#8217; of the <a href="https://en.wikipedia.org/wiki/SBML" title="Systems Biology Markup Language"><span class="caps">SMBL</span></a> language.</p>
+<p><a name="unwrapping"></a></p>
+<h4>Unwrapping a GO term, leading to Semantic Structure Transparency</h4>
+<p>Some of those very long <a href="http://www.geneontology.org/">Gene Ontology</a> terms could be made structurally transparent, as <span class="caps">VSM</span>-sentences:</p>
+<script> addvsm( ['positive regulation of transcription from RNA polymerase II promoter|d:3|w:400,,500|x:Gene Ontology term'], [ ],  0, 'nm' ); </script>
+<script> addvsm( ['positive', 'regulation|F', 'of', 'transcription from RNA polymerase II promoter|d:3|w:400,,500'], [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
+<script> addvsm( ['positive', 'regulation|F', 'transcription from RNA polymerase II promoter|d:3|w:400,,500'], [ [0,1,-1,0], [0,-1,1,2] ],  0,  'nms' ); </script>
+<p>Because that&#8217;s what a <em>subject-less bident</em> does: it makes phrases like: &#8220;Relation-(of) &nbsp; Object&#8221;.
+<br />So here it made: &#8220;regulation-(of) &nbsp; (Object-term)&#8221;. &nbsp; (As in: &#8220;[unknown] &nbsp; regulates &nbsp; (Object)&#8221;).</p>
+<script> addvsm( ['positive', 'regulation|F', 'transcription|d:3', 'from', 'RNA polymerase II promoter|d:3|w:400,,500'],
+        [ [0,1,-1,0], [0,-1,1,2], [0,2,3,4] ],  3,  'nms' ); </script>
+<p>Perhaps at some point this may help computers to more &#8216;deeply understand&#8217; and reason with such terms,
+which we now use mostly just to tag/classify genes with.</p>
+<p><a name="special-terms"></a></p>
+<h4>English special terms</h4>
+<script> addvsm( ['condition A', 'if-then', 'action B', 'else', 'action C'], [ [0,0,1,2], [0,0,3,4] ],  0, 'nm' ); </script>
+<p>Statements like &#8216;if &#8230; then &#8230;&#8217; have to be reformulated for <span class="caps">VSM</span>, by using a single &#8220;if-then&#8221; &#8216;relation&#8217; <span class="caps">VSM</span>-term.</p>
+<script> addvsm( ['John', 'bought', 'phone'], [ [0,0,1,2] ] ); </script>
+<script> addvsm( ['John', 'in the past', 'buys', 'phone'], [ [0,0,2,3], [0,2,-1,1] ],  0,  'nms' ); </script>
+<p>Past tense of verbs. A similar structure could be for negations (&#8220;does&#8209;not&nbsp; buy&#8221;).
+Or for modal verbs (&#8220;may&nbsp; buy&#8221;), although one could also make a structure with &#8220;buy&#8221; as object of the &#8220;may&#8221; relation.</p>
+<script> addvsm( ['phone|F', 'of|c:123', 'John'], [ [0,0,1,2] ] ); </script>
+<script> addvsm( ['John', '\'s', 'phone|F'], [ [0,2,1,0] ],  0,  'nms' ); </script>
+<p>The relation &#8220;&#8216;s&#8221; is the same as the possessive &#8220;of&#8221;. The trident is only added in inverse order, because the terms are ordered so too in readable English.</p>
+<p><a name="logics"></a></p>
+<h4>Quantifiers for logics and mathematics <em>&nbsp;(experimental section)</em></h4>
+<p>One should be able to express anything in <span class="caps">VSM</span>, so logical expressions are a valid subset too. E.g.:</p>
+<script> addvsm( [ 'for all', 'x', 'x', hdec('&lt;'), '1' ],  [ [0,3,0,1], [0,4,2,3], [2,2,1], ],  3, 'nm' ); </script>
+<p>The leftmost triple can be read as:&nbsp; &#8220;the-being-smaller&nbsp; is-valid-for-all&nbsp; x&#8221;, &nbsp;
+which explains the peculiar order of the trident&#8217;s relation/object/subject-legs.&nbsp; &#8211; Still,
+the trident was added with three clicks in the normal order of Subject, Relation, and Object.</p>
+<script> addvsm( [ '∀', 'x', 'x', hdec('&lt;'), '1' ],  [ [0,3,0,1], [0,4,2,3], [2,2,1], ],  3, 'nm' ); </script>
+<p>The same example, now with a quantifier symbol.</p>
+<script> addvsm( [ '∀', 'x', '∃', 'y', 'x', hdec('&lt;'), 'y' ],  [ [0,2,0,1], [0,5,2,3], [0,4,5,6], [2,4,1], [2,6,3] ],  4 ); </script>
+<script> addvsm( [ 'for all', 'x', 'for some', 'y', 'x', hdec('&lt;'), 'y' ],  [ [0,2,0,1], [0,5,2,3], [0,4,5,6], [2,4,1], [2,6,3] ],  4, 'nms' ); </script>
+<ul>
+	<li>Both are the same, the second one just is more wordy.</li>
+	<li>It expresses: &#8216;For all x, there exists y, such that x &lt; y&#8217;.
+	<ul class="smaller">
+		<li>(Please forgive the unnatural looking ordering of the connectors here.
+It would be clearer if the leftmost trident were placed above the other two. Here the current connector-ordering algorithm still works suboptimally).</li>
+	</ul></li>
+</ul>
+
+<p>The <span class="caps">VSM</span>-sentence looks weird (perhaps), but it&#8217;s because we&#8217;re used to see mathematical expressions in that order.
+Here is the exact same sentence but with terms reordered (and same connections).</p>
+<script> addvsm( [ 'x', hdec('&lt;'), 'y', 'for some', 'y', 'for all', 'x' ],  [ [0,0,1,2], [0,1,3,4], [0,3,5,6], [2,0,6], [2,2,4] ],  5, 'nms' ); </script>
+<p>It says: &#8216;x is smaller than y, &nbsp;and that is valid for some y, &nbsp;and that second thing is valid for all x&#8217;.</p>
+<p>It should be possible to make an example for integrals, or any other mathematical formula too.</p>
+<p><a name="styled-terms"></a></p>
+<h4>Styled <span class="caps">VSM</span>-terms</h4>
+<p>Just to show that, unlike a normal text-based controlled language, the auto-completed <span class="caps">VSM</span>-terms can apply proper styling:</p>
+<script> addvsm( ['Ca2+', 'regulates', 'cdc25|d:3|s:i|x:The human gene cdc25'],  [ [0,0,1,2] ],  0, 'nm' ); </script>
+<p>Like superscript text for ions; or for showing human gene names in their standard, italicized way.</p>
+<script> addvsm( ['light speed', 'equals', '299792458', 'm/s2'], [ [0,0,1,3],  [0,3,-1,2] ] ); </script>
+<p><a name="extra"></a></p>
+<h3>4. Biological use-cases <em>&nbsp; <span class="smaller">(some inspired by readers)</span></em></h3>
+<p>(If you have a particular use-case, let me know! &nbsp;I may add it here.)</p>
+<h4>Binding of two proteins which then together activate a third</h4>
+<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
+<p>Basically, this is two units of information: &#8216;A and B bind to form A-B-complex&#8217;, <strong>and</strong> &#8216;<i>that</i>-A-B-complex activates C&#8217;.
+So with an &#8216;and&#8217; list-connector on top of both. So it is better to represent that with two <span class="caps">VSM</span>-sentences.
+The second sentence then refers to a <span class="caps">VSM</span>-term in the first one.
+&nbsp;<span class="smaller">(Curation software should be able to handle inter-sentence references then).</span></p>
+<h4>Something <acronym title="Biological Expression Language"><span class="caps">BEL</span></acronym></h4>
+<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
+<p><span class="smaller">(Should add an example statement from <a href="http://openbel.org/"><span class="caps">BEL</span></a> here).</span></p>
+<h4>Something <span class="caps">SBML</span></h4>
+<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
+<p><span class="smaller">(Should add an example statement from <a href="https://en.wikipedia.org/wiki/SBML"><span class="caps">SBML</span></a> here).</span></p>
+<h4>Experiment protocol, as &#8216;story&#8217; with inter-sentence coreferences</h4>
+<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
+<p><span class="smaller">(Short, real-world example here, perhaps).</span></p>
+<p><br /><br /></p>
+<p style="text-align:right"><br />Read about <span class="caps">VSM</span>&#8216;s implications and roll-out on <a class="next" href="discussion.html">the Discussion page<i class="arrow right"></i></a></p>
+<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> page</p>
+<div class="forPrint"> <br /><br /> <ol class="noteList fun">
+</ol> <ol class="noteList dry">
+</ol>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+
+
+</body>
+</html>

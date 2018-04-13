@@ -1,0 +1,281 @@
+<html>
+<head>
+  <title>VSM - SciCura</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" id="google_fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CDroid+Sans%7CPT+Sans+Narrow&#038;ver=4.7.4" type="text/css" media="all">
+  <link rel="stylesheet" id="fp-font-awesome-css" href="http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/css/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.4" type="text/css" media="all">
+
+  <meta name="keywords"    content="simplified knowledge representation, curation, ontologies, semantic web"/>
+  <meta name="description" content="A simple curation tool with high flexibility."/>
+
+  <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
+  <meta itemprop="description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stcruy">
+  <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
+  <meta name="twitter:description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta name="twitter:creator" content="@stcruy">
+  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+
+  <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://scicura.org/vsm" />
+  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
+  <meta property="og:description" content="VSM: A seriously fun way to teach our future overlords." />
+  <meta property="og:site_name" content="The VSM-pages" />
+  <meta property="fb:admins" content="404986372864030" />
+</head>
+<body>
+
+<div id="topnavmenu" class="topnav openvert">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbarIcon()">
+    <div class="l">Menu</div>
+    <div class="r">&#9776;</div>
+  </a>
+  <div class="topnavblock">
+    <a class="_fill" href="">&nbsp;</a>
+    <!--
+    <div class="dropdown">
+      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <div class="dropcont">
+        <a href="intro.html#fun-intro">General Intro</a>
+        <a href="intro.html#deeper-intro">Deeper Intro</a>
+      </div>
+    </div>
+    -->
+    <a id="intro"      href="intro.html">Introduction</a>
+    <a id="vsm"        href="vsm.html">How VSM works</a>
+    <a id="summary"    href="summary.html">Summary</a>
+    <a id="examples"   href="examples.html">Examples</a>
+    <a id="discussion" href="discussion.html">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
+    <a id="scicura"    href="scicura.html">SciCura</a>
+    <a id="about"      href="about.html">About</a>
+  </div>
+</div>
+<img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
+<script>
+var tnbiThrottle = 0;
+function toggleNavbarIcon() {
+  if(!tnbiThrottle) {
+    tnbiThrottle = 1;
+    var x = document.getElementById('topnavmenu');
+    if(x.className == 'topnav')  x.className += ' openvert';
+    else  x.className = 'topnav';
+    setTimeout(function() { tnbiThrottle = 0;},  200);
+  }
+}
+function setNavbarAActive(id) {
+  document.getElementById(id).className += ' active';
+  document.getElementById('infv').src += '/infv/' + id;
+}
+</script>
+<script>setNavbarAActive('scicura');</script>
+
+<div id="content" class="content">
+  <h2>7. &nbsp; SciCura</h2>
+<p class="smaller"><i>(This page is an unpolished stub.&nbsp; You can help by joining us or long-term funding our team.)</i></p>
+<h3>1. A tale of two SciCuras</h3>
+<p>SciCura is a web-application for curation, based on <span class="caps">VSM</span>.
+&nbsp; It&#8217;s a multi-purpose platform for crowdsourced knowledge collection.
+&nbsp;&ndash;&nbsp; But, currently there are two &#8220;SciCura&#8220;s :</p>
+
+
+<p><strong>SciCura 1</strong> is just a research prototype.
+It&#8217;s a skeleton <a href="http://scicura.org">web application</a>, originally only for demonstrating <span class="caps">VSM</span>.
+It was developed by one person, during years of volunteer work.
+The web app is now being used for a real curation project. So it serves as a testimonial of how much curators like <span class="caps">VSM</span>. Which is nice!</p>
+<p>Other people can already play with the demo at <a href="http://demo.scicura.org">demo.scicura.org</a>. &#8211; There, start by selecting a template at the top-left.</p>
+<p><strong>SciCura 2</strong> is still just a dream of what could be: a community-based, multi-purpose curation platform.
+Like a Wiki but where every page is a full, <span class="caps">VSM</span>-based summary of a research paper, for all papers.
+With public and temporarily private &#8216;curation projects&#8217;.
+And with linked or editable dictionaries with version control, user role management, curation discussion, and a curation quality management process.
+And with third-party plugins for computation on the huge graph of linked, curated data.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Sounds like a business idea, not?
+<br />It&#8217;s unfortunate for science and society (and our energy), that we couldn&#8217;t reach anyone yet with the vision or ambition to fund it. Yet!
+<br /><br />Then again, the purpose of this site is to reach people on a larger scale.
+To communicate more efficiently than with one person at a time
+(during a typical &#8216;intro&#8217; meeting that often turns out hours longer than planned because people get so interested and involved).
+</span></span></p>
+<p>But that&#8217;s all I can write for now. More later maybe, if I find time and inspiration.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> And I&#8217;m a software developer at heart.
+ After hours of writing and rewriting text, my mental batteries are drained.
+ While after hours of programming, I often feel more hungry to solve all the next challenges!
+</span></span><br />For now, here is:</p>
+
+<p><br />
+<hr /><hr /><hr /></p>
+<h3>2. <em>An earlier text we wrote on <span class="undl">SciCura v2 &nbsp;(the Holy Grail)</span> :</em></h3>
+<h4>SciCura-based community curation</h4>
+<p>Now that we have a flexible and simple curation method (<acronym title="Visual Syntax Method"><span class="caps">VSM</span></acronym>) that enables a research community to curate whatever they need,
+we can develop SciCura: a web-based platform for community curation.</p>
+<p>Our vision is that after several years it would have one page per paper, holding a <span class="caps">VSM</span>-sentence-based digital abstract of that paper&#8217;s detailed findings.
+This would be similar to a Wikipedia-page, except that the content is fully semantic: the meaning of every term and complex sentence is clearly understood by software.</p>
+<p><img class="i65" src="img/vsm-to-scicura-v2.png" alt="" /></p>
+<p>A fully social web platform would also support features like: commenting to discuss interpretations (a real curator need);
+an edit history; flagging of problems; and reviewing/approving of statements.</p>
+<p><img class="i65" src="img/scicura-v2.png" alt="" /></p>
+<p>As a comparison: on Wikipedia, 90% just reads, 9% correct typos, and 1% writes content.
+Similarly, SciCura can grow when most people just fill templates, and some people use <span class="caps">VSM</span>&#8216;s full power and design templates for others.</p>
+<p><br />
+In summary: diverse, unstructured facts can be structured with <span class="caps">VSM</span>.
+This enables the web-app SciCura to open up previously opaque science results to the world, in a standardized and scalable way.</p>
+<p><img class="i70" src="img/scicura-v2-overview.png" alt="" /></p>
+<h4>Positioning</h4>
+<p>A comparison to the current state-of-the-art is shown in the cartoon below.
+While small-scale curation is accurate and text-mining can boast coverage, both are still limited in scope.
+Meanwhile, SciCura has potential for heterogeneous, crowd-sourced manual curation. &#8211; Small-scale
+curation may be like walking in a dark forest with a narrow focused flashlight;
+text-mining is like using a magic lantern that shows many things that aren&#8217;t really there (errors);
+SciCura could foster a global community curation effort of high quality and virtually limitless diversity and depth,
+increasingly showing the full details of the forest.</p>
+<p><img class="i65" src="img/scicura-v2-forest.png" alt="" /></p>
+<h4>Impact</h4>
+<p>The impact of SciCura will increase with growing numbers of users. What incentives could there be to get SciCura adopted by a wide community of curators?
+In our earlier curation experiments, we directly integrated scientists&#8217; curations into a browsable overview (like our viewer <a href="http://ols.wordvis.com">OLSVis</a>).
+The fact that curators could immediately see the results of their work in the context of what else had been entered by their colleagues proved to be
+an extremely useful &#8216;carrot&#8217; for participants.</p>
+<p>More generally, SciCura will give scientists access to the sum of curated knowledge through an <span class="caps">API</span>, and enable user-written output scripts, plugins,
+or even a shareable App repository. These additions may elevate SciCura to a community development platform much like
+the popular <a href="http://www.cytoscape.org/">Cytoscape</a> platform.</p>
+<p>Exports of information to established databases (IntAct, the GO database, other) of the Knowledge Commons will further increase the impact.
+Several export possibilities are already in place (see later), and future export in the semantic web formats <span class="caps">RDF</span> and <span class="caps">OWL</span> will further
+the spread of information available through SciCura, including the use of graph searches.
+<span class="caps">OWL</span> exports will also facilitate the integration with the <span class="caps">OWL</span> editor <a href="http://noctua.berkeleybop.org/">Noctua</a>,
+and pave the way to apply DL reasoning to the collection of curated facts.</p>
+<p>SciCura will also impact the development of text mining algorithms. A collection of structured facts linked to original papers or even sentences
+is an invaluable text corpus for training. Also, by cross-referencing each <span class="caps">VSM</span> statement to the original paper through PubMed IDs,
+platform users will be able to consult the original papers, which serves as an advertisement for journals and publishing houses.</p>
+<p><strong>Research also becomes more cost-efficient.</strong>
+Less duplicated effort of re-interpretation of complex results will happen, and relevant information becomes quicker to find.</p>
+<p>Other benefits are shown in the figure below.</p>
+<p>In summary, <strong>SciCura can be a transformative project to open up knowledge</strong>, making it computationally available and effectively accessible for Systems Biology,
+Systems Medicine and Precision Medicine. It can streamline access to open knowledge, deeply understood by intelligent machines.
+SciCura&#8217;s growth depends on funding and publicity, making people contribute with code, ideas, and curated knowledge.
+<br /><br /></p>
+<p><img class="i75" src="img/scicura-v2-impact.png" alt="" /></p>
+<p><hr /><hr /><hr /></p>
+<h3>3. <em>An earlier text we wrote on <span class="undl">SciCura v1 &nbsp;(the prototype)</span> :</em></h3>
+<p>The current prototype platform was developed in collaboration with volunteer curators at <span class="caps">NTNU</span>.
+Their focus is the curation of all <span class="caps">DNA</span> binding transcription factors (DbTFs) of human, mouse and rat; and
+a curation protocol was developed in collaboration with members of the Gene Ontology Consortium and curators of the Mouse Genome Database at the Jackson laboratories.</p>
+<p>We use an agile, iterative strategy while building the prototype&#8217;s functionality, in continuous discussion with curators.
+We prioritize the features that are needed first, while we maintain a balance to keep the web app generic enough for next use cases.
+The SciCura prototype currently features one curation room where six people can simultaneously curate DbTFs,
+their regulation effect, target gene, and experimental details.</p>
+<p>We loaded the back-end database with various dictionaries and ontologies needed for the task. As these can be incomplete (e.g. Cell Type),
+new terms can be added ad-hoc and then reused, and are flagged.</p>
+<p>Each curation statement is linked to the original paper, here simply via PubMed ID.
+We added a place to put the &#8216;original sentence&#8217; from which information was extracted, even though facts were often inferred from several parts of text and figures.
+Curators started using this place to communicate: comments on interpretation, flagging if re-checked yet.
+This shows a user need to develop social and other features around curated sentences.</p>
+<p>1) An early version of the curation room:</p>
+<p><img class="i80" src="img/scicura-v1-1.png" alt="" /></p>
+<p>2) One of five current templates, larger to hold additional details; and an autocomplete list:</p>
+<p><img class="i100" src="img/scicura-v1-2.png" alt="" /></p>
+<p>3) A selection from 5000+ curated sentences; under an input box with 5 selectable templates:</p>
+<p><img class="i100" src="img/scicura-v1-3.png" alt="" /></p>
+<p>Our users testify they don&#8217;t find the trident structures difficult at all.
+In fact, they are excited about all <strong>the complexity they can now handle &nbsp;in such an elegant manner</strong>,&nbsp; allowing them to focus on the biology,
+and avoiding tedious and error-prone entry sheets.</p>
+<p>The current prototype can generate output of relevant parts of information to established databases like
+<a href="http://geneontology.org/">GO</a> and <a href="https://www.ebi.ac.uk/intact/">IntAct</a>.
+We built a graph-query algorithm that can fish out any matching pattern or sub-pattern of terms and connectors in all <span class="caps">VSM</span>-sentences.
+Then we wrote output-scripts to gather, combine and reformat relevant sets of information.</p>
+<p>1) Selection of output scripts:</p>
+<p><img class="i70" src="img/scicura-v1-4.png" alt="" /></p>
+<p>2a) Output results for IntAct:
+<br />(And look at the horizontal slider. The script generated the many required columns,
+while the user only had to fill in a few autocompleted blanks in a template <span class="caps">VSM</span>-sentence!) :</p>
+<p><img class="i70" src="img/scicura-v1-5.png" alt="" /></p>
+<p>2b) Output results for GO (and the grey rows are were automatically inferred by combining information from two <span class="caps">VSM</span>-sentence) :</p>
+<p><img class="i70" src="img/scicura-v1-6.png" alt="" /></p>
+<p><hr /><hr /><hr /></p>
+<h3>4. A to-do list</h3>
+<p>A selection of things that definitely need to be done to fully get from SciCura v1 to v2 :
+<br /><span class="smaller">(see also the Discussion&#8217;s <a href="discussion.html#roadmap">Roadmap</a>) :</span></p>
+
+
+<ul>
+	<li><strong>Integration of ontologies, biological dictionaries, term suggestion service</strong> (like <a href="http://geneontology.org/page/termgenie">TermGenie</a>). &#8211; Currently
+the dictionaries loaded in SciCura have to be manually updated, after user request.</li>
+</ul>
+<ul>
+	<li><strong>User-added new-terms management</strong> is a critical point that should be addressed. &#8211; Currently
+SciCura&#8217;s main developer has to edit and clean up new terms added by users,
+  because this still has to be done in the database directly. Users should be given an interface to do this efficiently.</li>
+</ul>
+<ul>
+	<li><strong><span class="caps">VSM</span>-template building interface</strong>. &#8211; Currently the main developer has to encode, paste, and change templates manually in the database.</li>
+</ul>
+<ul>
+	<li><strong>General &#8216;<a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a>&#8216; of the codebase</strong>. &#8211; Because
+even though we kept a &#8216;general outlook&#8217; when users asked to add features
+ for our one curation project, we were so constrained in resources that it affected code evolvability. &#8211; And
+ clean code will open the project for collaborative development!</li>
+</ul>
+<ul>
+	<li><strong>More curation pilot projects</strong>: both broad and deep. &#8211; Broad: to test/showcase <span class="caps">VSM</span> on multiple topics. &#8211; Deep: to make use of the full flexibility of <span class="caps">VSM</span>.
+	<ul>
+		<li><strong>Multiple curation rooms</strong> are needed for this. With access settings,
+especially for during the messy initial phase of curation project (before publication of results).</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Query interface</strong>. &#8211; Currently the query functionality has to be invoked rather cumbersomely, hardcoded from within the program code.</li>
+</ul>
+<ul>
+	<li><strong>Exports to <span class="caps">RDF</span>/<span class="caps">OWL</span></strong>. &#8211; Current knowledge experts and existing tools are accustomed to these. So it would be opportune to build
+a bridge from end-users (biologists etc), over <span class="caps">VSM</span>, to existing know-how and technology.</li>
+</ul>
+<ul>
+	<li><strong>Imports from text-mining</strong>. &#8211; It could auto-fill a <span class="caps">VSM</span>-template, which a curator only needs to approve or edit. This could make entry more efficient.</li>
+</ul>
+<ul>
+	<li><strong>Plugins</strong>, apps: for input, update and output like the above two. E.g. visualisation, custom analyses.</li>
+</ul>
+<ul>
+	<li><strong>Campaigning</strong>. &#8211; SciCura’s growth depends on funding and publicity, for stimulating people to contribute with code, ideas, and curated knowledge.</li>
+</ul>
+<ul>
+	<li><strong>Etc.</strong> &#8211; I&#8217;m sure there was more, but this page was supposed to be a &#8216;stub&#8217;.</li>
+</ul>
+
+
+
+
+<p><br />
+<hr /><hr /><hr /></p>
+<p><br />
+That was a quick preview!
+<br />So much has been done.&nbsp; So much more still needs to be done to make SciCura v2 happen.</p>
+<p>As said, more proper text may or may not follow later, depending on available resources.</p>
+<p><br /><br /><br /></p>
+<p style="text-align:right"><br />Continue to <a class="next" href="about.html">the About page<i class="arrow right"></i></a></p>
+<div class="forPrint"> <br /><br /> <ol class="noteList fun">
+<br><hr><p>Blue notes list:</p>
+<li class="item"><span class="nr">1</span> Sounds like a business idea, not?
+<br>It&#8217;s unfortunate for science and society (and our energy), that we couldn&#8217;t reach anyone yet with the vision or ambition to fund it. Yet!
+<br>Then again, the purpose of this site is to reach people on a larger scale.
+To communicate more efficiently than with one person at a time
+(during a typical &#8216;intro&#8217; meeting that often turns out hours longer than planned because people get so interested and involved).
+</li>
+<li class="item"><span class="nr">2</span> And I&#8217;m a software developer at heart.
+ After hours of writing and rewriting text, my mental batteries are drained.
+ While after hours of programming, I often feel more hungry to solve all the next challenges!
+</li>
+
+</ol> <ol class="noteList dry">
+</ol>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+
+
+</body>
+</html>

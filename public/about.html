@@ -1,0 +1,192 @@
+<html>
+<head>
+  <title>VSM - About</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" id="google_fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CDroid+Sans%7CPT+Sans+Narrow&#038;ver=4.7.4" type="text/css" media="all">
+  <link rel="stylesheet" id="fp-font-awesome-css" href="http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/css/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.4" type="text/css" media="all">
+
+  <meta name="keywords"    content="simplified knowledge representation, curation, ontologies, semantic web"/>
+  <meta name="description" content="A simple curation tool with high flexibility."/>
+
+  <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
+  <meta itemprop="description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stcruy">
+  <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
+  <meta name="twitter:description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta name="twitter:creator" content="@stcruy">
+  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+
+  <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://scicura.org/vsm" />
+  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
+  <meta property="og:description" content="VSM: A seriously fun way to teach our future overlords." />
+  <meta property="og:site_name" content="The VSM-pages" />
+  <meta property="fb:admins" content="404986372864030" />
+</head>
+<body>
+
+<div id="topnavmenu" class="topnav openvert">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbarIcon()">
+    <div class="l">Menu</div>
+    <div class="r">&#9776;</div>
+  </a>
+  <div class="topnavblock">
+    <a class="_fill" href="">&nbsp;</a>
+    <!--
+    <div class="dropdown">
+      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <div class="dropcont">
+        <a href="intro.html#fun-intro">General Intro</a>
+        <a href="intro.html#deeper-intro">Deeper Intro</a>
+      </div>
+    </div>
+    -->
+    <a id="intro"      href="intro.html">Introduction</a>
+    <a id="vsm"        href="vsm.html">How VSM works</a>
+    <a id="summary"    href="summary.html">Summary</a>
+    <a id="examples"   href="examples.html">Examples</a>
+    <a id="discussion" href="discussion.html">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
+    <a id="scicura"    href="scicura.html">SciCura</a>
+    <a id="about"      href="about.html">About</a>
+  </div>
+</div>
+<img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
+<script>
+var tnbiThrottle = 0;
+function toggleNavbarIcon() {
+  if(!tnbiThrottle) {
+    tnbiThrottle = 1;
+    var x = document.getElementById('topnavmenu');
+    if(x.className == 'topnav')  x.className += ' openvert';
+    else  x.className = 'topnav';
+    setTimeout(function() { tnbiThrottle = 0;},  200);
+  }
+}
+function setNavbarAActive(id) {
+  document.getElementById(id).className += ' active';
+  document.getElementById('infv').src += '/infv/' + id;
+}
+</script>
+<script>setNavbarAActive('about');</script>
+
+<div id="content" class="content">
+  <h2>8. &nbsp; About</h2>
+<h4>Creator/s</h4>
+<p><a href="http://stcruy.com">Steven Vercruysse</a> created most of this site&#8217;s text, all its figures, and embedded software.
+<br />He is Researcher (PhD in Computational Biotechnology, MSc in Computer Science, MSc in Physics)
+<br />
+at the <a href="https://www.ntnu.edu/health/druglogics">DrugLogics</a> group,
+in a featured project (see <a href="http://phdcomics.com/tv/?v=N4NzEyo_HQo">PhdComics-TV</a>)
+of <acronym title="Norwegian University of Science and Technology"><span class="caps">NTNU</span></acronym> University,
+<br />
+in
+<a href="https://www.google.com/maps/place/Trondheim,+Norway/@60.3809367,-2.2723442,4z">Trondheim</a>,
+the technology capital of
+<a href="https://www.google.com/search?q=norway+nature&amp;tbm=isch">Norway, your next holiday destination</a>.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Come visit us if you like <span class="caps">VSM</span>! &#8211; Or invite us to your own city. </span></span></p>
+
+
+<p><br />In addition, <a href="http://www.ntnu.edu/employees/martin.kuiper">Martin Kuiper</a>
+(Professor in <a href="https://www.ntnu.edu/biology/research/molecular-systems-biology/systems-biology">Systems Biology</a>),
+contributed with feedback and edits to an earlier, shorter and more formal version of text, which parts of this site are based on.
+He also took the role of afternoon sounding board during the evolution of ideas that formed <span class="caps">VSM</span>.
+<br />Martin Kuiper, and then also <a href="http://www.ntnu.edu/employees/astrid.lagreid">Astrid Lægreid</a>,
+created a friendly, interdisciplinary research environment, that led wet-lab biologists and computer specialists to sit together
+and identify problems that could be addressed with combined expertise.</p>
+
+<p>We are also indebted to <a href="https://www.linkedin.com/in/florianleitner/">Florian Leitner</a>, <a href="https://www.linkedin.com/in/erickantezana/">Erick Antezana</a>,
+and <a href="https://www.linkedin.com/in/runesaetre/">Rune Sætre</a>
+for their feedback on and critical reading of the earlier, very different versions of the shorter, much more formal text. &#8211; We
+also thank <a href="https://www.linkedin.com/in/heri-ramampiaro-1a86351/">Heri Ramampiaro</a>,
+<a href="https://www.linkedin.com/in/arnejenssen/">Arne Jenssen</a>, <a href="https://www.linkedin.com/in/sophia-efstathiou-27275b29/">Sophia Efstathiou</a>,
+<a href="https://www.ntnu.edu/employees/maria.k.andersen">Maria K Andersen</a> and others for comments throughout the conception of the ideas
+and on earlier versions of that text. &#8211; We
+thank scientists at the European Bioinformatics Institute (<a href="http://www.ebi.ac.uk/"><span class="caps">EBI</span></a>)
+and members of the International Society for Biocuration (<a href="http://www.biocurator.org/"><span class="caps">ISB</span></a>) for discussions and suggestions.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> Looking back to the beginning, I realize that at first we only had a rudimentary idea of how to explain <span class="caps">VSM</span>.
+<br />Florian&#8217;s, Erick&#8217;s and many dozens and dozens of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
+And they helped us offset <span class="caps">VSM</span> much better against existing technology.
+<br />Thank you all for bearing through that!
+</span></span></p>
+<h4>Funding Information</h4>
+<p>First, the conception of the initial idea was supported by Funksjonell Genomforskning (<span class="caps">FUGE</span>) of Midt-Norge and <span class="caps">NTNU</span>.&nbsp; &#8211; &nbsp;Next,
+it was then further developed and implemented solely by private, otherwise unfunded efforts
+by Steven Vercruysse.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup"> Yes&#8230; in today&#8217;s scientific funding system, you&#8217;re a temp forever. &#8211; And
+  some years nothing at all, <span class=""><strong>if you dare to be passionate about your brainchild</strong></span>.
+  <br />And this situation
+  <a href="http://www.nature.com/news/let-researchers-try-new-paths-1.20857">is</a>,
+  <a href="http://www.nature.com/news/fewer-numbers-better-science-1.20858">quite</a>,
+  <a href="http://www.nature.com/news/young-talented-and-fed-up-scientists-tell-their-stories-1.20872">a common</a>,
+  <a href="http://www.nature.com/news/young-researchers-thrive-in-life-after-academia-1.20686">problem</a>.
+   It&#8217;s also a strong push to move outside academia, to be less worried about one&#8217;s future.
+   <br />Perhaps I should do that after sharing this project here! Unless we&#8217;re able to draw attention to <span class="caps">VSM</span>, to help us convince
+   <a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=https%3A%2F%2Fwww.forskningsradet.no%2Fno%2FNyheter%2FForskningsradet_bor_ta_mer_risiko%2F1253977676638&amp;edit-text=&amp;act=url">risk&#8209;averse</a>
+   project reviewers&#8230;, or try our luck in industry.
+</span></span>&nbsp; &#8211; &nbsp;And
+recently the further application of this prototype is funded through &#8216;Crossover Research 2.0: Well-constructed Knowledge Commons&#8217;
+of The Research Council of Norway (<a href="https://www.forskningsradet.no"><span class="caps">NFR</span></a>).</p>
+<h4>How we got here</h4>
+<p>The foundation of <span class="caps">VSM</span>&#8216;s design was laid starting in 2009. By then it had become obvious, from many interactions with biologists,
+that new methods for concerting their knowledge into some database format were dearly needed.
+Despite many attempts to raise funding for implementing <span class="caps">VSM</span>,
+we were unable to convince funding agencies of the importance of making research findings computable!</p>
+<p>We therefore implemented a proof-of-concept <span class="caps">VSM</span> <acronym title="user interface"><span class="caps">UI</span></acronym> without funding.
+We embedded it in a web application (<a href="scicura.html">SciCura v1</a>) and curators in our group were happy to test/use it.
+This gave us a clearer insight into the nature of <span class="caps">VSM</span>, how to use it, and how to explain it to third parties while avoiding common misunderstandings.
+This process was crucial for the text on this site.</p>
+
+
+<blockquote>
+<p>The development of  <span class="caps">VSM</span> is a demonstration of the difficulty encountered by young scientists
+to mature their groundbreaking ideas into transformative implementations,
+and calls for new modalities of project support by funding agencies.</p>
+</blockquote>
+
+<h4>We&#8217;re people too</h4>
+<p>If you really enjoyed this site, it would be nice to hear a friendly, simple
+<a href="mailto:steven.vercruysse@ntnu.no?subject=The VSM-pages&amp;body=Hi! :)">&#8216;Hi!&#8217;</a>
+from you.
+&nbsp;Just to keep our spirits high and to know if we&#8217;re making an impact.</p>
+
+<p><br /><br /><br /></p>
+<p style="text-align:right" class="smaller dateInfo"><em>This site was prepublished in draft form in Oct 2017,</em> <br />
+<em>last updated in Apr 2018,</em> <br />
+<em>and awaits official publication.</em></p>
+<div class="forPrint"> <br /><br /> <ol class="noteList fun">
+<br><hr><p>Blue notes list:</p>
+<li class="item"><span class="nr">1</span> Come visit us if you like <span class="caps">VSM</span>! &#8211; Or invite us to your own city. </li>
+<li class="item"><span class="nr">2</span> Looking back to the beginning, I realize that at first we only had a rudimentary idea of how to explain <span class="caps">VSM</span>.
+<br>Florian&#8217;s, Erick&#8217;s and many dozens and dozens of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
+And they helped us offset <span class="caps">VSM</span> much better against existing technology.
+<br>Thank you all for bearing through that!
+</li>
+<li class="item"><span class="nr">3</span> Yes&#8230; in today&#8217;s scientific funding system, you&#8217;re a temp forever. &#8211; And
+  some years nothing at all, <span class=""><strong>if you dare to be passionate about your brainchild</strong></span>.
+  <br>And this situation
+  <a href="http://www.nature.com/news/let-researchers-try-new-paths-1.20857">is</a>,
+  <a href="http://www.nature.com/news/fewer-numbers-better-science-1.20858">quite</a>,
+  <a href="http://www.nature.com/news/young-talented-and-fed-up-scientists-tell-their-stories-1.20872">a common</a>,
+  <a href="http://www.nature.com/news/young-researchers-thrive-in-life-after-academia-1.20686">problem</a>.
+   It&#8217;s also a strong push to move outside academia, to be less worried about one&#8217;s future.
+   <br>Perhaps I should do that after sharing this project here! Unless we&#8217;re able to draw attention to <span class="caps">VSM</span>, to help us convince
+   <a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=https%3A%2F%2Fwww.forskningsradet.no%2Fno%2FNyheter%2FForskningsradet_bor_ta_mer_risiko%2F1253977676638&amp;edit-text=&amp;act=url">risk&#8209;averse</a>
+   project reviewers&#8230;, or try our luck in industry.
+</li>
+
+</ol> <ol class="noteList dry">
+</ol>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+
+
+</body>
+</html>

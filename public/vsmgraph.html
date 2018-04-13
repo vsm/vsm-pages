@@ -1,0 +1,190 @@
+<html>
+<head>
+  <title>VSM - VSMGraphs</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" id="google_fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CDroid+Sans%7CPT+Sans+Narrow&#038;ver=4.7.4" type="text/css" media="all">
+  <link rel="stylesheet" id="fp-font-awesome-css" href="http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/css/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.4" type="text/css" media="all">
+
+  <meta name="keywords"    content="simplified knowledge representation, curation, ontologies, semantic web"/>
+  <meta name="description" content="A simple curation tool with high flexibility."/>
+
+  <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
+  <meta itemprop="description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stcruy">
+  <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
+  <meta name="twitter:description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta name="twitter:creator" content="@stcruy">
+  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+
+  <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://scicura.org/vsm" />
+  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
+  <meta property="og:description" content="VSM: A seriously fun way to teach our future overlords." />
+  <meta property="og:site_name" content="The VSM-pages" />
+  <meta property="fb:admins" content="404986372864030" />
+</head>
+<body>
+
+<div id="topnavmenu" class="topnav openvert">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbarIcon()">
+    <div class="l">Menu</div>
+    <div class="r">&#9776;</div>
+  </a>
+  <div class="topnavblock">
+    <a class="_fill" href="">&nbsp;</a>
+    <!--
+    <div class="dropdown">
+      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <div class="dropcont">
+        <a href="intro.html#fun-intro">General Intro</a>
+        <a href="intro.html#deeper-intro">Deeper Intro</a>
+      </div>
+    </div>
+    -->
+    <a id="intro"      href="intro.html">Introduction</a>
+    <a id="vsm"        href="vsm.html">How VSM works</a>
+    <a id="summary"    href="summary.html">Summary</a>
+    <a id="examples"   href="examples.html">Examples</a>
+    <a id="discussion" href="discussion.html">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
+    <a id="scicura"    href="scicura.html">SciCura</a>
+    <a id="about"      href="about.html">About</a>
+  </div>
+</div>
+<img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
+<script>
+var tnbiThrottle = 0;
+function toggleNavbarIcon() {
+  if(!tnbiThrottle) {
+    tnbiThrottle = 1;
+    var x = document.getElementById('topnavmenu');
+    if(x.className == 'topnav')  x.className += ' openvert';
+    else  x.className = 'topnav';
+    setTimeout(function() { tnbiThrottle = 0;},  200);
+  }
+}
+function setNavbarAActive(id) {
+  document.getElementById(id).className += ' active';
+  document.getElementById('infv').src += '/infv/' + id;
+}
+</script>
+<script>setNavbarAActive('vsmgraph');</script>
+
+<div id="content" class="content">
+  <h2>6. &nbsp; VSMGraphs</h2>
+<p class="smaller"><i>(This page is a stub.)</i></p>
+<p><br />
+VSMGraphs are a way to represent the content of one or multiple <span class="caps">VSM</span>-sentences in a single graph.
+Loosely spoken, it&#8217;s a bit like an integration of &#8216;<a href="https://en.wikipedia.org/wiki/Semantic_memory">semantic memory</a>&#8216; (like ontology-based classifications)
+and &#8216;<a href="https://en.wikipedia.org/wiki/Episodic_memory">episodic memory</a>&#8216; (specific facts, like <span class="caps">VSM</span>&#8216;s core functionality).</p>
+<p>More text may follow later (based on a still-unpolished text I&#8217;ve written a while ago).</p>
+<p><br />
+<hr /></p>
+<p class="smaller">But maybe you can already get the gist from this preview? :</p>
+<p><img class="i60 vsm" src="img/vsmgraph-1.png" alt="" /></p>
+<ul>
+	<li class="smaller"><strong>Black nodes (round, triangle, square)</strong> represent &#8216;specific&#8217; or &#8216;context-embedded&#8217; concepts.
+	<ul>
+		<li class="smaller">Semantically, they are embedded in an <em>explicit</em> (by their connected nodes) or <em>implicit</em> (simply not stated) context.</li>
+		<li class="smaller">They are the concepts that are created by making a <span class="caps">VSM</span>-sentence.</li>
+		<li class="smaller">They are linked in a way that reflects <span class="caps">VSM</span>-connectors (e.g. &#9679;&mdash;<sup>&#9650;</sup>&rarr;&#9679;, as <em>one</em> object that connects three nodes).</li>
+		<li class="smaller">(The numbers are only there to make the graph less tangled).</li>
+	</ul></li>
+	<li class="smaller"><strong>White nodes</strong> (there are only round ones) represent &#8216;general&#8217; or &#8216;context-free&#8217; concepts.
+	<ul>
+		<li class="smaller">Semantically, they are not embedded in any specific context (and also not embedded so by connected terms).
+They just represent &#8216;the idea&#8217; of a particular concept. &nbsp;E.g.: &#8216;Duck&#8217;, in general.</li>
+		<li class="smaller">Every black node is <em>specified from</em> a white node, or from another black node
+(a coreference sub-specifies it, adding extra (explicit and perhaps also implicit) context). &#8211; Specification is indicated with a double arrow: &#8608;.</li>
+		<li class="smaller">So all <span class="caps">VSM</span>-sentences (represented as VSMGraphs) create new black nodes, which are all specified from the same set of available white nodes.</li>
+	</ul></li>
+	<li class="smaller"><strong>Rectangle nodes</strong> represent &#8216;data&#8217;. This could e.g. be a &#8216;literal string&#8217; as label for a white node concept, or a protein sequence, or image data.</li>
+	<li class="smaller">The colored areas only serve to illustrate node functionality groups here:
+	<ul>
+		<li class="smaller">The <strong>blue area</strong> highlights one <span class="caps">VSM</span>-sentence.</li>
+		<li class="smaller">The <strong>yellow area</strong> highlights general, dictionary concepts. These would be shared between all <span class="caps">VSM</span>-sentences. (And they could be categorized in a hierarchy).</li>
+		<li class="smaller">The <strong>green area</strong> highlights the terms / labels for the dictionary concepts.</li>
+	</ul></li>
+</ul>
+
+<p class="smaller"><br />Here&#8217;s another one : &nbsp;(and the grey-shaded areas just highlight two <span class="caps">VSM</span>-sentences&#8217; individual subgraphs) :</p>
+<p><img class="i60 vsm" src="img/vsmgraph-2.png" alt="" /></p>
+<p><br /><hr /><br /></p>
+<p>And since we promised <a href="vsm.html#term-types">earlier</a> that we&#8217;d explain this after a picture of a VSMGraph, here is:</p>
+<p><a name="principle-4"></a>
+<br /></p>
+<p>📖 <strong>The Fourth Founding Principle of <span class="caps">VSM</span>:</strong></p>
+<ol>
+	<li><strong>general concepts</strong> are free from any &#8216;context&#8217;, while</li>
+	<li><strong>specific concepts</strong> are placed into an <strong>&#8216;<span class="undl">implicit</span> context&#8217;</strong>, and</li>
+	<li><em>some</em> of their implicit context is <strong>made <span class="undl">explicit</span></strong> via tridents/bidents and list connectors.</li>
+	<li>A coreference&#8217;d child inherits all of this context from its parent;
+except that <em>some more</em> of its context is made explicit, via its own connected terms.</li>
+</ol>
+<p>Let&#8217;s elaborate on each:
+<br />1.&nbsp; A General Concept is a &#8216;general idea/understanding&#8217; of something that we can have in our minds.
+For example, the concept of <em>Duck</em>, in general, is not any specific duck.
+So meaning-wise, it&#8217;s not &#8216;placed&nbsp;in&#8217; any &#8216;context&#8217; (which would make it specific) at all.</p>
+<p>2+3.&nbsp; A Specific Concept, however, is one that we have mentally placed into some &#8216;context&#8217;
+(i.e. associated &#8216;things/meanings&#8217; that make the concept a particular thing).
+Now, it is important to realize that this &#8216;context&#8217; consists of two parts.
+Most obviously, there is <em>explicit context</em>: this comes from all what is connected to the concept in a <span class="caps">VSM</span>-sentence, through tridents/bidents and list connectors.
+But there is also <em>implicit context</em>: all the other things that aren&#8217;t said explicitly about it, and many of which we may not even know!
+<br />Just think about this example. When I tell you about a particular caffeine molecule that I observed in a biochemical experiment,
+then I may describe which molecule I meant, e.g.: one that was bound to some receptor in the brain.
+But I didn&#8217;t mention, nor do I often even know, some other context details that are implicitly attached to it, but that still make it particular.
+For example, what exact location in the brain was the receptor? Were any other molecules possibly interacting with the caffeine?
+And even more in detail, what isotopes of carbon did the caffeine consist of?
+And even history-like context like: who produced the caffeine molecule/s (maybe it had impurities that influenced my experiment)?
+Was it stored correctly? Who prepped it? Etc.
+<br />All these things are what make up any specific <span class="caps">VSM</span>-term&#8217;s implicit context. They are absent details,
+but they are still what make the <span class="caps">VSM</span>-term a &#8216;specific thing&#8217; in our minds. &#8211; So,
+a specific concept is always embedded in lots of unspecified, &#8216;implicit context&#8217;.
+<br /><span class="smaller"> &ndash; (This is what we also explained, in a bit ad-hoc manner,
+<a href="examples.html#bidents-numbers">in that section</a> on the Examples page).</span>&nbsp;</p>
+<p>4.&nbsp; When you look at VSMGraphs, you may see that there can be hierarchies of concepts with more and more context:
+from general concept (white node), down to specific concept (black node), down to a coreferenced, more-specific child-concept (also black)
+(I like to call this: <em>sub-specification</em> of a concept), and so on.
+So if you&#8217;d build a story around some concepts, then you&#8217;d create chains of sub-specified concepts that get consecutively embedded into ever-more explicit context.
+(Like: attached details, or a growing history we&#8217;re learning about it).
+For example: Arnold woke up one morning. Then <em>he</em> saved the world. (Now the <em>he</em> is a concept of which we also already know that it woke up that morning).
+Then <em>he</em> jumped into a pool of lava. (Now <em>he</em> is subspecified again, and has again more explicit context attached). Etc.&nbsp; &#8211; So
+there is always opportunity to make a specific concept ever-more specified.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br /><hr /></p>
+<p><br /><br /></p>
+<p style="text-align:right"><br />Read about an application of <span class="caps">VSM</span> on <a class="next" href="scicura.html">the SciCura page<i class="arrow right"></i></a></p>
+<p style="text-align:right"><br />Or skip to <a class="next" href="about.html">the About page<i class="arrow right"></i></a></p>
+<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> page</p>
+<div class="forPrint"> <br /><br /> <ol class="noteList fun">
+</ol> <ol class="noteList dry">
+</ol>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+
+
+</body>
+</html>

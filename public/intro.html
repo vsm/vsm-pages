@@ -1,0 +1,718 @@
+<html>
+<head>
+  <title>VSM - How to Easily Plant Complex Ideas into Computers</title>
+  <link rel="canonical"      href="http://scicura.org/vsm/intro.html" />
+  <meta property="og:url" content="http://scicura.org/vsm/intro.html" />
+  <link rel="stylesheet" href="css.css">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" id="google_fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CDroid+Sans%7CPT+Sans+Narrow&#038;ver=4.7.4" type="text/css" media="all">
+  <link rel="stylesheet" id="fp-font-awesome-css" href="http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/css/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.4" type="text/css" media="all">
+
+  <meta name="keywords"    content="simplified knowledge representation, curation, ontologies, semantic web"/>
+  <meta name="description" content="A simple curation tool with high flexibility."/>
+
+  <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
+  <meta itemprop="description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stcruy">
+  <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
+  <meta name="twitter:description" content="VSM: A seriously fun way to teach our future overlords.">
+  <meta name="twitter:creator" content="@stcruy">
+  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+
+  <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://scicura.org/vsm" />
+  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
+  <meta property="og:description" content="VSM: A seriously fun way to teach our future overlords." />
+  <meta property="og:site_name" content="The VSM-pages" />
+  <meta property="fb:admins" content="404986372864030" />
+</head>
+<body>
+
+<div id="topnavmenu" class="topnav openvert">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbarIcon()">
+    <div class="l">Menu</div>
+    <div class="r">&#9776;</div>
+  </a>
+  <div class="topnavblock">
+    <a class="_fill" href="">&nbsp;</a>
+    <!--
+    <div class="dropdown">
+      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <div class="dropcont">
+        <a href="intro.html#fun-intro">General Intro</a>
+        <a href="intro.html#deeper-intro">Deeper Intro</a>
+      </div>
+    </div>
+    -->
+    <a id="intro"      href="intro.html">Introduction</a>
+    <a id="vsm"        href="vsm.html">How VSM works</a>
+    <a id="summary"    href="summary.html">Summary</a>
+    <a id="examples"   href="examples.html">Examples</a>
+    <a id="discussion" href="discussion.html">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
+    <a id="scicura"    href="scicura.html">SciCura</a>
+    <a id="about"      href="about.html">About</a>
+  </div>
+</div>
+<img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
+<script>
+var tnbiThrottle = 0;
+function toggleNavbarIcon() {
+  if(!tnbiThrottle) {
+    tnbiThrottle = 1;
+    var x = document.getElementById('topnavmenu');
+    if(x.className == 'topnav')  x.className += ' openvert';
+    else  x.className = 'topnav';
+    setTimeout(function() { tnbiThrottle = 0;},  200);
+  }
+}
+function setNavbarAActive(id) {
+  document.getElementById(id).className += ' active';
+  document.getElementById('infv').src += '/infv/' + id;
+}
+</script>
+<script>setNavbarAActive('intro');</script>
+
+<div id="content" class="content">
+  <p><br />
+<a name="fun-intro"></a></p>
+<h1>How to Easily Plant Complex Ideas into Computers</h1>
+
+<p style="text-align:right" class="smaller"><br /><br />&ndash; An intuitive way to translate any &#8220;piece of information&#8221; and its full context into a computation-ready form.</p>
+<p style="text-align:right" class="smallerWider"><br /><i><strong>To people in a hurry</strong>: &nbsp; First read the <a href="intro.html#piece-of-information">Piece-of-Information</a> definition.
+&nbsp; Then read <br />either <a href="vsm.html">How&nbsp;<acronym title="Visual Syntax Method"><span class="caps">VSM</span></acronym>&nbsp;works</a>,
+or just its 5 <a href="vsm.html#short-story-1">Short Stories</a>, or even only <a href="summary.html"><span class="caps">VSM</span> in a nutshell</a>.</i></p>
+
+
+<h3>1a. &nbsp; A General, Fun-To-Read Intro &nbsp;&nbsp;<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">0</span><span class="popx popup">
+Blue notes are fun: for remarks, my side-thoughts etc.
+<br />Grey notes are boring: for references.
+</span></span><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup">
+So I thought long about &#8216;<strong>Who is the target audience for this Intro?</strong>&#8216;.
+<br /><br />
+And I decided: it&#8217;s for readers like those of the sciency
+<a href="http://waitbutwhy.com/">WaitButWhy</a> site
+<span class="smaller">(by <a href="https://www.ted.com/speakers/tim_urban">Tim Urban</a>, who was hired by Elon Musk to
+write about the vision behind Tesla, SpaceX, and <a href="https://waitbutwhy.com/2017/04/neuralink.html">Neuralink</a>)
+</span>. &#8211; I.e.:
+for curious, smart people who are eager to learn about a new field, but who also require to be entertained. &#8211; <strong>Why?</strong>
+Because my goal is to reach as many young-spirited scientists as possible.
+</span></span><sup style="position:relative">&larr;<span class="noteCT">Click&nbsp;these</span></sup></h3>
+
+
+
+
+
+
+<p>One might think that Science is this pretty awesome, well-oiled machine.</p>
+<p>Where everyone builds on top of what others have found out before.
+And everyone shares their new findings with all the others, in an efficient way.
+So the next scientist can immediately build further, upon the new sum of human knowledge.</p>
+<p>Not quite so.</p>
+<p>Spreading new insights in science goes at the speed of a snail. Because most findings are published in <span class="caps">PDF</span> files. As plain old text.
+A wordy format that takes a lot of mental effort to process and understand.</p>
+<p>And you&#8217;d be wrong to assume that computers can process all this for us.
+They can&#8217;t even read one full text and give a reliable, detailed summary.
+Because they do not &#8216;understand&#8217; text as we do.
+Only a human mind is able to read a <span class="caps">PDF</span> and properly understand the maddening complexities of the real world.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup">
+Consider even a simple example to see how ambiguous language is:<br />
+<br />If I say: <em>&#8220;The cat ate the fish. Now <strong>IT</strong> is dead&#8221;</em>, then who died? You&#8217;d say: the fish.
+<br />But what if I had first said: <em>&#8220;The fish was poisoned&#8221;</em> , now who died? The cat!&#8230;
+<br /><br />It&#8217;s super hard to make a computer program &#8216;understand&#8217; stuff like that, and especially in science&#8230; &#8211; It
+would need to learn all about how the world works first, before it can decipher text.
+</span></span></p>
+
+
+
+<p>So it&#8217;s really time-consuming for each scientist, to read all this and find out what thousands of others have discovered.
+In the Life Sciences this is especially a problem.
+For example in Molecular Biology, scientists need to study systems of
+10.000s of different molecule types that all kick &amp; push each other around, in their own weird ways. (That&#8217;s just how biological systems works).
+And every tiny interaction that was discovered at some time, is now described, or in fact hidden,
+in one of the millions of PDFs out there&nbsp;:&nbsp;<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup">There are ~ 25 million research articles in the Life Sciences
+(extrapolated for 2017). And they publish over 800&#8217;000 new ones each year.
+<br />
+Source: <a href="https://www.nlm.nih.gov/bsd/medline_cit_counts_yr_pub.html">https://www.nlm.nih.gov/bsd/medline_cit_counts_yr_pub.html</a>
+</span></span><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup"> <strong>If you print all PDFs of 2017, how high would they stack?</strong>
+<br />Say, 8 pages/pdf, double-sided, 0.05mm/sheet, 800&#8217;000 pdfs :
+<br /><br />That&#8217;s <strong>160 meters</strong> (500 feet) of paper for this year alone. &#8211; That equals to
+an <a href="https://en.wikipedia.org/wiki/Wikipedia:Size_in_volumes">entire Wikipedia</a> <strong>per year</strong>.
+<br /><br />And over <strong>5 kilometers</strong> (3 miles) <strong>of biomedical literature</strong>
+since 1945.
+<br />That&#8217;s 15 Eiffel Towers high.<br /> Or 12 Empire State Buildings.
+</span></span><sup style="position:relative">&larr;<span class="noteCT noteCP">Click&nbsp;the&nbsp;blue&nbsp;note</span></sup></p>
+
+<p><img class="i80" src="img/System1.png" alt="" /></p>
+<p>And when you want to learn &#8220;The Big Picture Of How A Biological System Actually Works&#8221;,
+you really need to bring gazillions of pieces of knowledge together, to study how they interact as a &#8216;biological&nbsp;network&#8217;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup"> <a href="https://en.wikipedia.org/wiki/Biological_network">Wikipedia:Biological_network</a> shows that &#8216;networks&#8217;, or webs of interconnected things,
+  are crucially important for studying all of Life.
+  <br /><br />Some examples of Biological Systems or networks are: the control mechanism
+  of <a href="https://en.wikipedia.org/wiki/Gene_regulatory_network">how genes turn each other on/off</a>,
+  or of <a href="https://en.wikipedia.org/wiki/Interactome">interactions between proteins</a>,
+  or the <a href="https://en.wikipedia.org/wiki/Biological_neural_network">network of brain connections</a>,
+  or higher level networks like <a href="https://en.wikipedia.org/wiki/Food_web">this</a>. </span></span>And that&#8217;s a bit of a problem:<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> Left image: from <a href="https://commons.wikimedia.org/wiki/File:The_protein_interaction_network_of_Treponema_pallidum.png">wikimedia</a>.
+   Actually, it shows a network of only one type of interacting components (proteins).
+   But in reality there are tons of other components involved, to keep a cell alive.
+   But I guess this is good enough for a cartoony figure. </span></span></p>
+
+<p><img class="i70" src="img/System2.png" alt="" /></p>
+
+<p>No one can read up on that mountain of PDFs. Not even if you team up with some friends : you can only extract a fraction.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/17646325">Baumgartner 2007</a> (Fig. 3-7) shows trends
+for teams who read up on a particular topic and catalogue it.
+<br />Conclusion: Their &#8216;To Do&#8217;-List keeps growing faster than their &#8216;Done&#8217;-List.
+</span></span></p>
+
+<p><br /></p>
+<p>We&#8217;d probably know much more about what went wrong in my friend David who has cancer,
+if we could piece all this knowledge together.
+If we could use computers to get an overview, and make them really &#8216;understand&#8217; what is hidden in those 25 million PDFs. &#8211; But
+that&#8217;s impossible with current technology.</p>
+<p>In other words, we <strong>are not able to fully benefit</strong> from the decades of expensive research results that exist out there! :</p>
+
+<p><img class="i70" src="img/Patient.png" alt="" /></p>
+
+
+<p><br />&mdash;&gt; Basically, we are spending monumental efforts to make plenty of discoveries,
+but then we bury them all again into a free-text format that&#8217;s hardly accessible at all :</p>
+
+<p><img class="i65" src="img/sisyphus.png" alt="" /></p>
+<p>And so, millions of potentially life-saving &#8220;pieces of information&#8221; stay locked up in scientific literature.</p>
+<p><br /></p>
+<p><a name="piece-of-information"></a></p>
+<div class="bluebox">
+<h4>What is a &#8220;piece of information&#8221;?</h4>
+<p>This is our key concept! &nbsp;So let&#8217;s first make clear what we mean by it.</p>
+
+<p>&bull; First, there exists this distinction between Data and Information:<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup">and between Knowledge, and sometimes Wisdom too.<br />
+See <a href="https://en.wikipedia.org/wiki/DIKW_pyramid">Data-Information-Knowledge-Wisdom pyramid</a>.</span></span>data is raw numbers from an experiment
+(like <em>monkey nr. 5 eats 2 bananas</em>), and information
+is &#8216;interpreted data&#8217; (like <em>Oh, monkeys prefer bananas over pizza</em>!&nbsp;💡).</p>
+<p>&bull; Second, while data is nicely structured  (it&#8217;s easy to put in an Excel table),
+<strong>information</strong> can be <strong>any insight at all</strong>.
+In the context of science, this would be a conclusion of a research paper.
+Like:<br />
+&#8220;<em>parts A and B of the brain get connected in a 6-week-old mouse embryo</em>&#8220;. &#8211; Or:
+&#8220;<em>molecule A puts a phosphorus-atom on molecule B, but only when molecule C is present, and that makes a cell start to grow</em>&#8220;. &#8211; Or:
+&#8220;<em>bacteria A releases molecule type B which makes part C of a D-type modified human liver react so and so</em>&#8220;. &#8211; Or:
+&#8220;<em>molecule A binds to B, at least according to our (error-prone) experimental setup X</em>&#8220;.</p>
+<p>So yes&#8230; a &#8220;piece of information&#8221; can have <strong>any form</strong> at all. &#8211; It&#8217;s
+an acquired insight, an idea<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup">
+In the sense of <a href="http://www.dictionary.com/browse/idea">dictionary.com</a> &#8216;s:
+<em>any conception existing in the mind as a result of mental understanding; a thought, conception, or notion, developed by the mind</em>.
+</span></span>, a &#8220;unit of thought&#8221;, than can be about <strong>any <span class="undl">topic</span></strong>,
+and can include <strong>any <span class="undl">details of a context</span></strong>.</p>
+
+
+</div>
+<p>And all these pieces of scientific information are being published in PDFs : as free, unstructured text.</p>
+
+
+<h4>Horses</h4>
+<p>Let&#8217;s make a fun analogy to explain what causes this problem:</p>
+
+<p>Communication in science is like living in the mid-1800s.
+Where you can only transport cargo (i.e.&nbsp;information) on slow <em>horses</em>.&nbsp;
+And on a few <em>steam trains</em> here and there.</p>
+
+
+<p>In the analogy, each horse (i.e.  <span class="caps">PDF</span>) carries some &#8216;pieces of information&#8217; (scientific findings) from one human mind to the next.
+Horses require a lot of personal attention from us though, for every single delivery. &#8211; It&#8217;s
+often a bit tedious to understand what each horse is neighing to you.</p>
+
+<p><img class="i90" src="img/Horses1.png" alt="" /></p>
+<p>Luckily, we already have some steam trains here and there.
+In our analogy, the trains represent the databases<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup">
+A database is simply Excel on steroids:
+you fill it so you can make advanced calculations over your data.
+</span></span>that carry biological information.
+Their precious cargo has been <em>manually</em> harvested from PDFs, by really good-hearted and often underpaid people.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">6</span><span class="popx popup">&#8230;who read PDFs all day.
+And try to decipher what the cryptic authors actually meant to say.
+And sometimes need to email them to be sure.
+And then nicely package it so it fits on the trains.
+<br /><br />
+Yes, a lot of work goes into filling the databases. Even though some scientific funding managers think this just happens magically. 🙈🙉🙊 </span></span>But it&#8217;s worth it: it makes science run so much smoother when information is structured: it just whooshes from mind to mind on rails.
+You get a clear, succinct piece of information delivered to you, without spending all that time trying to understand horses.</p>
+
+<p>However.&nbsp; Our information-trains are clunky as hell. They would even make our 1800s&#8217; ancestors laugh at us.
+Because they have a fundamental design flaw. Each train can transport only <span class="undl">one type of cargo</span>!
+If you want to transport something new, you must design a whole new train for it.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">7</span><span class="popx popup">
+Imagine buying stuff online, but you can only get books by train.
+So electronics, toys, ice&nbsp;cream&#8230; have to be packed on a horse and you have to wait two months before it gets there.
+<br /><br />
+Likewise you must tell any new database exactly what it is going to store. Anything else won&#8217;t fit in later.
+<br />Clunky steam trains!
+</span></span>And there&#8217;s a second reason why our 1800s&#8217; folks are mocking us:
+our trains are totally understaffed. There&#8217;s almost no one there, paid or trained to load them in the first place!<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">6</span><span class="popx popup"> <a href="https://www.nature.com/nature/journal/v455/n7209/full/455047a.html">Howe D, et al: The future of biocuration (2008), Nature</a>. </span></span></p>
+
+<p>So yes, most people just use a horse :</p>
+
+<p><img class="i80" src="img/Horses.png" alt="" /></p>
+
+<p>No wonder horses are popular: they can carry everything that doesn&#8217;t fit on trains. And everyone knows how to ride a horse.
+And the same goes for PDFs : free text, or natural language, is the most versatile tool for easily expressing our thoughts.
+We can write down whatever we may think of (while computers need strict forms and checkboxes). &#8211; But
+horses are just too slow for the modern age of Big&nbsp;Data we have now entered.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">8</span><span class="popx popup">When you think about it: PDFs are a relic for a technology not invented yet.
+Our clunky databases, however, are harbingers to a future of &#8216;mechanized&nbsp;knowledge&#8217; processing.
+<br />A future that our grandchildren will find just as obvious as we find Excel.
+<br /><br />
+(Btw, maybe we could use the term &#8220;Big&nbsp;Information&#8221; for the situation in the Life Sciences: with vast amounts of <em>diverse</em> pieces of information?)</span></span></p>
+
+
+
+
+
+
+<h4>The Tesla Moment</h4>
+<p>We live in the 21st century now. And we know better.
+It&#8217;s time for some self-driving electric cars, that can take anything anywhere fast. Or trucks. Or androids on electric motorbikes.<br /></p>
+<p>To get here, we must invent some kind of&#8230; &#8216;versatile digital engine&#8217;. &nbsp;Meaning: we need
+(1) a multi-purpose, <em>extremely versatile</em> carrier for sharing scientific findings,
+(2) that a <em>computer</em> intelligence can &#8216;understand&#8217; and help us with too, and
+(3) that <em>many people</em> will actually like to start using.</p>
+
+<p>So, we need <strong>a computational tool</strong> that <strong>can carry <span class="undl">any</span> information</strong>.
+That can hold whatever we may <em>think</em> of, in a computable form.
+And that is so <strong><span class="undl">easy</span> to use for the commoner</strong> that,
+well&#8230; most of us will want to keep our <span class="caps">PDF</span>-horse as a pet and start using wheels to get around:</p>
+
+<p><img class="i100" src="img/Tesla.png" alt="" /></p>
+
+
+<p>Such a tool would of course not mean that the <span class="caps">PDF</span>-horse&#8217;s days are counted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">9</span><span class="popx popup">And that&#8217;s a &#8220;<em>Hold</em> your horses&#8221; to doubters and knee&#8209;jerk neigh&#8209;sayers 😃 </span></span>Scientific prose is still valuable for showing how conclusions were reached
+and why they are meaningful. &#8211; What
+is needed right now, is to give people an easy-to-use tool to create a <strong>complete, digital summary</strong> for any <span class="caps">PDF</span>,
+with which our dear friend the computer can do something <em>meaning</em> -ful.</p>
+
+
+
+
+
+<p>With a little tool like this, that powerful, image what humanity could create. We could team up and transform the sum of human knowledge,
+into an in-depth, computer-queryable form. (And I hope my friend with cancer could live to benefit from that). &#8211; You could imagine
+something like a Wikipedia, where every page shows the full summary of one <span class="caps">PDF</span>, but in a way that both humans <em>and</em> computers can fully &#8216;understand&#8217;&#8230;
+That would be quite a utopian future, where all scientific knowledge has been
+nicely combined into some machine intelligence,
+and all we need to do is come up with clever questions.
+Which immediately get answered. Like by Google&#8217;s wiser sibling.</p>
+
+
+
+
+
+
+<p>So let&#8217;s first invent&#8230; <strong>a simple way to transform any &#8216;piece of information&#8217; into a computable form</strong>.</p>
+
+<p><br />
+That was the teaser.
+Now follows a deeper introduction, so we&#8217;re all prepared to
+&#8216;get&#8217; the beauty of the solution that we&#8217;ll describe after that.
+&nbsp; Because we created something that is actually unique.</p>
+
+
+
+
+
+<p><a name="deeper-intro"></a></p>
+<h3><br />1b. &nbsp; A Deeper Background</h3>
+
+<p>Our story really starts with the growing need for Computable Information, which is one of the most valuable things to have in this day and age:</p>
+
+<p><a name="computable-information"></a></p>
+<div class="bluebox">
+<h4>&#8220;Computable Information&#8221; blue box</h4>
+<p>Definition:<br />
+Computable information = pieces of information (as defined in <a href="intro.html#piece-of-information">that earlier blue box</a>)
+that have been converted into a <em>&#8220;computation-ready&#8221;</em> format.</p>
+<p>It is &#8220;usefully formatted&#8221; pieces of information.
+Only information <strong>that has been translated into some structured format</strong> (in contrast to plain text), has been made <em>computable</em>. E.g. when it&#8217;s stored in a database.</p>
+<p>Only then can people write software to analyze and integrate it in an automated way.
+Only then can we say that a computer can &#8216;understand&#8217; the meaning of it, and can it do &#8216;meaning&#8217;-ful computation on it.</p>
+
+</div>
+<h4>a) <span class="caps">WHY</span> is computable information so cool to have?</h4>
+
+<p>I&#8217;ll answer this from the perspective of the Life Sciences (as that&#8217;s where I work now), but I&#8217;m sure it applies to other fields too :</p>
+<p>Computable information is becoming a cornerstone of today&#8217;s bioscience research,
+especially when the focus is on <strong>studying how numerous interacting components work together as a system</strong>.
+If you want to address complex questions like &#8216;how does the molecular machinery work or malfunction in cancer cells&#8217;,
+or &#8216;what is the best remedy for a patient&#8217;s particular cancer&#8217;, you must <strong>study the dynamics of the system</strong>,
+i.e. how the system reacts internally, to outside changes.
+And for that, you simply need a computer.</p>
+<p>So computers can do more than just give us better Search, or draw static overviews (which is already cool) :&nbsp;
+When you tell a computer everything you know about some biological system, it can let you explore that system in a kind of abstract &#8220;<em>Virtual&nbsp;Reality</em>&#8220; (VR) !</p>
+
+<p>Then you can play around in this dynamic, digital, simulated world.
+You can modify one or two things, and study how many many other things are logically bound to react.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup">
+My friend Ward was the first to explain biological systems to me. He described them as: &#8220;If you poke a biological cell with anything,
+then suddenly lots and lots of things inside it come to life. It&#8217;s like a spider-web of molecules that are all connected. &#8211; For example
+when a cell detects an infection (or a drug, or a change in temperature),
+then on a molecular level the cell basically starts lighting up and flashing like a christmas tree, to deal with this new situation&#8221;.
+</span></span>You can also test if what you know so far about biology makes sense on its own,
+by checking of your virtual world responds in the same way as real-world biological experiments do.
+And you can hypothesize which tiny things you could fix, in order to change the entire virtual world&#8217;s state from e.g. &#8216;cancer&#8217; to &#8216;healthy&#8217;.</p>
+
+<p>And most splendid of all: you can now make a computer play with itself, in its little/giant virtual world.
+You can let it try out millions of hypotheses, and test all the effects.
+Then by the time you had your coffee the next morning, you got the results of millions of dirt-cheap virtual experiments.
+And you can go to your boss with a really good case about which of the 5.000$-tagged real-world experiments you should try out first,
+given your budget only has room for twenty of them.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">7</span><span class="popx popup"> This already happens, see e.g. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004426">Flobak 2015: Discovery of Drug Synergies in Gastric Cancer Cells Predicted by Logical
+Modeling</a>. </span></span><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup"> I actually work with a <a href="http://www.colosys.org/">European project</a> that&#8217;s based on this.
+It&#8217;s part of the <a href="https://www.ntnu.edu/health/druglogics">DrugLogics</a> initiative where it&#8217;s called &#8220;Rational drug response prediction&#8221;.
+<br /><br />There&#8217;s a short <a href="http://phdcomics.com/tv/?v=N4NzEyo_HQo">PhDComics video</a> ! <br /><br /> </span></span></p>
+
+<p>Here&#8217;s a computer playing the VR-game &#8220;Beat The Cancer genes&#8221;, based on computable information:
+<img class="i85" src="img/Simulation.png" alt="" /></p>
+
+<p>Computable information <strong>enables us to reason through combined, integrated knowledge</strong>,
+and handle it on a scale much larger than what our limited human minds could ever deal with.</p>
+
+<p>Of course, one can only construct these virtual biological worlds (called &#8220;biological models&#8221;) based
+on a <strong>sufficiently detailed</strong> and <strong>large</strong> collection of prior knowledge, all available in computation-ready form.</p>
+<p>(This is similar to the &#8216;FAIR&#8217; call, for sharing raw experimental Data in a reusable way).<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">8</span><span class="popx popup"> The <a href="https://www.force11.org/group/fairgroup/fairprinciples"><span class="caps">FAIR</span> Data Principles</a>
+are calling for experimental (structured) <strong>Data</strong> to be made: Findable, Accessible, Interoperable, and Reusable.
+<br /><br />
+Quite similarly here, we wish for heteregenous <strong>Information</strong> to become, not only findable, but also computationally integratable.
+</span></span></p>
+
+<h4>b) <span class="caps">WHO</span> creates computable information? Who drags it out of messy text?</h4>
+
+<p>Broadly speaking, there are three categories of people who do this: professionals, temporarily organized ones, and individuals.</p>
+
+<p>But first, let&#8217;s update our vocabulary:</p>
+
+<p><a name="biocuration"></a></p>
+<div class="bluebox">
+<h4>&#8220;Biocuration&#8221; &#8211; how to be a Guardian of the Life Sciences</h4>
+<p>A biocurator (or curator)
+is a person who finds, reads &amp; interprets pieces of information in a <span class="caps">PDF</span>&#8216;s text and figures, and translates them into a computable format.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">9</span><span class="popx popup"> See <a href="https://en.wikipedia.org/wiki/Biocurator">Wikipedia: Biocurator</a> or <a href="https://biocuration.org/">https://biocuration.org</a> </span></span>&nbsp;So:</p>
+<p>&nbsp; Natural Language <a href="intro.html#piece-of-information">piece of information</a> &nbsp; --&gt; <em>&nbsp;biocuration&nbsp;</em> --&gt; &nbsp; <a href="intro.html#computable-information">Computable
+Information</a></p>
+<p><img class="i90" src="img/biocurator.png" alt="" /></p>
+<p>Curators are the (often unnoticed) philanthropists who fill the databases that so many biologist use to get their work done.
+They spend their time to read scientific literature, clear up obscurities that authors have left in the PDFs, and produce structured information.</p>
+<p>They basically make information easily reusable, either for themselves or for others.</p>
+
+</div>
+<p>Now, our first category of biocurators are the <strong>professional biocurators</strong>.
+They are employed at institutions whose mission is the development and the long-term maintenance of large databases
+(e.g. at <acronym title="European Institute for Bioinformatics"><span class="caps">EBI</span></acronym>, <acronym title="Gene Ontology"><span class="caps">GO</span></acronym>, UniProt, <acronym title="National Center for Biotechnology Information"><span class="caps">NCBI</span></acronym>).<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> &bull; <a href="https://www.ebi.ac.uk/training/online/course/biocuration-introduction"><span class="caps">EBI</span>: European Institute for Bioinformatics</a>,
+<br />&bull; <a href="http://www.geneontology.org/">GO: Gene Ontology</a>,
+<br />&bull; <a href="http://www.uniprot.org/">UniProt</a>,
+<br />&bull; <a href="http://www.uniprot.org/"><span class="caps">NCBI</span>: National Center for Biotechnology Information</a>.
+</span></span>These initiatives form the backbone of a more and more large-scale way of working: of a modern, data- or <acronym title="Information Technology"><span class="caps">IT</span></acronym>-driven Life Sciences.</p>
+
+<p>News flash : If you&#8217;d put all biocurators together on a few airplanes and they crash (and you wouldn&#8217;t need too many planes),
+modern Life Sciences would come to a grinding halt.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup"> I would say that the <a href="https://en.wikipedia.org/wiki/Bus_factor">Bus Factor</a> of modern Life Sciences is pretty low:
+there are many people who do experiments, but relatively only a critical few who make experimental data or research conclusions easily reusable.<br />Sure,
+there are also people who develop algorithms to &#8216;text-mine&#8217; the PDFs (to retrieve very specific facts), but these still need manually created &#8216;training&nbsp;sets&#8217;. </span></span></p>
+<p>My point is: although professional curator groups have developed good curation strategies (also semi-automatic ones),
+they cannot keep up with the increasing amount of Life Science literature.
+With nearly a million new papers published each year, only a fraction of information and of selected topics can get structured.</p>
+
+<p>That&#8217;s why the second category of curators keeps popping up: the <strong>temporarily organized curators</strong>.
+These are often scientists who start a new project, realize the value of structured data/information, develop their own database,
+spend hundreds of hours filling it with information which they manually curate from literature &#8211; but then run out of their 2-year funding,
+and either keep the database online in an unmaintained zombie state, or simply let it go offline and die.</p>
+<p>There are many hundreds of these smaller-scale databases, all at various stages in this precarious life&#8209;cycle.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup"> E.g. <a href="http://www.lbbc.ibb.unesp.br/htri/" title="Human Transcriptional Regulation Interactions database">HTRiDB</a>,
+or see the <a href="http://www.biosharing.org">BioSharing</a> database of databases, or see <a href="https://en.wikipedia.org/wiki/List_of_biological_databases">this list</a>,
+or <a href="https://en.wikipedia.org/wiki/List_of_neuroscience_databases">this list</a>
+(note: these lists show a mix of databases of curated information, as well as of experimental data).
+<br /><br />And even larger databases have run out of funding, causing chaos, e.g.
+<a href="http://www.arabidopsis.org/" title="The Arabidopsis Information Resource"><span class="caps">TAIR</span></a> (now rescued by <a href="http://phoenixbioinformatics.org/">Phoenix Bioinformatics</a>).
+See also the &#8216;<a href="http://www.nature.com/ncb/journal/v7/n7/full/ncb0705-639b.html">Databases in peril</a>&#8216; Nature editorial.
+</span></span></p>
+<p>All these databases aim to cover a particular, quite narrow topic in the Life Sciences.
+Still, there are many more topics and information types than any of these efforts, combined, were designed to cover.</p>
+<p>And that is where the third category comes in: the unknowingly-biocurating <strong>individual scientists</strong>.
+Most people who need some structured overview in their research niche have to create it themselves, and engage, without realizing it,
+in curation. They read a selection of relevant papers, and note down a list of useful facts, or sometimes even collect them in an Excel spreadsheet
+(because of course, the majority of bioscientists has no expertise in setting up a new online database).</p>
+
+<p>During my 15 years of interacting with various research labs, I&#8217;ve seen these <em>local curation</em> efforts happen over and over again:
+e.g. on plant cell cycle and biomass<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">13</span><span class="popx popup"> I was involved in a whole <a href="https://www.psb.ugent.be/">department</a> effort, where a few dozen researchers from various research groups
+wanted to curate diverse information on how plant cells work and grow. (E.g. for making rice produce more biomass in challenging climates).
+<br />A challenge was that the information they wished to collect was quite heterogeneous, more than what plain spreadsheets can easily handle. </span></span>,
+or on stomach cancer gene-regulation<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup"> At the <a href="https://www.ntnu.edu/nv/research/systemsbiology/projects/gastrin">Gastrin research</a> group
+at <acronym title="Norwegian University of Science and Technology"><span class="caps">NTNU</span></acronym> University. </span></span>,
+or that researcher who curated brain tissue connectivity (and now left that job),
+or that person who was looking for a proper tool to curate 30 papers on microbe/surface-protein interactions, and so on.
+Many of these efforts start out in an ad-hoc way, and their short-lived yield is never even shared with others.</p>
+
+<p>Here&#8217;s a sketch of this landscape of biocuration projects:</p>
+<p><img class="i80" src="img/Biocuration.png" alt="" /></p>
+<p>So, even though we keep witnessing a large drive to have information computationally accessible,
+most information in PDFs never makes it into a curated form.
+And for that what does make it, much of it is never even shared, or just gets lost and dies at the end of a project.</p>
+
+
+<h4>c) <span class="caps">WHAT</span> types of information do people want to &#8216;curate&#8217;?</h4>
+<p>Whatever one can think of :</p>
+<p>The largest possible variety of <strong>information&nbsp;types</strong> (many topics, and scales<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">13</span><span class="popx popup"> See <a href="https://en.wikipedia.org/wiki/Biological_organisation">Wikipedia: Levels of biological organisation</a>. </span></span>in biology)
+is being described in scientific papers,
+and this with any amount or variety of <strong>context&nbsp;details</strong> (biological samples, treatments, experimental conditions, etc.).</p>
+<p>And so the information, useful for building biological models, can be extremely <strong>diverse</strong> and <strong>irregular</strong>.
+Yet, the more of these irregular <em>contextual details</em> you record, the more useful your collection of information becomes.
+Because then you can take into account the precise conditions under which it is valid! &nbsp;See this:</p>
+
+
+<p><a name="context"></a></p>
+<div class="bluebox">
+<h4>&#8220;Context details&#8221; blue box</h4>
+
+
+<p>For software, it is easiest to work with <em>core facts</em> : simplistic, regularized, reduced information.
+But in order to reason and to derive proper conclusions, it is necessary to embed such core facts into a meaningful <em>context</em>.</p>
+
+
+<p>For example, imagine software that would only let you store facts of the form &#8220;X is Y&#8221;, without any&nbsp;additional <em>context</em>.
+Then you could only store thinks like &#8220;Cat is alive&#8221; or &#8220;Cat is dead&#8221;.</p>
+<p>But what you&#8217;d really need to capture is things like: &#8220;Cat was alive, <span class="undd">in the year 1999</span>&#8220;,
+or &#8220;Cat is dead <span class="undd">before Dog was born</span>&#8220;,
+or &#8220;Cat is dead <span class="undd">because it ate poisoned fish</span>&#8220;,
+or &#8220;<span class="undd">Eve claims that</span> Cat <span class="undd">probably</span> will be alive <span class="undd">in 2050, if you let her adopt it</span>&#8220;.
+&nbsp;(See also the examples in the <a href="intro.html#piece-of-information">Piece-of-Information</a> blue box!)</p>
+<p>Such details embed information in <strong>any</strong> possible <strong>&#8220;context&#8221;</strong>, which are <em>an essential part of the information unit</em>.
+&nbsp;Because they tell the circumstances under which it is valid. &nbsp;So remember:
+&nbsp;<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup"> Adapted from Star Trek Discovery episode <a href="http://www.imdb.com/title/tt5171438/episodes?season=1">1.03: &#8216;Context is for Kings&#8217;</a>. </span></span></p>
+
+
+<p><img class="i60 vsm" src="img/context-is-for-kings.jpg" alt="" /></p>
+<p>Therefore, <strong>curation tools</strong> should enable us to capture any context details to the fullest.</p>
+</div>
+<h4>d) <span class="caps">HOW</span> are people &#8216;curating&#8217;? What tools do they have?</h4>
+
+
+
+
+<p>Well, this is The Key Problem :&nbsp;</p>
+<p>No one knows yet how to design software, that enables biologists
+to <strong>easily</strong> capture <strong>all</strong> information types &amp; context they want to, into a computation-ready form.
+<br />Current curation technology is built around &#8220;predefined schemas&#8221;,
+i.e. abstractions of only <em>parts</em> of the information and its context that one <em>anticipates</em> to capture.</p>
+<p>Today, if you&#8217;re a software developer and you need to design software that support curators, you have two options:
+to use <strong>database tables</strong> or to use a <strong>formal language</strong>. &nbsp;Let&#8217;s look at both:</p>
+
+<p>If you use database tables (or forms or spreadsheets), you start by defining a fixed number of columns.
+But then during an actual curation process, working with specific literature,
+you can bet that curators will become aware of extra types of information or relevant context they will want to capture too.
+But accommodating such wishes post-hoc would require expensive updates to your database schema and user interface. So that rarely happens.
+And this inevitably condems curators to forcing square pegs into a round hole, whereby possibly essential contextual information is left out.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup"> Then typically, one column evolves to become &#8220;that desperate column with free-text notes of extra context that didn&#8217;t fit anywhere else &#8211; plus
+we also wanted to stop adding even more columns to our spreadsheet/form/table because who can deal with more than 30 columns anyway?&#8221;.
+<br />But rather-free-text in a table cell is of course not &#8216;computable information&#8217;, which defeats the purpose of putting it there.&nbsp; &#8211; E.g.:
+<a href="http://www.geneontology.org/">GO</a> Annotation File&#8217;s <a href="http://www.geneontology.org/page/go-annotation-file-format-20">Column 16</a>, or
+<a href="http://www.psidev.info/"><span class="caps">PSI</span></a> <span class="caps">MITAB</span>&#8216;s <a href="http://psicquic.github.io/MITAB27Format.html">Column 28</a>.
+</span></span></p>
+
+<p><img class="i70" src="img/tools1.png" alt="" /></p>
+<p>On the other hand, if you use a Formal Language<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup"> or Controlled Language.
+   I.e. an artificial language, with well-defined vocabulary, and restricted grammar rules.
+   See <a href="https://en.wikipedia.org/wiki/Controlled_natural_language">this</a>
+   and <a href="https://en.wikipedia.org/wiki/Formal_language">this</a> Wikipedia page. </span></span>(e.g. <acronym title="Attempto Controlled English"><span class="caps">ACE</span></acronym><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup"> See the <a href="http://attempto.ifi.uzh.ch/site/">Attempto Controlled English project site</a>
+   or its <a href="https://en.wikipedia.org/wiki/Attempto_Controlled_English">Wikipedia page</a>. </span></span>,
+<acronym title="Biological Expression Language"><span class="caps">BEL</span></acronym><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup"> See the <a href="http://openbel.org/">Biological Expression Language project site</a>
+   or this <a href="http://belief.scai.fraunhofer.de/BeliefDashboard/home/bel">Introduction to <span class="caps">BEL</span></a>. </span></span>),
+then your curators can capture information &amp; context in a &#8216;sentence&#8217; or &#8216;statement&#8217; format. This is more versatile to use, and also easier to read
+(e.g. &#8220;<span class="pre">Cat is Alive in 2017</span>&#8220;&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup"> That would be a valid statement in a Controlled Language that defines
+  that sentences with the structure &#8216;<span class="pre">&lt;subject&gt;&nbsp;IS&nbsp;&lt;state&gt;</span>&#8216; are valid (among others),
+  and has a rule that extensions like &#8216;<span class="pre">IN&nbsp;&lt;timeInterval&gt;</span>&#8216; are recognized too. </span></span>).
+But this requires that curators are willing to learn the language&#8217;s long list of rules, so they know which statements your software will accept.
+Unfortunately, the more <em>expressive</em> you make a formal language (i.e. the more variety of information you design it to capture),
+the more rules the language will need. And that makes the language harder and harder to learn for curators.
+And then the computer may misunderstand them when they forget a rule (e.g.&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup">
+Take for example a controlled language that uses a rule like: &#8216;a preposition
+(e.g. &#8220;with&#8221;) always pertains to the word that comes just before it&#8217;.
+<br />Then consider even a simple sentence like &#8220;<span class="pre">John eats chicken with fork</span>&#8220;.
+The computer would interpret this as: it&#8217;s the chicken that has the fork (instead of John eating with it) !
+<br /><br />And that&#8217;s just a 5-word sentence.
+For longer, real-world biological sentences, you&#8217;d have to navigate myriads of rules like that.
+</span></span>) :</p>
+
+<p><img class="i70" src="img/tools2.png" alt="" /></p>
+<p>Likewise, <acronym title="Resource Description Framework"><span class="caps">RDF</span></acronym><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">18</span><span class="popx popup"> See the <a href="https://www.w3.org/RDF/">Resource Description Framework project site</a>
+   or this <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Wikipedia page</a>,
+   or these <a href="https://www.google.com/search?q=rdf+graph&amp;tbm=isch">images</a> to see what information represented in a graphical form of <span class="caps">RDF</span> looks like. </span></span>is a most expressive method that can represent composite information. But it is only usable for experts in knowledge management.
+These tools are not easy to use by typical curators whose main expertise is in biology.</p>
+
+<p>So the status of current curation technology is the bottleneck:
+it <strong>prevents</strong> people from <strong>effectively communicating their most complex ideas with computers</strong>.
+And that prevents the possibly many scientists who wish to curate, or who are curating, from making more information computable.</p>
+
+
+<h4>e) So let&#8217;s summarize: What new technology is needed?</h4>
+
+<p>Given the above, we need to develop &#8216;some new tool&#8217; for this: a format / way / method / interface / &#8230; :</p>
+<p>It must be a tool that is simple &amp; intuitive to use, so that many more people can use it. Especially non-IT&#8217;ers like bioscientists,
+and especially emerging communities of non-professional curators.
+So that together, they can make much more information computable.</p>
+<p>It must also be a tool that is highly flexible / expressive, so that any information with any, full, rich context can be curated easily.
+So that subsequent computation can be based on highly accurate, &#8216;real&#8209;world&#8217; pieces of computable information.</p>
+<p><a name="new-tech"></a></p>
+<p>So we need something in the middle of this Venn diagram:</p>
+<p><img class="i90" src="img/NewTech.png" alt="" /></p>
+<p>In essence, we need an easy method for planting complex ideas into computers.</p>
+<p>We took up the challenge to design such a method!
+<br />We call our solution <strong><span class="caps">VSM</span></strong>, or Visual&nbsp;Syntax&nbsp;Method,
+and explain it on the next page:</p>
+<p><br />
+<br />
+<a class="next" href="vsm.html">How <span class="caps">VSM</span> Works<i class="arrow right"></i></a>
+<br /></p>
+
+<div class="forPrint"> <br /><br /> <ol class="noteList fun">
+<br><hr><p>Blue notes list:</p>
+<li class="item"><span class="nr">1</span>
+So I thought long about &#8216;<strong>Who is the target audience for this Intro?</strong>&#8216;.
+<br>And I decided: it&#8217;s for readers like those of the sciency
+<a href="http://waitbutwhy.com/">WaitButWhy</a> site
+<span class="smaller">(by <a href="https://www.ted.com/speakers/tim_urban">Tim Urban</a>, who was hired by Elon Musk to
+write about the vision behind Tesla, SpaceX, and <a href="https://waitbutwhy.com/2017/04/neuralink.html">Neuralink</a>)
+</span>. &#8211; I.e.:
+for curious, smart people who are eager to learn about a new field, but who also require to be entertained. &#8211; <strong>Why?</strong>
+Because my goal is to reach as many young-spirited scientists as possible.
+</li>
+<li class="item"><span class="nr">2</span>
+Consider even a simple example to see how ambiguous language is:<br>If I say: <em>&#8220;The cat ate the fish. Now <strong>IT</strong> is dead&#8221;</em>, then who died? You&#8217;d say: the fish.
+<br>But what if I had first said: <em>&#8220;The fish was poisoned&#8221;</em> , now who died? The cat!&#8230;
+<br>It&#8217;s super hard to make a computer program &#8216;understand&#8217; stuff like that, and especially in science&#8230; &#8211; It
+would need to learn all about how the world works first, before it can decipher text.
+</li>
+<li class="item"><span class="nr">3</span> <strong>If you print all PDFs of 2017, how high would they stack?</strong>
+<br>Say, 8 pages/pdf, double-sided, 0.05mm/sheet, 800&#8217;000 pdfs :
+<br>That&#8217;s <strong>160 meters</strong> (500 feet) of paper for this year alone. &#8211; That equals to
+an <a href="https://en.wikipedia.org/wiki/Wikipedia:Size_in_volumes">entire Wikipedia</a> <strong>per year</strong>.
+<br>And over <strong>5 kilometers</strong> (3 miles) <strong>of biomedical literature</strong>
+since 1945.
+<br>That&#8217;s 15 Eiffel Towers high.<br>Or 12 Empire State Buildings.
+</li>
+<li class="item"><span class="nr">4</span> <a href="https://en.wikipedia.org/wiki/Biological_network">Wikipedia:Biological_network</a> shows that &#8216;networks&#8217;, or webs of interconnected things,
+  are crucially important for studying all of Life.
+  <br>Some examples of Biological Systems or networks are: the control mechanism
+  of <a href="https://en.wikipedia.org/wiki/Gene_regulatory_network">how genes turn each other on/off</a>,
+  or of <a href="https://en.wikipedia.org/wiki/Interactome">interactions between proteins</a>,
+  or the <a href="https://en.wikipedia.org/wiki/Biological_neural_network">network of brain connections</a>,
+  or higher level networks like <a href="https://en.wikipedia.org/wiki/Food_web">this</a>. </li>
+<li class="item"><span class="nr">5</span>
+A database is simply Excel on steroids:
+you fill it so you can make advanced calculations over your data.
+</li>
+<li class="item"><span class="nr">6</span>&#8230;who read PDFs all day.
+And try to decipher what the cryptic authors actually meant to say.
+And sometimes need to email them to be sure.
+And then nicely package it so it fits on the trains.
+<br>Yes, a lot of work goes into filling the databases. Even though some scientific funding managers think this just happens magically. 🙈🙉🙊 </li>
+<li class="item"><span class="nr">7</span>
+Imagine buying stuff online, but you can only get books by train.
+So electronics, toys, ice&nbsp;cream&#8230; have to be packed on a horse and you have to wait two months before it gets there.
+<br>Likewise you must tell any new database exactly what it is going to store. Anything else won&#8217;t fit in later.
+<br>Clunky steam trains!
+</li>
+<li class="item"><span class="nr">8</span>When you think about it: PDFs are a relic for a technology not invented yet.
+Our clunky databases, however, are harbingers to a future of &#8216;mechanized&nbsp;knowledge&#8217; processing.
+<br>A future that our grandchildren will find just as obvious as we find Excel.
+<br>(Btw, maybe we could use the term &#8220;Big&nbsp;Information&#8221; for the situation in the Life Sciences: with vast amounts of <em>diverse</em> pieces of information?)</li>
+<li class="item"><span class="nr">9</span>And that&#8217;s a &#8220;<em>Hold</em> your horses&#8221; to doubters and knee&#8209;jerk neigh&#8209;sayers 😃 </li>
+<li class="item"><span class="nr">10</span>
+My friend Ward was the first to explain biological systems to me. He described them as: &#8220;If you poke a biological cell with anything,
+then suddenly lots and lots of things inside it come to life. It&#8217;s like a spider-web of molecules that are all connected. &#8211; For example
+when a cell detects an infection (or a drug, or a change in temperature),
+then on a molecular level the cell basically starts lighting up and flashing like a christmas tree, to deal with this new situation&#8221;.
+</li>
+<li class="item"><span class="nr">11</span> I actually work with a <a href="http://www.colosys.org/">European project</a> that&#8217;s based on this.
+It&#8217;s part of the <a href="https://www.ntnu.edu/health/druglogics">DrugLogics</a> initiative where it&#8217;s called &#8220;Rational drug response prediction&#8221;.
+<br>There&#8217;s a short <a href="http://phdcomics.com/tv/?v=N4NzEyo_HQo">PhDComics video</a> ! <br></li>
+<li class="item"><span class="nr">12</span> I would say that the <a href="https://en.wikipedia.org/wiki/Bus_factor">Bus Factor</a> of modern Life Sciences is pretty low:
+there are many people who do experiments, but relatively only a critical few who make experimental data or research conclusions easily reusable.<br>Sure,
+there are also people who develop algorithms to &#8216;text-mine&#8217; the PDFs (to retrieve very specific facts), but these still need manually created &#8216;training&nbsp;sets&#8217;. </li>
+<li class="item"><span class="nr">13</span> I was involved in a whole <a href="https://www.psb.ugent.be/">department</a> effort, where a few dozen researchers from various research groups
+wanted to curate diverse information on how plant cells work and grow. (E.g. for making rice produce more biomass in challenging climates).
+<br>A challenge was that the information they wished to collect was quite heterogeneous, more than what plain spreadsheets can easily handle. </li>
+<li class="item"><span class="nr">14</span> Then typically, one column evolves to become &#8220;that desperate column with free-text notes of extra context that didn&#8217;t fit anywhere else &#8211; plus
+we also wanted to stop adding even more columns to our spreadsheet/form/table because who can deal with more than 30 columns anyway?&#8221;.
+<br>But rather-free-text in a table cell is of course not &#8216;computable information&#8217;, which defeats the purpose of putting it there.&nbsp; &#8211; E.g.:
+<a href="http://www.geneontology.org/">GO</a> Annotation File&#8217;s <a href="http://www.geneontology.org/page/go-annotation-file-format-20">Column 16</a>, or
+<a href="http://www.psidev.info/"><span class="caps">PSI</span></a> <span class="caps">MITAB</span>&#8216;s <a href="http://psicquic.github.io/MITAB27Format.html">Column 28</a>.
+</li>
+<li class="item"><span class="nr">15</span> That would be a valid statement in a Controlled Language that defines
+  that sentences with the structure &#8216;<span class="pre">&lt;subject&gt;&nbsp;IS&nbsp;&lt;state&gt;</span>&#8216; are valid (among others),
+  and has a rule that extensions like &#8216;<span class="pre">IN&nbsp;&lt;timeInterval&gt;</span>&#8216; are recognized too. </li>
+<li class="item"><span class="nr">16</span>
+Take for example a controlled language that uses a rule like: &#8216;a preposition
+(e.g. &#8220;with&#8221;) always pertains to the word that comes just before it&#8217;.
+<br>Then consider even a simple sentence like &#8220;<span class="pre">John eats chicken with fork</span>&#8220;.
+The computer would interpret this as: it&#8217;s the chicken that has the fork (instead of John eating with it) !
+<br>And that&#8217;s just a 5-word sentence.
+For longer, real-world biological sentences, you&#8217;d have to navigate myriads of rules like that.
+</li>
+
+</ol> <ol class="noteList dry">
+<br><hr><p>Grey notes list:</p>
+<li class="item"><span class="nr">1</span>There are ~ 25 million research articles in the Life Sciences
+(extrapolated for 2017). And they publish over 800&#8217;000 new ones each year.
+<br>Source: <a href="https://www.nlm.nih.gov/bsd/medline_cit_counts_yr_pub.html">https://www.nlm.nih.gov/bsd/medline_cit_counts_yr_pub.html</a>
+</li>
+<li class="item"><span class="nr">2</span> Left image: from <a href="https://commons.wikimedia.org/wiki/File:The_protein_interaction_network_of_Treponema_pallidum.png">wikimedia</a>.
+   Actually, it shows a network of only one type of interacting components (proteins).
+   But in reality there are tons of other components involved, to keep a cell alive.
+   But I guess this is good enough for a cartoony figure. </li>
+<li class="item"><span class="nr">3</span> <a href="https://www.ncbi.nlm.nih.gov/pubmed/17646325">Baumgartner 2007</a> (Fig. 3-7) shows trends
+for teams who read up on a particular topic and catalogue it.
+<br>Conclusion: Their &#8216;To Do&#8217;-List keeps growing faster than their &#8216;Done&#8217;-List.
+</li>
+<li class="item"><span class="nr">4</span>and between Knowledge, and sometimes Wisdom too.<br>See <a href="https://en.wikipedia.org/wiki/DIKW_pyramid">Data-Information-Knowledge-Wisdom pyramid</a>.</li>
+<li class="item"><span class="nr">5</span>
+In the sense of <a href="http://www.dictionary.com/browse/idea">dictionary.com</a> &#8216;s:
+<em>any conception existing in the mind as a result of mental understanding; a thought, conception, or notion, developed by the mind</em>.
+</li>
+<li class="item"><span class="nr">6</span> <a href="https://www.nature.com/nature/journal/v455/n7209/full/455047a.html">Howe D, et al: The future of biocuration (2008), Nature</a>. </li>
+<li class="item"><span class="nr">7</span> This already happens, see e.g. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004426">Flobak 2015: Discovery of Drug Synergies in Gastric Cancer Cells Predicted by Logical
+Modeling</a>. </li>
+<li class="item"><span class="nr">8</span> The <a href="https://www.force11.org/group/fairgroup/fairprinciples"><span class="caps">FAIR</span> Data Principles</a>
+are calling for experimental (structured) <strong>Data</strong> to be made: Findable, Accessible, Interoperable, and Reusable.
+<br>Quite similarly here, we wish for heteregenous <strong>Information</strong> to become, not only findable, but also computationally integratable.
+</li>
+<li class="item"><span class="nr">9</span> See <a href="https://en.wikipedia.org/wiki/Biocurator">Wikipedia: Biocurator</a> or <a href="https://biocuration.org/">https://biocuration.org</a> </li>
+<li class="item"><span class="nr">10</span> &bull; <a href="https://www.ebi.ac.uk/training/online/course/biocuration-introduction"><span class="caps">EBI</span>: European Institute for Bioinformatics</a>,
+<br>&bull; <a href="http://www.geneontology.org/">GO: Gene Ontology</a>,
+<br>&bull; <a href="http://www.uniprot.org/">UniProt</a>,
+<br>&bull; <a href="http://www.uniprot.org/"><span class="caps">NCBI</span>: National Center for Biotechnology Information</a>.
+</li>
+<li class="item"><span class="nr">11</span> E.g. <a href="http://www.lbbc.ibb.unesp.br/htri/" title="Human Transcriptional Regulation Interactions database">HTRiDB</a>,
+or see the <a href="http://www.biosharing.org">BioSharing</a> database of databases, or see <a href="https://en.wikipedia.org/wiki/List_of_biological_databases">this list</a>,
+or <a href="https://en.wikipedia.org/wiki/List_of_neuroscience_databases">this list</a>
+(note: these lists show a mix of databases of curated information, as well as of experimental data).
+<br>And even larger databases have run out of funding, causing chaos, e.g.
+<a href="http://www.arabidopsis.org/" title="The Arabidopsis Information Resource"><span class="caps">TAIR</span></a> (now rescued by <a href="http://phoenixbioinformatics.org/">Phoenix Bioinformatics</a>).
+See also the &#8216;<a href="http://www.nature.com/ncb/journal/v7/n7/full/ncb0705-639b.html">Databases in peril</a>&#8216; Nature editorial.
+</li>
+<li class="item"><span class="nr">12</span> At the <a href="https://www.ntnu.edu/nv/research/systemsbiology/projects/gastrin">Gastrin research</a> group
+at <acronym title="Norwegian University of Science and Technology"><span class="caps">NTNU</span></acronym> University. </li>
+<li class="item"><span class="nr">13</span> See <a href="https://en.wikipedia.org/wiki/Biological_organisation">Wikipedia: Levels of biological organisation</a>. </li>
+<li class="item"><span class="nr">14</span> Adapted from Star Trek Discovery episode <a href="http://www.imdb.com/title/tt5171438/episodes?season=1">1.03: &#8216;Context is for Kings&#8217;</a>. </li>
+<li class="item"><span class="nr">15</span> or Controlled Language.
+   I.e. an artificial language, with well-defined vocabulary, and restricted grammar rules.
+   See <a href="https://en.wikipedia.org/wiki/Controlled_natural_language">this</a>
+   and <a href="https://en.wikipedia.org/wiki/Formal_language">this</a> Wikipedia page. </li>
+<li class="item"><span class="nr">16</span> See the <a href="http://attempto.ifi.uzh.ch/site/">Attempto Controlled English project site</a>
+   or its <a href="https://en.wikipedia.org/wiki/Attempto_Controlled_English">Wikipedia page</a>. </li>
+<li class="item"><span class="nr">17</span> See the <a href="http://openbel.org/">Biological Expression Language project site</a>
+   or this <a href="http://belief.scai.fraunhofer.de/BeliefDashboard/home/bel">Introduction to <span class="caps">BEL</span></a>. </li>
+<li class="item"><span class="nr">18</span> See the <a href="https://www.w3.org/RDF/">Resource Description Framework project site</a>
+   or this <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Wikipedia page</a>,
+   or these <a href="https://www.google.com/search?q=rdf+graph&amp;tbm=isch">images</a> to see what information represented in a graphical form of <span class="caps">RDF</span> looks like. </li>
+
+</ol>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+
+
+</body>
+</html>
