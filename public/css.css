@@ -873,6 +873,21 @@ p.prev i.arrow.left {
   margin-right: 7px;
 }
 
+.nextPageIndic {
+  float: right;
+  font-weight: bold;
+  font-size: 28px;
+}
+.content .nextPageIndic a {
+  color: #333;
+}
+.nextPageIndic .arrow.right {
+  border-width: 0 4px 4px 0;
+  padding: 6px;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
 p.dateInfo {
   color: #AAA;
 }
