@@ -95,7 +95,7 @@ var showMain = 1;
 
 
 
-<h4>Goal &nbsp; <span class="smaller">(intro recap)</span></h4>
+<h4>Goal &nbsp; <span class="smaller">(intro summary)</span></h4>
 
 
 
@@ -105,7 +105,7 @@ var showMain = 1;
 and easily <a href="intro.html#biocuration">reformulate</a> it into a &#8216;computable form&#8217; that clarifies its full meaning and &#8216;context&#8217;.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Please read the <a href="intro.html">Introduction page</a> if you haven&#8217;t yet.<br />Or at least the Blue Boxes with our key concepts:
   &#8216;<a href="intro.html#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro.html#context">Context&nbsp;details</a>&#8216;,
   &#8216;<a href="intro.html#computable-information">Computable&nbsp;Information</a>&#8216;. </span></span></p>
-<p><span class="caps">VSM</span> is tool that lets people manually create computable information, with both high&nbsp;ease&nbsp;of&nbsp;use, and high&nbsp;expressive power
+<p><span class="caps">VSM</span> is a tool that lets people manually create computable information, with both high&nbsp;ease&nbsp;of&nbsp;use, and high&nbsp;expressive power
 &nbsp;(see also the introduction&#8217;s <a href="intro.html#new-tech">Venn diagram</a>).</p>
 
 <p>We aimed for <span class="caps">VSM</span> to be applicable to the widest range of use-cases, i.e.: it works for diverse, heterogeneous information.
@@ -157,7 +157,10 @@ These can be used over and over, to create infinite combinations.</p>
 <ul>
 	<li><span class="">We have built a prototype <span class="caps">VSM</span> user-interface, for the purpose of illustration. It is embedded it in this site for the interactive examples.
 We&#8217;re also using it at our lab for a first, specific curation <a href="scicura.html">project</a>.
- But a full-fledged, easily reusable web-component for biocuration based on <span class="caps">VSM</span> still needs a good programming effort.</span></li>
+ But a full-fledged, easily reusable web-component for biocuration based on <span class="caps">VSM</span> still needs a good programming effort.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
+This is now happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub.
+There we&#8217;re building several modules that should culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
+</span></span></span></li>
 	<li><span class="">While <span class="caps">VSM</span> was designed to solve a problem in the biosciences, we believe that <span class="caps">VSM</span> is much more generally applicable.
  We therefore use many non-biological examples in what follows.</span></li>
 	<li><span class="">To get a quick overview, just read the &#8216;Short Story&#8217; sections below.
@@ -181,7 +184,7 @@ We&#8217;re also using it at our lab for a first, specific curation <a href="sci
 <p><img class="i65 imgl vsm" src="img/vsm01-1.png" alt="" /></p>
 <p>When you type a word in it, you get an <em>autocomplete list</em>.
 It offers terms from one or more pre-loaded <em>dictionaries</em>, i.e. lists of words for which people already agreed on a precise definition. &#8211; This
-example just uses a toy-dictionary called Persons:<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
+example just uses a toy-dictionary called Persons:<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup">
  For use in the real world, a <span class="caps">VSM</span>-box should be linked to some of the many available
  biological <a href="https://en.wikipedia.org/wiki/Open_Biomedical_Ontologies">Ontologies</a>
  or  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary">Controlled Vocabularies</a> (CV).
@@ -236,7 +239,7 @@ or even curator-built lists.<span class="note dry popupHolder"><span class="popx
 <p>If a same term occurs in multiple lists, then the autocomplete helps the user to disambiguate between the available concepts/IDs.
 For example for a mouse and a human gene with the same name, the selection panel would also display the species of each.
 Once selected, only the term remains visible to the user while the ID is stored in the background, by the curation system.
-The <acronym title="User Interface"><span class="caps">UI</span></acronym> can still show full information when mouse-hovering a term,<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup"> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
+The <acronym title="User Interface"><span class="caps">UI</span></acronym> can still show full information when mouse-hovering a term,<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
 <br />In the Full Story sections, we may also discuss possible alternatives or extensions,
 which are to be seen as suggestions for future implementation.
 </span></span>or could place a clarifying icon by it.</p>
@@ -290,7 +293,7 @@ By doing so you add a <em>trident</em> connector in the <span class="caps">VSM</
 <p><img class="i65 imgl vsm" src="img/vsm02-3.png" alt="" /></p>
 <p><img class="i65 imgl vsm" src="img/vsm02-4.png" alt="" /></p>
 <p>Next, we can easily repeat this, once we realize that
-the preposition &#8220;with&#8221; is just the same as a relation, being: &#8220;using&#8221;. (See:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup">
+the preposition &#8220;with&#8221; is just the same as a relation, being: &#8220;using&#8221;. (See:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">6</span><span class="popx popup">
 &bull; I like to say that they are different &#8216;avatars&#8217;: i.e.  manifestations, appearances, different lexical forms that represents the same thing.
 (Much more about that in The Full Story).
 <br /><br />&bull; <span class="caps">VSM</span>-terms for &#8220;with&#8221; / &#8220;using&#8221; / &#8220;uses&#8221; / &#8230; would in fact all have the same ID.
@@ -324,7 +327,7 @@ just remove the second trident (hover it and click the top-right &#8216;x&#8217;
 In case you wonder why the (correct) second trident connects <strong>not to <em>John</em>, but to <em>eats</em></strong> :
 If you would connect it to <em>John</em>, then it would only mean that John is using the fork for something, but not necessarily that he&#8217;s eating chicken with it:
 then he could e.g. be eating chicken with his hands, and use the fork to hold a tomato! &#8211; So
-it&#8217;s the <span class="undd"><em>eating</em> (by John)</span>, done <span class="undd">by-use-of</span>/with a <span class="undd">fork</span>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">6</span><span class="popx popup">
+it&#8217;s the <span class="undd"><em>eating</em> (by John)</span>, done <span class="undd">by-use-of</span>/with a <span class="undd">fork</span>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">7</span><span class="popx popup">
 A note to impatient knowledge-representation experts: this intuitive description will become elegantly rigorous during the Full Story sections.
 <br /><br />Note #2: The John-holds-tomato case is shown as a <span class="caps">VSM</span>-sentence later, on the Examples page.
 </span></span></p>
@@ -341,7 +344,7 @@ And that will be quite easy for more complex cases too. &#8211; But that&#8217;s
 <h4>The Full Story</h4>
 <p>Once entered, the sequence of terms may look like disambiguated natural language.
 But a sentence is typically not copied verbatim from a paper
-(read also&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">7</span><span class="popx popup">
+(read also&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">8</span><span class="popx popup">
 In fact, we are able to make it <strong>look</strong> a lot like natural language,
 because we are <em>allowed</em> to make <span class="caps">VSM</span>-terms <strong>appear</strong>  as conjugated verbs, nouns, prepositions, etc.
 <br />That ensures that we can keep complex information (i.e. longer sentences) <strong>easily readable</strong> for us, humans, too!
@@ -389,7 +392,7 @@ Only by connecting the second trident to the &#8220;eating&#8221; term does one 
 <p>📖 <strong>The Second Founding Principle of <span class="caps">VSM</span>.</strong>
 &nbsp;A connector leg always attaches to one particular term,
 and never to an entire other triple. This is even true when a leg attaches to a term that is used as a relation in another triple;
-and this makes <span class="caps">VSM</span> different from <span class="caps">RDF</span>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">8</span><span class="popx popup"> In <span class="caps">RDF</span> you need to make a &#8216;reification&#8217; construct in order to point to a relation.
+and this makes <span class="caps">VSM</span> different from <span class="caps">RDF</span>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">9</span><span class="popx popup"> In <span class="caps">RDF</span> you need to make a &#8216;reification&#8217; construct in order to point to a relation.
 I.e. you need to create an additional &#8216;object&#8217; that represents that &#8216;relation&#8217;
 (or in fact, its entire embedding triple), and that you can then point to.
 <br />Because <span class="caps">RDF</span> treats &#8216;relations&#8217; as fundamentally different things than &#8216;objects&#8217;. </span></span>This difference is intentional, and it makes the syntax-definition process simple, flexible, scalable, and intuitive, following the thinking of the curator.
@@ -401,7 +404,7 @@ when viewed under another connecting trident.</p>
 (And in Fig 1.2e, the verb term &#8220;eats&#8221; is in meaning identical to its noun-form &#8216;the eating&#8217;).
 If both lexical alternatives would be available as terms in a dictionary for <span class="caps">VSM</span>, then they would carry the same ID. &#8211; In
 conclusion: <em>each <span class="caps">VSM</span>-term should generally be thought of as an &#8216;entity&#8217;</em>.
-<br />(See also this note:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">9</span><span class="popx popup"> This Principle is crucial, so let&#8217;s repeat it in other words:
+<br />(See also this note:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> This Principle is crucial, so let&#8217;s repeat it in other words:
 <br />Only when some trident attaches to a <span class="caps">VSM</span>-term with its relation-leg, only then is the term <em>made</em> to be seen as a relation.
 And then only so, under that one trident, i.e. in that one triple, locally.
 <br /><br />So anything that e.g. <span class="caps">RDF</span> views as a relation, <span class="caps">VSM</span> views only <em>locally</em> as a relation (under a particular connector)
@@ -436,7 +439,7 @@ And that enabled the second trident to connect to that particular&#8217;ized con
 
 <p>Now, this &#8216;context sharing&#8217; happens for all connected terms. For example the first term now represents &#8216;<em>the A</em> that activates B, in C&#8217;,
 and the last term &#8216;<em>the C</em> in which&#8230;&#8217;, etc.
-<br />So <strong>every time you add a connector,&nbsp; each of the connected terms&nbsp; receives extra context&nbsp; from all others</strong>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> Some more ways to say this:&nbsp;
+<br />So <strong>every time you add a connector,&nbsp; each of the connected terms&nbsp; receives extra context&nbsp; from all others</strong>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup"> Some more ways to say this:&nbsp;
 &#8216;each term <em>is placed in the context of</em> / accumulates extra context-meaning from all others&#8217;, or:&nbsp;
 &#8216;all connected <span class="caps">VSM</span>-terms <em>enrich</em> each other&#8217;s meaning&#8217;.
 <br />This context meaning is shared with indirectly connected <span class="caps">VSM</span>-terms too.
@@ -504,7 +507,7 @@ But the <span class="caps">VSM</span>-term&#8217;s ID and associated meaning rem
 </ul>
 <p><img class="i65 imgl vsm" src="img/vsm04-4.png" alt="" /></p>
 <p>And we got an easy to read sentence, an intuitive structure, and a clear, computable piece of information!&nbsp; &#8211; So
-<span class="caps">VSM</span> enables us to easily build complex statements, by reusing the same building blocks.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup">Easy to read: relative to the complexity of the information. &#8211; And of course (just like natural language) relative to the reader&#8217;s knowledge of the research field.
+<span class="caps">VSM</span> enables us to easily build complex statements, by reusing the same building blocks.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup">Easy to read: relative to the complexity of the information. &#8211; And of course (just like natural language) relative to the reader&#8217;s knowledge of the research field.
 <br /><br />To quote one of our curators:
 <br />&#8220;From a user&#8217;s side, I don&#8217;t think that complexity is difficult to handle at all.
 <br />In fact, I&#8217;m excited about all the <em>complexity we can now handle</em> in such an elegant manner.
@@ -512,7 +515,7 @@ But the <span class="caps">VSM</span>-term&#8217;s ID and associated meaning rem
 </span></span></p>
 
 <p class="smaller">Notes: 1) This is not a sentence copied verbatim from text. It is reformulated information, boiled down to its essence by writing it with <span class="caps">VSM</span>.&nbsp; &#8211; 2)
-The connectors are <em>manually</em> added.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup">
+The connectors are <em>manually</em> added.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">13</span><span class="popx popup">
 There was once this guy at a conference who mistakenly thought that the connectors were a &#8216;<a href="https://en.wikipedia.org/wiki/Parse_tree">parse-tree</a>&#8216;
 (as in: generated by a <a href="https://en.wikipedia.org/wiki/Text_mining">text-mining</a> algorithm).
 Because they look a bit like it. &#8211; He later admitted he had been answering an email during my presentation, though.
@@ -578,7 +581,7 @@ Some of their terms come from ontologies, some others are yet to be added to off
 <p>A phrase like &#8216;white mouse&#8217; is not a triplet of terms. So how do we write this with <span class="caps">VSM</span>?</p>
 <p>Simple. Just read the phrase silently as: it&#8217;s a &#8220;mouse [being] white&#8221;.
 Meanwhile you add a trident, from &#8220;mouse&#8221; as a subject, to &#8220;white&#8221; as an object,
-but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">13</span><span class="popx popup">
+but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup">
 You could also read it as<br />&#8220;mouse [having-attribute] white&#8221;, or as<br />&#8220;mouse [has-color] white&#8221;.
 <br />And the computer would understand it like that too, because it would already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
@@ -614,7 +617,7 @@ A user could add this <strong>first type</strong> of bident just like a trident,
 where the latter uses a <strong>second type</strong> of bident, one that omits the subject leg (Fig 2b-c).
 Apart from using the appropriate synonym for the &#8220;activation&#8221; relation (with same ID),
 the principal difference is that the activator is unspecified in the latter case. Appropiately, the structure of both statements is similar, thanks to the bident.
-This consistency would not be present when using a second triple &#8220;activation having-activatee B&#8221; with an artificial relation inserted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup"> Note for experts:
+This consistency would not be present when using a second triple &#8220;activation having-activatee B&#8221; with an artificial relation inserted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup"> Note for experts:
 <br />One could also enter &#8220;activation&nbsp; <strong>of</strong> &nbsp;B&#8221;, by using an explicit <span class="caps">VSM</span>-term &#8220;<strong>of</strong>&#8220;, which would have the meta-meaning
 &#8216;has&nbsp;object&#8217;.
 <br /><br />Note #2: please do not misunderstand and think that &#8216;VSM knows&#8217; if two sentences (two graph structures) would represent a same, rephrased meaning.
@@ -649,7 +652,7 @@ The user can add a trident that misses any one of its three legs, i.e. a bident,
 The bident in (a) accomodates a verb without object. The bident in &#40;c) represents &#8220;activation-of B&#8221; with an unknown subject,
 which is structurally similar to case (b) where a subject &#8220;A&#8221; is known.
 The bident in (d) frees the curator from the obligation to explicitly define a relation that could be computationally inferred, as in (e).
-(f-g) show other attributes with an implicit, inferable relation: &#8220;has-precision&#8221;, &#8220;has-count&#8221;, and &#8220;has-concentration&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup">
+(f-g) show other attributes with an implicit, inferable relation: &#8220;has-precision&#8221;, &#8220;has-count&#8221;, and &#8220;has-concentration&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup">
 Here we also see that numbers can be represented with <span class="caps">VSM</span>-terms.
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
@@ -769,12 +772,12 @@ and then enter it repetitively into a spreadsheet or database form.</p>
 <p><img class="i65 imgl vsm" src="img/vsm06-5.png" alt="" /></p>
 <p><span class="caps">VSM</span>-templates imitate spreadsheet rows or entry forms. But in addition they offer a convenient autocomplete
 (which is quicker and less error-prone that spreadsheets),
-with each field linked to its own, particular set of term dictionaries.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup">Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
+with each field linked to its own, particular set of term dictionaries.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup">Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
  <br /><br />Note for experts:&nbsp; In our prototype UI, we can specify a number of &#8220;preferred <acronym title="Controlled Vocabulary"><span class="caps">CV</span></acronym> s&#8221; for each empty field.
  Terms from those CVs are then conveniently ranked on top of the autocomplete suggestion list. &#8211; Alternatively,
  one may want to configure the template-UI to leave less flexibility,
  and to require that users enter terms only from a specific CV. </span></span>And they offer an intuitive clarity of what to fill in where, because of the readable &#8216;sentence&#8217; format.
-Our test-users literally loved all this.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup"> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
+Our test-users literally loved all this.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">18</span><span class="popx popup"> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
  our test-users would be horrified if they had to go back to the technology they used before <span class="caps">VSM</span>-templates.
  <br /><br />They described this new curation technology &#8211; <span class="caps">VSM</span> &#8211; and
  what could be done automatically for them as a result,
@@ -876,6 +879,10 @@ or biological context.</p>
   But unlike them, <span class="caps">VSM</span> does not use their complicated rules on word order.
   Instead, <span class="caps">VSM</span> uses a simpler and more powerful way to clarify structure, as we will show. </li>
 <li class="item"><span class="nr">3</span>
+This is now happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub.
+There we&#8217;re building several modules that should culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
+</li>
+<li class="item"><span class="nr">4</span>
  For use in the real world, a <span class="caps">VSM</span>-box should be linked to some of the many available
  biological <a href="https://en.wikipedia.org/wiki/Open_Biomedical_Ontologies">Ontologies</a>
  or  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary">Controlled Vocabularies</a> (CV).
@@ -883,33 +890,33 @@ or biological context.</p>
  <br>It is an essential step anyways for communicating with colleagues, to agree on what words mean what!
  Building an agreed-upon dictionary just formalizes this process and creates a common work of reference.
 </li>
-<li class="item"><span class="nr">4</span> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
+<li class="item"><span class="nr">5</span> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
 <br>In the Full Story sections, we may also discuss possible alternatives or extensions,
 which are to be seen as suggestions for future implementation.
 </li>
-<li class="item"><span class="nr">5</span>
+<li class="item"><span class="nr">6</span>
 &bull; I like to say that they are different &#8216;avatars&#8217;: i.e.  manifestations, appearances, different lexical forms that represents the same thing.
 (Much more about that in The Full Story).
 <br>&bull; <span class="caps">VSM</span>-terms for &#8220;with&#8221; / &#8220;using&#8221; / &#8220;uses&#8221; / &#8230; would in fact all have the same ID.
 <br>So it makes no difference for a computer&#8217;s understanding which form you choose. Still, by choosing the form that we&#8217;d expect to see in e.g. English,
 we can create <span class="caps">VSM</span>-sentences that are much easier to read for humans.
 </li>
-<li class="item"><span class="nr">6</span>
+<li class="item"><span class="nr">7</span>
 A note to impatient knowledge-representation experts: this intuitive description will become elegantly rigorous during the Full Story sections.
 <br>Note #2: The John-holds-tomato case is shown as a <span class="caps">VSM</span>-sentence later, on the Examples page.
 </li>
-<li class="item"><span class="nr">7</span>
+<li class="item"><span class="nr">8</span>
 In fact, we are able to make it <strong>look</strong> a lot like natural language,
 because we are <em>allowed</em> to make <span class="caps">VSM</span>-terms <strong>appear</strong>  as conjugated verbs, nouns, prepositions, etc.
 <br>That ensures that we can keep complex information (i.e. longer sentences) <strong>easily readable</strong> for us, humans, too!
 <br>A computer doesn&#8217;t understand (and thus doesn&#8217;t use/need) conjugations etc.,
 so we&#8217;ll need to clarify the structure of a sentence in some other (preferably easy!) way.
 </li>
-<li class="item"><span class="nr">8</span> In <span class="caps">RDF</span> you need to make a &#8216;reification&#8217; construct in order to point to a relation.
+<li class="item"><span class="nr">9</span> In <span class="caps">RDF</span> you need to make a &#8216;reification&#8217; construct in order to point to a relation.
 I.e. you need to create an additional &#8216;object&#8217; that represents that &#8216;relation&#8217;
 (or in fact, its entire embedding triple), and that you can then point to.
 <br>Because <span class="caps">RDF</span> treats &#8216;relations&#8217; as fundamentally different things than &#8216;objects&#8217;. </li>
-<li class="item"><span class="nr">9</span> This Principle is crucial, so let&#8217;s repeat it in other words:
+<li class="item"><span class="nr">10</span> This Principle is crucial, so let&#8217;s repeat it in other words:
 <br>Only when some trident attaches to a <span class="caps">VSM</span>-term with its relation-leg, only then is the term <em>made</em> to be seen as a relation.
 And then only so, under that one trident, i.e. in that one triple, locally.
 <br>So anything that e.g. <span class="caps">RDF</span> views as a relation, <span class="caps">VSM</span> views only <em>locally</em> as a relation (under a particular connector)
@@ -918,7 +925,7 @@ and views it elsewhere as an entity / as &#8216;reified&#8217; / &#8216;as a nou
 <br>This was a super-essential and necessary step for designing <span class="caps">VSM</span>&#8216;s expressivity and simplicity in what will follow:
 <strong><em>think</em> of all <span class="caps">VSM</span>-terms as nouns</strong> / &#8216;thingified concepts&#8217; / something that you can mentally point to.
 </li>
-<li class="item"><span class="nr">10</span> Some more ways to say this:&nbsp;
+<li class="item"><span class="nr">11</span> Some more ways to say this:&nbsp;
 &#8216;each term <em>is placed in the context of</em> / accumulates extra context-meaning from all others&#8217;, or:&nbsp;
 &#8216;all connected <span class="caps">VSM</span>-terms <em>enrich</em> each other&#8217;s meaning&#8217;.
 <br>This context meaning is shared with indirectly connected <span class="caps">VSM</span>-terms too.
@@ -927,24 +934,24 @@ This is really useful. Because then you can say more about <em>that</em> concept
 For example: &#8216;that being-located in&#8230;&#8217; is only &#8220;probable&#8221;. Then we can form the sentence: &#8220;A activates B probably in C&#8221;.
 <span class="smaller">(To add adverbs, see next Short Story).</span>
 </li>
-<li class="item"><span class="nr">11</span>Easy to read: relative to the complexity of the information. &#8211; And of course (just like natural language) relative to the reader&#8217;s knowledge of the research field.
+<li class="item"><span class="nr">12</span>Easy to read: relative to the complexity of the information. &#8211; And of course (just like natural language) relative to the reader&#8217;s knowledge of the research field.
 <br>To quote one of our curators:
 <br>&#8220;From a user&#8217;s side, I don&#8217;t think that complexity is difficult to handle at all.
 <br>In fact, I&#8217;m excited about all the <em>complexity we can now handle</em> in such an elegant manner.
 <br>It allows us to focus on the biology; no more need to worry about the entry format so much.&#8221;
 </li>
-<li class="item"><span class="nr">12</span>
+<li class="item"><span class="nr">13</span>
 There was once this guy at a conference who mistakenly thought that the connectors were a &#8216;<a href="https://en.wikipedia.org/wiki/Parse_tree">parse-tree</a>&#8216;
 (as in: generated by a <a href="https://en.wikipedia.org/wiki/Text_mining">text-mining</a> algorithm).
 Because they look a bit like it. &#8211; He later admitted he had been answering an email during my presentation, though.
 (I thank him for immunizing us against one more possible misunderstanding though).
 </li>
-<li class="item"><span class="nr">13</span>
+<li class="item"><span class="nr">14</span>
 You could also read it as<br>&#8220;mouse [having-attribute] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
 <br>And the computer would understand it like that too, because it would already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </li>
-<li class="item"><span class="nr">14</span> Note for experts:
+<li class="item"><span class="nr">15</span> Note for experts:
 <br>One could also enter &#8220;activation&nbsp; <strong>of</strong> &nbsp;B&#8221;, by using an explicit <span class="caps">VSM</span>-term &#8220;<strong>of</strong>&#8220;, which would have the meta-meaning
 &#8216;has&nbsp;object&#8217;.
 <br>Note #2: please do not misunderstand and think that &#8216;VSM knows&#8217; if two sentences (two graph structures) would represent a same, rephrased meaning.
@@ -952,7 +959,7 @@ and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if neede
 to be used by people and algorithms. &#8211; Just
 like &#8216;English does not know&#8217; what you mean. Your brain does, and it uses English to represent information at some level.
 </li>
-<li class="item"><span class="nr">15</span>
+<li class="item"><span class="nr">16</span>
 Here we also see that numbers can be represented with <span class="caps">VSM</span>-terms.
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
@@ -960,12 +967,12 @@ For example, one could be an “approximately&nbsp; 5”, another a “5 &nbsp;&
 <br>So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
 </li>
-<li class="item"><span class="nr">16</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
+<li class="item"><span class="nr">17</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
  <br>Note for experts:&nbsp; In our prototype UI, we can specify a number of &#8220;preferred <acronym title="Controlled Vocabulary"><span class="caps">CV</span></acronym> s&#8221; for each empty field.
  Terms from those CVs are then conveniently ranked on top of the autocomplete suggestion list. &#8211; Alternatively,
  one may want to configure the template-UI to leave less flexibility,
  and to require that users enter terms only from a specific CV. </li>
-<li class="item"><span class="nr">17</span> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
+<li class="item"><span class="nr">18</span> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
  our test-users would be horrified if they had to go back to the technology they used before <span class="caps">VSM</span>-templates.
  <br>They described this new curation technology &#8211; <span class="caps">VSM</span> &#8211; and
  what could be done automatically for them as a result,
