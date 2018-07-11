@@ -91,8 +91,8 @@ The web app is now being used for a real curation project. So it serves as a tes
 <p>Other people can already play with the demo at <a href="http://demo.scicura.org">demo.scicura.org</a>. &#8211; There, start by selecting a template at the top-left.</p>
 <p><strong>SciCura 2</strong> is still just a dream of what could be: a community-based, multi-purpose curation platform.
 Like a Wiki but where every page is a full, <span class="caps">VSM</span>-based summary of a research paper, for all papers.
-With public and temporarily private &#8216;curation projects&#8217;.
-And with linked or editable dictionaries with version control, user role management, curation discussion, and a curation quality management process.
+With public and perhaps temporarily private &#8216;curation projects&#8217;.
+And with linked or editable dictionaries with version control. And with user role management, curation discussion, and a curation quality management process.
 And with third-party plugins for computation on the huge graph of linked, curated data.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Sounds like a business idea, not?
 <br />It&#8217;s unfortunate for science and society (and our energy), that we couldn&#8217;t reach anyone yet with the vision or ambition to fund it. Yet!
 <br /><br />Then again, the purpose of this site is to reach people on a larger scale.
@@ -199,19 +199,19 @@ while the user only had to fill in a few autocompleted blanks in a template <spa
 
 <ul>
 	<li><strong>Integration of ontologies, biological dictionaries, term suggestion service</strong> (like <a href="http://geneontology.org/page/termgenie">TermGenie</a>). &#8211; Currently
-the dictionaries loaded in SciCura have to be manually updated, after user request.</li>
+the dictionaries loaded in SciCura 1 have to be manually updated, after user request.</li>
 </ul>
 <ul>
 	<li><strong>User-added new-terms management</strong> is a critical point that should be addressed. &#8211; Currently
-SciCura&#8217;s main developer has to edit and clean up new terms added by users,
+SciCura 1&#8217;s developer has to edit and clean up new terms added by users,
   because this still has to be done in the database directly. Users should be given an interface to do this efficiently.</li>
 </ul>
 <ul>
 	<li><strong><span class="caps">VSM</span>-template building interface</strong>. &#8211; Currently the main developer has to encode, paste, and change templates manually in the database.</li>
 </ul>
 <ul>
-	<li><strong>General &#8216;<a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a>&#8216; of the codebase</strong>. &#8211; Because
-even though we kept a &#8216;general outlook&#8217; when users asked to add features
+	<li><strong>General &#8216;<a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a>&#8216; of the codebase</strong>.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup"> This has now been started under the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub. </span></span>&#8211; Because
+ although we kept a &#8216;general outlook&#8217; when users asked to add features
  for our one curation project, we were so constrained in resources that it affected code evolvability. &#8211; And
  clean code will open the project for collaborative development!</li>
 </ul>
@@ -219,11 +219,11 @@ even though we kept a &#8216;general outlook&#8217; when users asked to add feat
 	<li><strong>More curation pilot projects</strong>: both broad and deep. &#8211; Broad: to test/showcase <span class="caps">VSM</span> on multiple topics. &#8211; Deep: to make use of the full flexibility of <span class="caps">VSM</span>.
 	<ul>
 		<li><strong>Multiple curation rooms</strong> are needed for this. With access settings,
-especially for during the messy initial phase of curation project (before publication of results).</li>
+especially for during the messy initial phase of a curation project (before publication of results).</li>
 	</ul></li>
 </ul>
 <ul>
-	<li><strong>Query interface</strong>. &#8211; Currently the query functionality has to be invoked rather cumbersomely, hardcoded from within the program code.</li>
+	<li><strong>Query interface</strong>. &#8211; While a query algorithm has been written, it currently has to be invoked rather cumbersomely, hardcoded from within the program code.</li>
 </ul>
 <ul>
 	<li><strong>Exports to <span class="caps">RDF</span>/<span class="caps">OWL</span></strong>. &#8211; Current knowledge experts and existing tools are accustomed to these. So it would be opportune to build
@@ -265,6 +265,7 @@ To communicate more efficiently than with one person at a time
  After hours of writing and rewriting text, my mental batteries are drained.
  While after hours of programming, I often feel more hungry to solve all the next challenges!
 </li>
+<li class="item"><span class="nr">3</span> This has now been started under the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub. </li>
 
 </ol> <ol class="noteList dry">
 </ol>

@@ -546,8 +546,8 @@ For example in Fig 1.3h, the second leftmost trident expresses that &#8220;the-b
 Note that here, the term &#8220;in&#8221; will have been linked by the curator to the concept &#8220;pertaining-to&#8221; rather than &#8220;is-located-in&#8221;.
 Each term represents an identifier from a controlled vocabulary, e.g. &#8220;leaf lamina&#8221; is provided by PO (Plant Ontology)
 and &#8220;twisted&#8221; by <span class="caps">PATO</span> (Phenotype And Trait Ontology).
-We want to accentuate that any additional biological context, like the details captured here, helps to increase the quality of the information,
-for instance by resolving two seemingly contradictory &#8216;bare triple&#8217; statements through reconciliatory contextual details.</p>
+We want to accentuate that any additional biological context, like the details captured here, helps to increase the quality of the information.
+This could for instance resolve two seemingly contradictory &#8216;bare triple&#8217; statements through reconciliatory contextual details.</p>
 <p>The order in which connectors are added or displayed is irrelevant for the connection structure. Still, some ordering may look more intuitive than others,
 for example based on which subunit one thinks of as central in the statement (see &#8216;Head&#8217; later). Various visual sort algorithms can be developed for this UI aspect.</p>
 <p>Note that although this all can be mapped to <acronym title="Resource Description Framework"><span class="caps">RDF</span></acronym><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> See this <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Wikipedia page</a>,
@@ -583,7 +583,7 @@ Some of their terms come from ontologies, some others are yet to be added to off
 Meanwhile you add a trident, from &#8220;mouse&#8221; as a subject, to &#8220;white&#8221; as an object,
 but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup">
 You could also read it as<br />&#8220;mouse [having-attribute] white&#8221;, or as<br />&#8220;mouse [has-color] white&#8221;.
-<br />And the computer would understand it like that too, because it would already know that &#8220;white&#8221; is a color,
+<br />And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </span></span>The connector now has only two legs, so we call it a <em>bident</em> :</p>
 <p><img class="i65 imgl vsm" src="img/vsm05-1.png" alt="" /></p>
@@ -659,6 +659,8 @@ because just like other <span class="caps">VSM</span>-terms, a number&#8209;conc
 For example, one could be an “approximately&nbsp; 5”, another a “5 &nbsp;&plusmn;&nbsp; 2”, and another an “at-least&nbsp; 5”.
 <br />So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
+(This is implemented in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
+see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>).
 </span></span></p>
 <p><a name="list-connector"></a></p>
 <h3>2.4. Group types that combine items : the list&#8209;connector</h3>
@@ -669,12 +671,12 @@ Then this construct with triples is artificial, as it may suggest that A and B c
 In addition, the longer a list, the more burdensome all the artificial triples become to the curator.</p>
 <p>With <span class="caps">VSM</span>&#8216;s <strong>list-connector</strong>, one can express that any number of <strong>list-item</strong> terms all come together as one group, in a way specified by a <strong>list-relation</strong> term.
 E.g. Fig 3a states that reactants all together react to D, as an unspecified group. The fact that the group order is unspecified,
-would be embedded in the meaning/ID of the chosen list-relation &#8220;and&#8221; (or: &#8220;and-(unordered-set)&#8221;).
-The curator is free to choose other list-relations as well: for instance a term &#8220;and-(ordered-list)&#8221;; or &#8220;sum-of&#8221;; or &#8220;either-or&#8221;,
+would be embedded in the meaning/ID of the chosen list-relation &#8220;and&#8221; (or: &#8220;and-(as-unordered-set)&#8221;).
+The curator is free to choose other list-relations as well: for instance a term &#8220;and-(as-ordered-list)&#8221;; or &#8220;sum&#8209;of&#8221;; or &#8220;either&#8209;or&#8221;,
 which is used in Fig 3b to state that &#8216;either A, B, or C bind to D&#8217;.
 This term &#8220;either-or&#8221; is also an example of an idiosyncratic phrase in natural language, that must be captured with a single term in <span class="caps">VSM</span>.</p>
 
-<p>The examples also illustrate this: the specific concept, of a group of all items combined in the way defined by the list-relation,
+<p>The examples also illustrate this: the specific concept that represents a group of all items combined in the way defined by the list-relation,
 is now embedded in this list-relation term. Just like how tridents function, the list-connectors in Fig 3a-b turn their list-relation term into a specific:
 &#8220;the-A-B-C-group&#8221;, and (for lack of a less artificial way of phrasing) &#8220;the-eitherOr-union-of-A-B-C&#8221;, respectively.
 Then once again, another connector can link to this term as it represents the specific, whole group.</p>
@@ -842,7 +844,7 @@ software could automatically make an external coreference toward this intended t
 <p>Moreover, in template <span class="caps">VSM</span>-phrases, one simply must assign a head because the UI would need to know by which &#8216;focal term&#8217; it should insert the phrase in a full template.
 For instance, in order to replace a template&#8217;s empty field &#8220;&lt;protein&gt;&#8221; by inserting the phrase
 &#8220;<span style=";text-decoration-line:underline;text-decoration-style:dashed">&lt;protein&gt;</span> having-state &lt;state&gt;&#8221;,
-this <span class="caps">VSM</span>-phrase&#8217;s first term must be assigned to be the head.
+this <span class="caps">VSM</span>-phrase&#8217;s first term must be assigned as the head.
 A UI could support head assignment via an Alt+click above a <span class="caps">VSM</span>-term, and by drawing dashes above the term and under the connectors.</p>
 
 <p><a name="term-types"></a></p>
@@ -948,7 +950,7 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
 </li>
 <li class="item"><span class="nr">14</span>
 You could also read it as<br>&#8220;mouse [having-attribute] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
-<br>And the computer would understand it like that too, because it would already know that &#8220;white&#8221; is a color,
+<br>And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </li>
 <li class="item"><span class="nr">15</span> Note for experts:
@@ -966,6 +968,8 @@ because just like other <span class="caps">VSM</span>-terms, a number&#8209;conc
 For example, one could be an “approximately&nbsp; 5”, another a “5 &nbsp;&plusmn;&nbsp; 2”, and another an “at-least&nbsp; 5”.
 <br>So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
+(This is implemented in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
+see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>).
 </li>
 <li class="item"><span class="nr">17</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
  <br>Note for experts:&nbsp; In our prototype UI, we can specify a number of &#8220;preferred <acronym title="Controlled Vocabulary"><span class="caps">CV</span></acronym> s&#8221; for each empty field.
