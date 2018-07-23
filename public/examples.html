@@ -129,7 +129,7 @@ function setNavbarAActive(id) {
 			<li>&nbsp;<a href="examples.html#styled-terms">Styled <span class="caps">VSM</span>-terms</a></li>
 		</ul></li>
 	</ul></li>
-	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Biological use-cases</strong></a>: &nbsp;inspired by you</li>
+	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Various use-cases</strong></a>: &nbsp;inspired by you</li>
 </ol>
 
 
@@ -347,8 +347,9 @@ They are absent details, but they are still what make the <span class="caps">VSM
 <p>It is straightforward to represent such things with <span class="caps">VSM</span>. &#8211; Though still:</p>
 <ul>
 	<li>It could be helpful to have software that automatically suggests simple connectors like these.</li>
-	<li>Software should be able to add <strong>numeric concepts</strong> to its internal dictionaries, right when needed.
-Because a dictionary can never be pre-loaded with all possible numbers, let alone numbers with a decimal separator like here:</li>
+	<li>Software should be able to generate <strong>numeric concepts</strong> into its internal dictionaries, right when needed.
+(This is implemented in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module now).
+ Because a dictionary can never be pre&#8209;loaded with all possible numbers, let alone numbers with a decimal separator like here:</li>
 </ul>
 <script> addvsm( ['5', '±', '1.2', 'mg', 'X', 'dissolves'],  [ [0,0,1,2], [0,3,-1,0], [0,4,-1,3], [0,4,5,-1] ],  4,  'nms' ); </script>
 <p>This illustrates an error margin given to a measurement.</p>
@@ -360,8 +361,20 @@ Because a dictionary can never be pre-loaded with all possible numbers, let alon
 <script> addvsm( [ 'at least', 'five', 'professors', 'at|c:125', 'NTNU|x:Norwegian University of Science and Technology, in Trondheim, Norway',
           'are younger than|x:is younger than, are younger than, to be younger than, being younger than', '40', 'years'],
         [ [0,1,-1,0], [0,2,-1,1], [0,2,3,4], [0,2,5,7], [0,7,-1,6] ],  4, 'nm' ); </script>
-<script> addvsm( [ 'Steven', 'designed', 'VSM', 'from time', 'August', 'of', '2008|x:the year 2008', 'to time', '2017|x:the year 2017' ],
-        [ [0,0,1,2], [0,1,3,4], [0,4,5,6], [0,1,7,8] ],  3 ); </script>
+<script> addvsm( [ 'Steven', 'designed', 'VSM', 'from time', 'August', '2008|x:the year 2008', 'to time', '2018|x:the year 2018' ],
+        [ [0,0,1,2], [0,1,3,5], [0,5,-1,4], [0,1,6,7] ],  3 ); </script>
+<ul>
+	<li>Here, e.g. &#8220;2018&#8243; is not a pure number concept, but a concept that represent a year. &#8220;2018&#8243; would be a shorthand for &#8220;year-2018-CE&#8221;.<br />
+Note: just like in the &#8216;numeric concepts&#8217; discussion earlier, one can not generate a dictionary with all possible years.
+ Still, one could have a dictionary with commonly-used year concepts, e.g. 1900 through 2100.
+ For other years, as long as <span class="caps">VSM</span>-dictionary software can generate pure numbers on-the-fly, we can always represent them
+ with a <span class="caps">VSM</span>-phrase like &#8220;year having-number 42000&#8243;.</li>
+	<li>Notice how &#8220;August&#8221; is connected to “year-2008”.
+ (This is similar to the &#8220;start-of &nbsp;S-phase&#8221; case, which we explain in more detail a few examples below here!)<br />
+  The “year-2008” is the main (initial) concept that represents time, and it gets narrowed down to its &#8220;August&#8221; month.
+ We could phrase the bident-unit explicitly as something like: &#8220;year-2008 &nbsp;[time-interval-limited-to-subinterval] &nbsp;August&#8221;.
+ The same principle would apply to e.g. &#8220;14 &nbsp;February&#8221;.</li>
+</ul>
 <script> addvsm( [ 'acceleration', 'of', 'bear', 'is', '3', 'm/s2' ],  [ [0,0,1,2], [0,0,3,5], [0,5,-1,4] ] ); </script>
 <script> addvsm( [ 'speed', 'of', 'A', 'reacts to', 'B', 'is', '5', 'mol/s' ],  [ [0,0,1,3], [0,2,3,4], [0,0,5,7], [0,7,-1,6] ],  3 ); </script>
 <p>Remember that any <span class="caps">VSM</span>-term represents a &#8216;noun&#8217;-concept. So here, &#8220;reacts-to&#8221; (after being connected with A and B like that) represents: &#8220;the reaction of A to B&#8217;.</p>
@@ -380,19 +393,51 @@ which <span class="caps">VSM</span> does not require. Because in <span class="ca
 <h4>Tridents: biological examples</h4>
 <script> addvsm( [ 'expression|d:3', 'of', 'YAB3|d:3|x:rice gene', 'is', 'reduced|d:3', 'in|c:111', 'Oryza', 'overexpressing|d:3', 'WOX3|d:3|x:rice gene'],
         [ [0,0,1,2], [0,0,3,4], [0,3,5,6], [0,6,7,8] ],  3,  'nms' ); </script>
-<script> addvsm( [ 'HsCdc6|d:3', 'translocates to|d:3', 'cytoplasm|d:3', 'at', 'start', 'of', 'S phase|d:3', 'via', 'Crm1|d:3', 'depending|x:to depend on', 'transport'],
-        [ [0,0,1,2], [0,1,3,4], [0,4,5,6], [0,1,7,10], [0,10,9,8] ],  3 ); </script>
-<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3', 'is', 'induced', 'at', '5', 'DAI|d:3|x:days after inoculation', 'in|c:111',
-          'Arabidops|d:3', 'infected by|d:3', 'TuMV|d:3|x:Turnip mosaic virus'],
-        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4 ); </script>
-<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3|x:A. thaliana gene', 'is', 'induced|d:3', 'at|c:115', '5', 'DAI|d:3|x:Days After Inoculation',
-          'in|c:111', 'TuMV|d:3|x:Turnip mosaic virus', 'infected-by|d:3', 'Arabidopsis|d:3|x:Plant species Arabidopsis thaliana'],
+<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3|x:A. thaliana gene', 'is', 'increased|d:3', 'at|c:115', '5', 'DAI|d:3|x:Days After Inoculation',
+          'in|c:111', 'TuMV|d:3|x:Turnip mosaic virus', 'infected|d:3|c:1139|t:1140|x:= infected by', 'Arabidopsis|d:3|x:Plant species Arabidopsis thaliana'],
         [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,11], [0,11,10,9] ],  4 ); </script>
+<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3', 'is', 'increased', 'at', '5', 'DAI|d:3|x:days after inoculation', 'in|c:111',
+          'Arabidops|d:3', 'infected by|d:3|c:1139|t:1139', 'TuMV|d:3|x:Turnip mosaic virus'],
+        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4, 'nms' ); </script>
+<p>For representing the natural language phrase &#8216;TuMV-infected Arabidopsis&#8217;, the above two examples show alternative ways
+of label selection for the relation (but with same classID) and <span class="caps">VSM</span>-term order.
+But both resulting <span class="caps">VSM</span>-sentence graphs (the <span class="caps">VSM</span>-term IDs and connection structure) are identical, which is all what matters for computation.
+&nbsp;Still, the second choice would be the clearest.</p>
+<script> addvsm( [ 'HsCdc6|d:3', 'translocates to|d:3', 'cytoplasm|d:3', 'at|c:115', 'start of', 'S phase|d:3',
+                   'via', 'Crm1|d:3', 'depending|x:to depend on', 'transport'],
+        [ [0,0,1,2], [0,1,3,5], [0,5,-1,4], [0,1,6,9], [0,9,8,7] ],  3 ); </script>
+<p>Notice the difference between the previous example and this one.
+In the previous one, we used the three terms &#8220;expression of <span class="caps">PAD4</span>&#8220;, and we connected &#8220;is&#8221; to the &#8220;expression&#8221; term.
+That&#8217;s because it is the &#8220;expression&#8221; that is increased, not the gene <span class="caps">PAD4</span>.
+<br />So here at first sight, one might want to use three terms &#8220;start of S-phase&#8221; and similarly connect &#8220;at&#8221; to &#8220;start&#8221;,
+to say that the &#8216;translocation happens-at some start&#8217;. But somehow it feels like &#8220;S-phase&#8221; is the main concept here, or a more specific part of it.
+<br />Instead, it&#8217;s better to consider &#8220;start-of&#8221; as an attribute that has the same meaning as &#8220;initial&#8221;,
+and use it with a bident, in a sense of further narrowing down the meaning of &#8220;S-phase&#8221;, i.e.: &#8220;initial &nbsp;S-phase&#8221;.
+This is also consistent with similar structures like &#8220;5 dogs&#8221;, or &#8220;half(-of) dogs&#8221;.</p>
+<p>So we created a dident unit that can be read as &#8220;S-phase [further-specified-to] start-part&#8221; here,
+(or as a more specific &#8220;S-phase [interval-limited-to-subinterval-as] start-part&#8221;).
+<br />In contrast, in the previous example we have a trident unit &#8220;expression &nbsp;of(=pertaining-to) &nbsp;<span class="caps">PAD4</span>&#8220;.
+If we would use a dident there, it would be something like &#8220;<span class="caps">PAD4</span> [limited-to-attribute?] expression&#8221;.
+But it does not make semantic sense to narrow down the meaning of <span class="caps">PAD4</span> to a property that it <em>is associated with</em>
+(instead of an own property that specifies what it can <em>be</em>, like in &#8220;mutated gene&#8221;).
+It does not change that <span class="caps">PAD4</span> still represents a gene.</p>
+<p>This whole explanation can be <strong>summarized</strong> by using this insight:&nbsp;
+&#8216;<em>adding context</em>&#8216; means &#8216;<em>narrowing down the meaning of a <span class="caps">VSM</span>-term, as to what range of possible meanings it may represent</em>&#8216;. Therefore:</p>
+<blockquote>
+<p>&#8220;start <span class="smaller">(of)</span>&#8220; narrows down the meaning of &#8220;S-phase&#8221; itself,
+and then we further connect to this narrowed-down &#8220;S-phase&#8221; concept itself;&nbsp;
+while &#8220;expression&#8221; is a distinct concept related to &#8220;<span class="caps">PAD4</span>&#8220;, so we further connect to &#8220;expression&#8221;.</p>
+</blockquote>
+
 <script> addvsm( [ 'approximately', '500', 'tumor cells|d:3', 'placed in', 'solution|d:3', 'containing', '5', 'mg/l', 'drug X|d:3' ],
         [ [0,1,-1,0], [0,2,-1,1], [0,2,3,4], [0,4,5,8], [0,7,-1,6], [0,8,-1,7] ],  4 ); </script>
 <p>(A first shot at creating one line of some protocol description).<br />
 The bident that connects &#8216;<em>drug X</em>&#8216; and &#8216;<em>mg/l</em>&#8216; has the implicit relation &#8216;<em>having concentration</em>&#8216;,
-because the attribute term &#8216;<em>mg/l</em>&#8216; would have been classified as a &#8216;concentration&#8217;.</p>
+because the attribute term &#8216;<em>mg/l</em>&#8216; would have been classified as a &#8216;concentration&#8217;.<br /></p>
+<p class="smaller">(Note: The connector order, which is automatically generated by the prototype,
+may not be optimal here. The &#8220;&#8230; containing &#8230;&#8221; connector would better
+have been placed under the &#8220;&#8230; placed-in &#8230;&#8221; one, which should go under the &#8220;500 tumor-cells&#8221; one.
+Maybe that more intuitive ordering has something to do with &#8220;tumor-cells&#8221; actually being the Head of the <span class="caps">VSM</span>-phrase).</p>
 
 <p><a name="list-connector"></a></p>
 <h4>List connector</h4>
@@ -586,7 +631,7 @@ which we now use mostly just to tag/classify genes with.</p>
 Or for modal verbs (&#8220;may&nbsp; buy&#8221;), although one could also make a structure with &#8220;buy&#8221; as object of the &#8220;may&#8221; relation.</p>
 <script> addvsm( ['phone|F', 'of|c:123', 'John'], [ [0,0,1,2] ] ); </script>
 <script> addvsm( ['John', '\'s', 'phone|F'], [ [0,2,1,0] ],  0,  'nms' ); </script>
-<p>The relation &#8220;&#8216;s&#8221; is the same as the possessive &#8220;of&#8221;. The trident is only added in inverse order, because the terms are ordered so too in readable English.</p>
+<p>The relation &#8220;&#8216;s&#8221; is the same as the possessive &#8220;of&#8221;. The trident is only added in inverse order, because the terms are ordered like that too in readable English.</p>
 <p><a name="logics"></a></p>
 <h4>Quantifiers for logics and mathematics <em>&nbsp;(experimental section)</em></h4>
 <p>One should be able to express anything in <span class="caps">VSM</span>, so logical expressions are a valid subset too. E.g.:</p>
@@ -608,7 +653,7 @@ It would be clearer if the leftmost trident were placed above the other two. Her
 </ul>
 
 <p>The <span class="caps">VSM</span>-sentence looks weird (perhaps), but it&#8217;s because we&#8217;re used to see mathematical expressions in that order.
-Here is the exact same sentence but with terms reordered (and same connections).</p>
+Here is the exact <strong>same</strong> sentence but with terms reordered (and same connections).</p>
 <script> addvsm( [ 'x', hdec('&lt;'), 'y', 'for some', 'y', 'for all', 'x' ],  [ [0,0,1,2], [0,1,3,4], [0,3,5,6], [2,0,6], [2,2,4] ],  5, 'nms' ); </script>
 <p>It says: &#8216;x is smaller than y, &nbsp;and that is valid for some y, &nbsp;and that second thing is valid for all x&#8217;.</p>
 <p>It should be possible to make an example for integrals, or any other mathematical formula too.</p>
@@ -619,23 +664,66 @@ Here is the exact same sentence but with terms reordered (and same connections).
 <p>Like superscript text for ions; or for showing human gene names in their standard, italicized way.</p>
 <script> addvsm( ['light speed', 'equals', '299792458', 'm/s2'], [ [0,0,1,3],  [0,3,-1,2] ] ); </script>
 <p><a name="extra"></a></p>
-<h3>4. Biological use-cases <em>&nbsp; <span class="smaller">(some inspired by readers)</span></em></h3>
+<h3>4. Various use-cases <em>&nbsp; <span class="smaller"></span></em></h3>
 <p>(If you have a particular use-case, let me know! &nbsp;I may add it here.)</p>
 <h4>Binding of two proteins which then together activate a third</h4>
-<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
-<p>Basically, this is two units of information: &#8216;A and B bind to form A-B-complex&#8217;, <strong>and</strong> &#8216;<i>that</i>-A-B-complex activates C&#8217;.
-So with an &#8216;and&#8217; list-connector on top of both. So it is better to represent that with two <span class="caps">VSM</span>-sentences.
+
+<p>If you&#8217;d represent this with biochemical reactions, then this is actually two units of information:
+&#8220;A and B bind-to-form A-B-complex&#8221;, <strong>and</strong> &#8220;<i>that</i>-A-B-complex activates C&#8221;.
+<br />That could be done with an &#8216;and&#8217; list-connector on top of both units. But it is better to represent that with two <span class="caps">VSM</span>-sentences.
 The second sentence then refers to a <span class="caps">VSM</span>-term in the first one.
 &nbsp;<span class="smaller">(Curation software should be able to handle inter-sentence references then).</span></p>
-<h4>Something <acronym title="Biological Expression Language"><span class="caps">BEL</span></acronym></h4>
-<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
-<p><span class="smaller">(Should add an example statement from <a href="http://openbel.org/"><span class="caps">BEL</span></a> here).</span></p>
-<h4>Something <span class="caps">SBML</span></h4>
-<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
-<p><span class="smaller">(Should add an example statement from <a href="https://en.wikipedia.org/wiki/SBML"><span class="caps">SBML</span></a> here).</span></p>
-<h4>Experiment protocol, as &#8216;story&#8217; with inter-sentence coreferences</h4>
-<script> addvsm( ['to do'], [ ],  0, 'nm' ); </script>
-<p><span class="smaller">(Short, real-world example here, perhaps).</span></p>
+<p>If you&#8217;d want to represent this on the biological-process level instead, then you can make this:</p>
+<script> addvsm( ['binding of|s:i8-9', 'A|x:protein A', 'and', 'B|x:protein B', 'causes', 'activation of|s:i11-12', 'C|x:protein C'],
+                 [ [0,-1,0,2], [1,2,1,3], [0,-1,5,6], [0,0,4,5] ],  0, 'nm' ); </script>
+<h4><acronym title="Biological Expression Language"><span class="caps">BEL</span></acronym> conversion examples</h4>
+<script> addvsm( ['proteinAbundance', 'of|c:125', 'IL6|x:HGNC human gene&#58; IL6',
+                  'increases', 'rnaAbundance', 'of|c:125', 'ENO1|x:HGNC human gene&#58; ENO1',
+                  'in', 'U266|x:Cell Line&#58; U266'],
+                 [ [0,0,1,2], [0,4,5,6], [0,0,3,4], [0,3,7,8] ],  3, 'nm' ); </script>
+<p>This is a literal conversion of the <a href="http://openbel.org/"><span class="caps">BEL</span></a> statements:
+<br /> &nbsp; <span class="smaller pre"><span class="caps">SET</span> CellLine = &#34;<span class="caps">U266</span>&#34;</span>
+<br /> &nbsp; <span class="smaller pre">proteinAbundance(<span class="caps">HGNC</span>:IL6) increases rnaAbundance(<span class="caps">HGNC</span>:ENO1)</span>
+<br />Or line 2 in short-form: &nbsp; <span class="smaller pre">p(<span class="caps">HGNC</span>:IL6) -&gt; r(<span class="caps">HGNC</span>:ENO1)</span></p>
+
+<p><span class="caps">BEL</span> uses two lines for this. The second line is conveniently short when written in short-form.
+<br />The <span class="caps">VSM</span>-sentence may be quick to construct when using a <span class="caps">VSM</span>-templates,
+while supports the curator with convenient autocomplete functionality,
+and the resulting statement is easy to read in a quasi-natural-language sentence, as one unit of information.</p>
+<p>Also, compared to controlled languages (like <span class="caps">BEL</span>), <span class="caps">VSM</span> does not need to be regularly updated
+with new rules to gain more power of expression.
+Only the controlled vocabularies that are plugged in to the <span class="caps">VSM</span>-box need to be updated, externally,
+and that happens to them all the time anyway.</p>
+<script> addvsm( ['corticosteroid|x:CHEBI term&#58; "corticosteroid"&#58; A natural or synthetic analogue of the hormones secreted by the adrenal gland. ' +
+                    ' - ID&#58; CHEBI&#58;50858 - Link&#58; https&#58;//www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI&#58;50858',
+                  'decreases|x:meaning&#58; the abundance or activity of the Subject decreases the abundance or activity of the Object',
+                  'inflammation|x:MeSH \'Pathologic Processes\'&#58; "Inflammation". - Link&#58; https&#58;//meshb.nlm.nih.gov/record/ui?ui=D007249',
+                  'in', 'cardiovascular system|x:MeSH Anatomy term&#58; "cardiovascular system". - Link&#58; https&#58;//meshb.nlm.nih.gov/record/ui?ui=D002319',
+                  'after', 'stroke|x:MeSH \'Vascular Diseases\' term&#58; "Stroke". - Link&#58; https&#58;//meshb.nlm.nih.gov/record/ui?ui=D020521'],
+                 [ [0,0,1,2], [0,1,3,4], [0,1,5,6] ],  3 ); </script>
+<p>This corresponds to the three <span class="caps">BEL</span> statements
+<span class="smaller">(from under <a href="http://openbel.org/language/version_2.0/bel_specification_version_2.0.html#_bel_statement_examples">here</a>)</span>:
+<br /> &nbsp; <span class="smaller pre"><span class="caps">SET</span> Anatomy = &#34;cardiovascular system&#34;</span>
+<br /> &nbsp; <span class="smaller pre"><span class="caps">SET</span> MeSHDisease = &#34;Stroke&#34;</span>
+<br /> &nbsp; <span class="smaller pre">abundance(<span class="caps">CHEBI</span>:corticosteroid) decreases biologicalProcess(<span class="caps">MESHD</span>:Inflammation)</span></p>
+<p>A <span class="caps">VSM</span>-sentence represents this as one fluently readable unit of information.
+<br />Types/classifications (<span class="caps">CHEBI</span>, MeSH Disease, etc) chosen by the curator, are all embedded in <span class="caps">VSM</span>-terms. Just mouse-hover them to see.</p>
+<p>In addition, <span class="caps">VSM</span> enables to specify more precisely how the &#8216;&#8220;stroke&#8221; context&#8217; relates to the rest of the information:
+with the relation &#8220;after&#8221; (found in the plain English text
+under <a href="http://openbel.org/language/version_2.0/bel_specification_version_2.0.html#_bel_statement_examples">here</a>).</p>
+<h4>And more</h4>
+<script> addvsm( ['rare', 'black', 'squirrel', 'has become', 'regular', 'visitor', 'in', 'suburban', 'garden'],
+                 [ [0,2,-1,0], [0,2,-1,1], [0,2,3,5], [0,5,-1,4], [0,5,6,8], [0,8,-1,7] ],  4,  'nms' ); </script>
+<p>&#8216;A rare black squirrel has become a regular visitor to a suburban garden&#8217;,
+from the <a href="http://news.bbc.co.uk/2/hi/uk_news/england/4365002.stm"><span class="caps">BBC</span></a>.</p>
+<h4>And more?</h4>
+
+<ul>
+	<li>Maybe some <a href="https://en.wikipedia.org/wiki/SBML"><span class="caps">SBML</span></a> example.</li>
+	<li>Maybe an &#8216;experiment protocol&#8217; step-by-step procedure,
+as a &#8216;story&#8217; with inter-sentence coreferences.
+ Or see also the &#8216;500 tumor cells&#8217; example earlier.</li>
+</ul>
 <p><br /><br /></p>
 <p style="text-align:right"><br />Read about <span class="caps">VSM</span>&#8216;s implications and roll-out on <a class="next" href="discussion.html">the Discussion page<i class="arrow right"></i></a></p>
 <p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> page</p>
