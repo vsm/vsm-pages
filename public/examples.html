@@ -129,6 +129,7 @@ function setNavbarAActive(id) {
 			<li>&nbsp;<a href="examples.html#styled-terms">Styled <span class="caps">VSM</span>-terms</a></li>
 		</ul></li>
 	</ul></li>
+	<li class="cnt1">&nbsp;<a href="examples.html#extra-bio"><strong>Various biological use-cases</strong></a>: &nbsp;inspired by you</li>
 	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Various use-cases</strong></a>: &nbsp;inspired by you</li>
 </ol>
 
@@ -674,9 +675,8 @@ Here is the exact <strong>same</strong> sentence but with terms reordered (and s
 <script> addvsm( ['Ca2+', 'regulates', 'cdc25|d:3|s:i|x:The human gene cdc25'],  [ [0,0,1,2] ],  0, 'nm' ); </script>
 <p>Like superscript text for ions; or for showing human gene names in their standard, italicized way.</p>
 <script> addvsm( ['light speed', 'equals', '299792458', 'm/s2'], [ [0,0,1,3],  [0,3,-1,2] ] ); </script>
-<p><a name="extra"></a></p>
-<h3>4. Various use-cases <em>&nbsp; <span class="smaller"></span></em></h3>
-<p>(If you have a particular use-case, let me know! &nbsp;I may add it here.)</p>
+<p><a name="extra-bio"></a></p>
+<h3>4. Various biological use-cases <em>&nbsp; <span class="smaller">(Inspired by you)</span></em></h3>
 <h4>Binding of two proteins which then together activate a third</h4>
 
 <p>If you&#8217;d want to represent this on the biochemical-reaction level, then you may actually be dealing with two units of information here:
@@ -698,6 +698,26 @@ We can use a list-connector, with a list-relation that expresses &#8220;molecula
                  [ [0,-1,0,2], [1,2,1,3], [0,-1,5,6], [0,0,4,5] ],  3, 'nm' ); </script>
 <p><br />Note that it would be interesting if there existed an algorithm that could map variants like these onto each other&#8230;
 &nbsp;e.g. before a user runs a query from either a reaction-level or a process-level perspective&#8230;</p>
+<h4>Proteins and cofactors examples</h4>
+<script> addvsm( ['A|x:protein A|i:1000001201|d:3|c:1002000131', 'bound to|i:1202', 'B|x:molecule B|i:1203', 'is required for|i:1204',
+                  'it|t:11|i:1205|R:1000001201|d:3|c:1002000131', 'binds to|i:1206', 'C|x:protein C|i:1207'],
+                 [ [0,0,1,2], [0,1,3,5], [0,4,5,6], [2,4,0] ],  3, 'nms' ); </script>
+<p>= &#8216;The fact that a protein A is bound to a &#8216;cofactor&#8217; molecule B, is required for that specific protein A (bound to B) to bind to protein C&#8217;.</p>
+<script> addvsm( ['A|x:protein A', 'not', 'bound to',
+                  'cofactor|x:a substance whose presence is essential for the activity of an enzyme',
+                  'not', 'binds to|F', 'C|x:protein C'],
+                 [ [0,0,2,3], [0,2,-1,1], [0,5,-1,4], [0,0,5,6] ],  3, 'nms' ); </script>
+<p>= &#8216;Some protein A that was not bound to some cofactor molecule, did not bind to protein C&#8217;.</p>
+<ul>
+	<li>Note: this only states this co-ocurrence of not-events. If you&#8217;d want to express causation,
+then you can insert a &#8220;causes&#8221; relation and a referring &#8220;it&#8221;&#58;&nbsp; &#8220;&#8230; causes it not binds-to C&#8221;.</li>
+	<li class="smaller">Pro tip (advanced topic):&nbsp; a reflection on specific vs. general concepts (or <span class="caps">VSM</span>-terms):
+ <br />that causation would also just be an observation for a (or several) specific A and C. &#8211; If you&#8217;d want to express
+ that this happens for any and all &#8216;A&#8217;s in general, then you could make &#8220;A&#8221; a general concept (Ctrl-click it).
+ <br />But: usually in a scientific report, even though such a result may be based on many observations,
+ it is only valid for the range of specific &#8220;A&#8220;s, within the context of the study(&#8216;s possibly many experiments).
+ This still not qualifies for it to be a general &#8220;A&#8221;. A general &#8220;A&#8221; would be e.g. for saying that &#8220;A[-in-general] is-classified-as protein&#8221;).</li>
+</ul>
 <h4><acronym title="Biological Expression Language"><span class="caps">BEL</span></acronym> conversion examples</h4>
 <script> addvsm( ['proteinAbundance', 'of|c:125',
                   'IL6|x:Human gene&#58; "IL6" - ID&#58; HGNC&#58;6018 - Link&#58; https&#58;//www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6018',
@@ -740,11 +760,6 @@ under <a href="http://openbel.org/language/version_2.0/bel_specification_version
 <br />&nbsp;<span class="smaller">(Note that the relation could have been &#8220;before&#8221; too, i.e. describing a preventative measure for at-risk patients.
 But a simple &#8216;MeSHDisease = &#8230;&#8217; context with <span class="caps">BEL</span> does not capture this level of detail.
 &nbsp;It is easy to specify this with <span class="caps">VSM</span>).</span></p>
-<h4>And more</h4>
-<script> addvsm( ['rare', 'black', 'squirrel', 'has become', 'regular', 'visitor', 'in', 'suburban', 'garden'],
-                 [ [0,2,-1,0], [0,2,-1,1], [0,2,3,5], [0,5,-1,4], [0,5,6,8], [0,8,-1,7] ],  4,  'nms' ); </script>
-<p>&#8216;A rare black squirrel has become a regular visitor to a suburban garden&#8217;,
-from the <a href="http://news.bbc.co.uk/2/hi/uk_news/england/4365002.stm"><span class="caps">BBC</span></a>.</p>
 <h4>And more?</h4>
 
 <ul>
@@ -755,6 +770,14 @@ written as a number of <span class="caps">VSM</span>-sentences.</li>
  as a &#8216;story&#8217; with inter-sentence coreferences.
  Or see also the &#8216;500 tumor cells&#8217; example earlier.</li>
 </ul>
+<p><a name="extra"></a></p>
+<h3>5. Various use-cases <em>&nbsp; <span class="smaller"></span></em></h3>
+<script> addvsm( ['rare', 'black', 'squirrel', 'has become', 'regular', 'visitor', 'in', 'suburban', 'garden'],
+                 [ [0,2,-1,0], [0,2,-1,1], [0,2,3,5], [0,5,-1,4], [0,5,6,8], [0,8,-1,7] ],  4,  'nms' ); </script>
+<p>= &#8216;A rare black squirrel has become a regular visitor to a suburban garden&#8217;,
+from the <a href="http://news.bbc.co.uk/2/hi/uk_news/england/4365002.stm"><span class="caps">BBC</span></a>.</p>
+<h4>And more?</h4>
+<p>(If you have a particular use-case, let me know! &nbsp;I may add it here).</p>
 <p><br /><br /></p>
 <p style="text-align:right"><br />Read about <span class="caps">VSM</span>&#8216;s implications and roll-out on <a class="next" href="discussion.html">the Discussion page<i class="arrow right"></i></a></p>
 <p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> page</p>
