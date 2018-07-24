@@ -185,11 +185,12 @@ There we&#8217;re building several modules that should culminate in the <a href=
 <p>When you type a word in it, you get an <em>autocomplete list</em>.
 It offers terms from one or more pre-loaded <em>dictionaries</em>, i.e. lists of words for which people already agreed on a precise definition. &#8211; This
 example just uses a toy-dictionary called Persons:<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup">
- For use in the real world, a <span class="caps">VSM</span>-box should be linked to some of the many available
+ To use a <span class="caps">VSM</span>-box in a real application, it must be linked to some dictionary/ies, e.g. some of the many available
  biological <a href="https://en.wikipedia.org/wiki/Open_Biomedical_Ontologies">Ontologies</a>
+ (like <a href="https://www.ncbi.nlm.nih.gov/pubmed/25214827">on</a> <a href="https://bioportal.bioontology.org/">BioPortal</a>)
  or  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary">Controlled Vocabularies</a> (CV).
  <br /><br />Also, these CVs are often incomplete works-in-progress, so you may need to create extra terms, or even new dictionaries, for your research field.
- <br />It is an essential step anyways for communicating with colleagues, to agree on what words mean what!
+ <br />It is an essential step anyway for communicating with colleagues, to agree on what words mean what!
  Building an agreed-upon dictionary just formalizes this process and creates a common work of reference.
 </span></span></p>
 
@@ -228,7 +229,9 @@ that&#8217;s for after the Full Story on <span class="caps">VSM</span>-terms, if
 <br /></p>
 </div>
 <h4>The Full Story &nbsp;<span class="smaller">(formal story)</span></h4>
-<p>The entering of terms is supported by an autocomplete function, which displays a selection panel that lets users choose specific terms (Fig 1.1a).
+<p>The user-interface of <span class="caps">VSM</span> is a component called a <i><span class="caps">VSM</span>-box</i>.
+A <span class="caps">VSM</span>-box supports the entering of terms by an autocomplete function,
+which displays a selection panel that lets users choose specific terms (Fig 1.1a).
 Each <strong>term</strong> represents a single <strong>concept</strong>,<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> <a href="https://en.wikipedia.org/wiki/Concept">Wikipedia:Concept</a> </span></span>or a &#8216;unit of meaning&#8217;. It can consist of one or more words, for instance &#8220;homo sapiens&#8221;, &#8220;is located in&#8221;, or &#8220;binds to&#8221;.
 A term is in fact a human-friendly representation for a unique <strong>identifier</strong> (ID): a number or code that computers work with.
 Each term and its linked ID come from one of many lists, such as biological ontologies or controlled vocabularies
@@ -237,7 +240,9 @@ or even curator-built lists.<span class="note dry popupHolder"><span class="popx
 &bull; <a href="http://www.geneontology.org/">http://www.geneontology.org/</a>
 <br />&bull; <a href="https://www.ncbi.nlm.nih.gov/pubmed/25428369">Gene Ontology Consortium: going forward</a>, Nucleic Acids Res, 2015.
 <br />&bull; <a href="https://www.ncbi.nlm.nih.gov/gene/">https://www.ncbi.nlm.nih.gov/gene/</a>
-</span></span></p>
+</span></span><br />In order to embed a <span class="caps">VSM</span>-box component into other software,
+one must link it to one or more of these term-lists;
+this gives the user access to available terminology.</p>
 <p>If a same term occurs in multiple lists, then the autocomplete helps the user to disambiguate between the available concepts/IDs.
 For example for a mouse and a human gene with the same name, the selection panel would also display the species of each.
 Once selected, only the term remains visible to the user while the ID is stored in the background, by the curation system.
@@ -259,7 +264,8 @@ and curators may prefer to use an abbreviation to keep produced statements reada
 And third, it enables to make <span class="caps">VSM</span>-sentences look more like natural language sentences! For example, consider a single relation concept that has two synonyms:
 the verb &#8220;is-located-in&#8221; and the preposition &#8220;in&#8221;, so that both represent the same ID. Then the <span class="caps">VSM</span>-sentence &#8220;A activates B in C&#8221; is most natural to read
 when one can use the preposition &#8220;in&#8221; instead of the verb form (Fig 1.1b vs 1.1c).</p>
-<p>In summary: <span class="caps">VSM</span> enables a curator to write and read information with reduced mental clutter;
+<p>In summary: <span class="caps">VSM</span> enables a curator to write and read information represented as a series of <span class="caps">VSM</span>-terms,
+with reduced mental clutter;
 and once specified, each term in a statement represents one specific ID.</p>
 <p><img class="i70" src="img/Fig1.1.png" alt="" /></p>
 <p class="caption"><b>Fig 1.1. Entering <span class="caps">VSM</span> terms.</b>
@@ -904,11 +910,12 @@ This is now happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#82
 There we&#8217;re building several modules that should culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
 </li>
 <li class="item"><span class="nr">4</span>
- For use in the real world, a <span class="caps">VSM</span>-box should be linked to some of the many available
+ To use a <span class="caps">VSM</span>-box in a real application, it must be linked to some dictionary/ies, e.g. some of the many available
  biological <a href="https://en.wikipedia.org/wiki/Open_Biomedical_Ontologies">Ontologies</a>
+ (like <a href="https://www.ncbi.nlm.nih.gov/pubmed/25214827">on</a> <a href="https://bioportal.bioontology.org/">BioPortal</a>)
  or  <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary">Controlled Vocabularies</a> (CV).
  <br>Also, these CVs are often incomplete works-in-progress, so you may need to create extra terms, or even new dictionaries, for your research field.
- <br>It is an essential step anyways for communicating with colleagues, to agree on what words mean what!
+ <br>It is an essential step anyway for communicating with colleagues, to agree on what words mean what!
  Building an agreed-upon dictionary just formalizes this process and creates a common work of reference.
 </li>
 <li class="item"><span class="nr">5</span> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
