@@ -122,13 +122,13 @@ We are currently converting this prototype into software modules that can be reu
 
 <p>Fully usable software should not only provide an interface for entering <span class="caps">VSM</span>-sentences, but also provide support for storing and querying them.
 Storage can be done in several ways: for instance as <span class="caps">JSON</span>-based graphs, or directly into a graph database.
-In addition, a <span class="caps">VSM</span>-to-<span class="caps">RDF</span> mapper could automatically produce <span class="caps">RDF</span> graphs, like the example in Fig 7.
+In addition, a <span class="caps">VSM</span>-to-<span class="caps">RDF</span> mapper could automatically produce <span class="caps">RDF</span> graphs, like the example in Fig 9.
 This would have the advantage of making <span class="caps">VSM</span>-sentences readily queryable with <span class="caps">SPARQL</span>.
 Alternatively, a tool for building queries that directly use <span class="caps">VSM</span> graph patterns
 could help users avoid the complexity of <span class="caps">RDF</span>-reifications.</p>
 
-<p><img class="i75" src="img/Fig7.png" alt="" /></p>
-<p class="caption"><b>Fig 7. Example conversion from <span class="caps">VSM</span> to <span class="caps">RDF</span>: a <span class="caps">VSM</span>-sentence is easier to understand than <span class="caps">RDF</span>.</b>
+<p><img class="i75" src="img/Fig9.png" alt="" /></p>
+<p class="caption"><b>Fig 9. Example conversion from <span class="caps">VSM</span> to <span class="caps">RDF</span>: a <span class="caps">VSM</span>-sentence is easier to understand than <span class="caps">RDF</span>.</b>
 The <span class="caps">VSM</span>-sentence in (a) was manually converted to (b):&nbsp;a&nbsp;possible graph representation in <span class="caps">RDF</span>, using an example controlled-vocabulary &#8220;ex&#8221;.
 The relation &#8220;activates&#8221; is used as the subject of another triple and thus needs a &#8216;reification&#8217; construction in <span class="caps">RDF</span>.
 Here, both representations show the two distinct &#8220;device&#8221; concepts: one only located in China and activated but not yet exploding, the other one exploding as well.

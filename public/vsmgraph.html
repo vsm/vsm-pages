@@ -90,29 +90,34 @@ and &#8216;<a href="https://en.wikipedia.org/wiki/Episodic_memory">episodic memo
 <ul>
 	<li class="smaller"><strong>Black nodes (round, triangle, square)</strong> represent &#8216;specific&#8217; or &#8216;context-embedded&#8217; concepts.
 	<ul>
-		<li class="smaller">Semantically, they are embedded in an <em>explicit</em> (by their connected nodes) or <em>implicit</em> (simply not stated) context.</li>
-		<li class="smaller">They are the concepts that are created by making a <span class="caps">VSM</span>-sentence.</li>
+		<li class="smaller">Semantically, they are embedded in <em>explicit</em> (by their connected nodes) and <em>implicit</em> (simply not stated) context.</li>
+		<li class="smaller">They are the concepts that are created by making a <span class="caps">VSM</span>-sentence (by default).</li>
 		<li class="smaller">They are linked in a way that reflects <span class="caps">VSM</span>-connectors (e.g. &#9679;&mdash;<sup>&#9650;</sup>&rarr;&#9679;, as <em>one</em> object that connects three nodes).</li>
 		<li class="smaller">(The numbers are only there to make the graph less tangled).</li>
 	</ul></li>
 	<li class="smaller"><strong>White nodes</strong> (there are only round ones) represent &#8216;general&#8217; or &#8216;context-free&#8217; concepts.
 	<ul>
-		<li class="smaller">Semantically, they are not embedded in any specific context (and also not embedded so by connected terms).
+		<li class="smaller">Semantically, they are not embedded in any context (and are also not embedded so by connected terms).
 They just represent &#8216;the idea&#8217; of a particular concept. &nbsp;E.g.: &#8216;Duck&#8217;, in general.</li>
 		<li class="smaller">Every black node is <em>specified from</em> a white node, or from another black node
 (a coreference sub-specifies it, adding extra (explicit and perhaps also implicit) context). &#8211; Specification is indicated with a double arrow: &#8608;.</li>
-		<li class="smaller">So all <span class="caps">VSM</span>-sentences (represented as VSMGraphs) create new black nodes, which are all specified from the same set of available white nodes.</li>
+		<li class="smaller">So all <span class="caps">VSM</span>-sentences (represented as VSMGraphs) are built with newly created black nodes, that are all specified from the same set of available white nodes.</li>
 	</ul></li>
-	<li class="smaller"><strong>Rectangle nodes</strong> represent &#8216;data&#8217;. This could e.g. be a &#8216;literal string&#8217; as label for a white node concept, or a protein sequence, or image data.</li>
+	<li class="smaller"><strong>Rectangle nodes</strong> represent &#8216;data&#8217;. This could e.g. be a &#8216;literal string&#8217; as label for a white node concept, or a protein sequence, or image data.
+	<ul>
+		<li><span class="smaller">How such raw data should be interpreted is indicated by any relation that connects to it, e.g. &#8220;has-jpeg-data&#8221;.</span></li>
+	</ul></li>
 	<li class="smaller">The colored areas only serve to illustrate node functionality groups here:
 	<ul>
 		<li class="smaller">The <strong>blue area</strong> highlights one <span class="caps">VSM</span>-sentence.</li>
 		<li class="smaller">The <strong>yellow area</strong> highlights general, dictionary concepts. These would be shared between all <span class="caps">VSM</span>-sentences. (And they could be categorized in a hierarchy).</li>
 		<li class="smaller">The <strong>green area</strong> highlights the terms / labels for the dictionary concepts.</li>
+		<li class="smaller">The <strong>red area</strong> is just for a few utility terms (&#8220;has-term&#8221; and &#8220;is specified to <i>be</i>&#8220;).</li>
 	</ul></li>
 </ul>
 
-<p class="smaller"><br />Here&#8217;s another one : &nbsp;(and the grey-shaded areas just highlight two <span class="caps">VSM</span>-sentences&#8217; individual subgraphs) :</p>
+<p class="smaller"><br />Here&#8217;s another one : &nbsp;(the grey-shaded areas highlight two <span class="caps">VSM</span>-sentences&#8217; individual subgraphs,
+ which are connected by a coreference between the two) :</p>
 <p><img class="i60 vsm" src="img/vsmgraph-2.png" alt="" /></p>
 <p><br /><hr /><br /></p>
 <p>And since we promised <a href="vsm.html#term-types">earlier</a> that we&#8217;d explain this after a picture of a VSMGraph, here is:</p>

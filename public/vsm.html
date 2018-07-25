@@ -215,9 +215,9 @@ a <span class="caps">VSM</span> UI helps you disambiguate between terms from mul
 
 <p><img class="i65 imgl vsm" src="img/vsm01-5.png" alt="" /></p>
 <p>and what kind of &#8216;with&#8217; we mean:</p>
-<p><img class="i65 imgl vsm" src="img/vsm01-5b.png" alt="" /></p>
-<p>In the end we create a human-readable sequence of words, with 5 terms that are each linked to an unambiguous ID:</p>
 <p><img class="i65 imgl vsm" src="img/vsm01-6.png" alt="" /></p>
+<p>In the end we create a human-readable sequence of words, with 5 terms that are each linked to an unambiguous ID:</p>
+<p><img class="i65 imgl vsm" src="img/vsm01-7.png" alt="" /></p>
 <p>Note: each blue <span class="caps">VSM</span>-term is always a <strong>specific</strong> &#8216;thing&#8217;.
 So it&#8217;s <em>not Johns in general</em>, but <em>a&nbsp;particular&nbsp;John</em>, in a particular situation.
 This is because we&#8217;re capturing information embedded in a context &#8211; e.g.
@@ -231,7 +231,7 @@ that&#8217;s for after the Full Story on <span class="caps">VSM</span>-terms, if
 <h4>The Full Story &nbsp;<span class="smaller">(formal story)</span></h4>
 <p>The user-interface of <span class="caps">VSM</span> is a component called a <i><span class="caps">VSM</span>-box</i>.
 A <span class="caps">VSM</span>-box supports the entering of terms by an autocomplete function,
-which displays a selection panel that lets users choose specific terms (Fig 1.1a).
+which displays a selection panel that lets users choose specific terms (Fig 1a).
 Each <strong>term</strong> represents a single <strong>concept</strong>,<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> <a href="https://en.wikipedia.org/wiki/Concept">Wikipedia:Concept</a> </span></span>or a &#8216;unit of meaning&#8217;. It can consist of one or more words, for instance &#8220;homo sapiens&#8221;, &#8220;is located in&#8221;, or &#8220;binds to&#8221;.
 A term is in fact a human-friendly representation for a unique <strong>identifier</strong> (ID): a number or code that computers work with.
 Each term and its linked ID come from one of many lists, such as biological ontologies or controlled vocabularies
@@ -263,12 +263,13 @@ Second, some official terms may be excessively long (e.g. in GO<span class="note
 and curators may prefer to use an abbreviation to keep produced statements readable.
 And third, it enables to make <span class="caps">VSM</span>-sentences look more like natural language sentences! For example, consider a single relation concept that has two synonyms:
 the verb &#8220;is-located-in&#8221; and the preposition &#8220;in&#8221;, so that both represent the same ID. Then the <span class="caps">VSM</span>-sentence &#8220;A activates B in C&#8221; is most natural to read
-when one can use the preposition &#8220;in&#8221; instead of the verb form (Fig 1.1b vs 1.1c).</p>
-<p>In summary: <span class="caps">VSM</span> enables a curator to write and read information represented as a series of <span class="caps">VSM</span>-terms,
+when one can use the preposition &#8220;in&#8221; instead of the verb form (Fig 1b vs 1c).</p>
+<p>In summary: <span class="caps">VSM</span> enables a curator to write and read information
 with reduced mental clutter;
 and once specified, each term in a statement represents one specific ID.</p>
-<p><img class="i70" src="img/Fig1.1.png" alt="" /></p>
-<p class="caption"><b>Fig 1.1. Entering <span class="caps">VSM</span> terms.</b>
+
+<p><img class="i70" src="img/Fig1.png" alt="" /></p>
+<p class="caption"><b>Fig 1. Entering <span class="caps">VSM</span> terms.</b>
 (a) A curator enters a sequence of terms, each linked to an identifier to represent a particular &#8216;concept&#8217;.
 (b) The full sequence of terms. This is just as easily readable as a natural language sentence,
 among others because the user was able to use the preposition &#8220;in&#8221; for the relation &#8220;is located in&#8221;, both of which would here represent the same identifier.
@@ -379,20 +380,20 @@ These triples look similar to <span class="caps">RDF</span>-triples initially.<s
 </span></span>The UI enables a user to specify triples by linking terms with a &#8216;trident&#8217; connector.
 A trident is added via three consecutive clicks, one above each term according to the role it has in the triple, in the order of: subject, relation, and direct object.
 The corresponding parts of the trident, its prongs or &#8216;legs&#8217;, are: a simple line, a line decorated with a filled triangle, and an arrow, respectively.
-Fig 1.2d shows an example of a one-triple statement specified with a trident, which expresses that a &#8220;John&#8221; &#8220;eats&#8221; a &#8220;chicken&#8221;.</p>
-<p><img class="i60" src="img/Fig1.2.png" alt="" /></p>
-<p class="caption"><b>Fig 1.2. Identifying triples with tridents.</b>
-(d-e) The user adds <span class="caps">VSM</span> trident connectors that indicate triplets among the terms and define the intended syntax.
+Fig 2a shows an example of a one-triple statement specified with a trident, which expresses that a &#8220;John&#8221; &#8220;eats&#8221; a &#8220;chicken&#8221;.</p>
+<p><img class="i60" src="img/Fig2.png" alt="" /></p>
+<p class="caption"><b>Fig 2. Identifying triples with tridents.</b>
+(a-b) The user adds <span class="caps">VSM</span> trident connectors that indicate triplets among the terms and define the intended syntax.
 The resulting composite semantics is explained in the main text.
-(e-f-g) show how meaning changes when attaching the second connector&#8217;s subject leg to a different term.</p>
+(b-d) show how meaning changes when attaching the second connector&#8217;s subject leg to a different term.</p>
 <p><a name="principle-2"></a></p>
 <p>Next we will show by example how to use multiple tridents, after which we can explain more founding principles.
-Fig 1.2e shows the addition of more terms and context to the first statement, via a second trident.
+Fig 2b shows the addition of more terms and context to the first statement, via a second trident.
 This specifies a second triple subunit that says: this &#8220;eating&#8221; happens &#8220;with&#8221; (or &#8220;using&#8221;), a &#8220;fork&#8221;.
 We represented this second triple&#8217;s relation by a preposition-type synonym, for natural-language-like readability.
-As contrast, Fig 1.2f shows an alternative version in which a chicken is using a fork instead.
+As contrast, Fig 2c shows an alternative version in which a chicken is using a fork instead.
 This illustrates that attaching a connector leg to a different term fundamentally changes the meaning.
-Similarly, Fig 1.2g states that John uses a fork, although it does not say that he eats chicken with it
+Similarly, Fig 2d states that John uses a fork, although it does not say that he eats chicken with it
 (he could be eating chicken in his hand, while using the fork for another purpose).
 Only by connecting the second trident to the &#8220;eating&#8221; term does one capture the correct meaning: &#8216;the eating, by John, is by use of a fork&#8217;.</p>
 <p>As shown, the significance of which specific element a <span class="caps">VSM</span> connector leg links to is huge. This is further elaborated in:</p>
@@ -408,8 +409,8 @@ It is rooted in <span class="caps">VSM</span>&#8216;s specific approach to <em>t
 In <span class="caps">VSM</span>, <em>any term is only viewed as a relation versus an entity, in the context of a particular trident</em> that connects to it.
 Because of that, any term that functions as a relation under one trident can function as a subject or object (i.e. an entity)
 when viewed under another connecting trident.</p>
-<p>Therefore, for instance in Fig 1.1b, the verb term &#8220;activates&#8221; can equally be thought of as a noun: &#8216;activation&#8217;.
-(And in Fig 1.2e, the verb term &#8220;eats&#8221; is in meaning identical to its noun-form &#8216;the eating&#8217;).
+<p>Therefore, for instance in Fig 1b, the verb term &#8220;activates&#8221; can equally be thought of as a noun: &#8216;activation&#8217;.
+(And in Fig 2b, the verb term &#8220;eats&#8221; is in meaning identical to its noun-form &#8216;the eating&#8217;).
 If both lexical alternatives would be available as terms in a dictionary for <span class="caps">VSM</span>, then they would carry the same ID. &#8211; In
 conclusion: <em>each <span class="caps">VSM</span>-term should generally be thought of as an &#8216;entity&#8217;</em>.
 <br />(See also this note:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> This Principle is crucial, so let&#8217;s repeat it in other words:
@@ -540,10 +541,10 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
 &nbsp;In order to scale this method up to statements with many more terms, one should keep in mind another key insight:
 by adding a trident, each of its three connected terms receives extra &#8216;context&#8217; or meaning from the other two terms.
 In other words: each term is placed the context of its connected terms, and becomes more specific.
-For example in Fig 1.2d, the first trident makes &#8220;eats&#8221; become &#8216;the eating, of a chicken, by John&#8217;;
+For example in Fig 2a, the first trident makes &#8220;eats&#8221; become &#8216;the eating, of a chicken, by John&#8217;;
 likewise &#8220;chicken&#8221; becomes &#8216;the chicken eaten by John&#8217;; and also &#8220;John&#8221; becomes a more specific concept.
 Then, when one connects a second trident to any of these terms, one in fact refers to that term&#8217;s full, context-enriched meaning.
-So the second trident Fig 1.2e states: &#8220;the-eating-of-chicken-by-John happens-with fork&#8221;.
+So the second trident Fig 2b states: &#8220;the-eating-of-chicken-by-John happens-with fork&#8221;.
 And by induction, all five of its terms now carry an enriched meaning, accumulated from the other four.
 This makes each term individually referable again, in the same way. Like this one can <em>keep adding further or nested context to every single term</em>, recursively.
 <br />For instance to express &#8216;John eats a chicken, occasionally using a fork&#8217;, one would connect a new trident to &#8220;using&#8221;, and create a new triple that states:
@@ -564,8 +565,8 @@ This makes each term individually referable again, in the same way. Like this on
  <a href="vsmgraph.html#principle-4">Principle 4</a> on a further page already).
 </span></span>).</p>
 
-<p>Fig 1.3h-j shows longer <span class="caps">VSM</span>-sentences created in this way, representing information curated from actual scientific publications.
-For example in Fig 1.3h, the second leftmost trident expresses that &#8220;the-being-twisted-of-leaf-lamina pertains-to Oryza-that-underexpresses-<span class="caps">YAB3</span>-by-<span class="caps">RNA</span>-interference&#8221;.
+<p>Fig 3a-c show longer <span class="caps">VSM</span>-sentences created in this way, representing information curated from actual scientific publications.
+For example in Fig 3a, the second leftmost trident expresses that &#8220;the-being-twisted-of-leaf-lamina pertains-to Oryza-that-underexpresses-<span class="caps">YAB3</span>-by-<span class="caps">RNA</span>-interference&#8221;.
 Note that here, the term &#8220;in&#8221; will have been linked by the curator to the concept &#8220;pertaining-to&#8221; rather than &#8220;is-located-in&#8221;.
 Each term represents an identifier from a controlled vocabulary, e.g. &#8220;leaf lamina&#8221; is provided by PO (Plant Ontology)
 and &#8220;twisted&#8221; by <span class="caps">PATO</span> (Phenotype And Trait Ontology).
@@ -580,12 +581,12 @@ for example based on which subunit one thinks of as central in the statement (se
 either directly when two non-relation legs connect to a term,
 or via <span class="caps">RDF</span>-reification when a non-relation leg attaches to a term also used as a relation, such <span class="caps">RDF</span> graph renditions quickly become unintelligible to a curator
 (see later on the Discussion page for a full example).</p>
-<p><img class="i70" src="img/Fig1.3.png" alt="" /></p>
-<p class="caption"><b>Fig 1.3. <span class="caps">VSM</span>-sentences based on scientific papers.</b>
-Sentences (h-j) are structured, reformulated versions of information from Life Science publications:
-(h-i) from<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1913789/">Dai 2007</a>:
+<p><img class="i70" src="img/Fig3.png" alt="" /></p>
+<p class="caption"><b>Fig 3. <span class="caps">VSM</span>-sentences based on scientific papers.</b>
+The <span class="caps">VSM</span>-sentences are structured, reformulated versions of information from Life Science publications:
+(a-b) from<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">11</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1913789/">Dai 2007</a>:
 &#8216;A <span class="caps">WUSCHEL</span>-<span class="caps">LIKE</span> <span class="caps">HOMEOBOX</span> Gene Represses a <span class="caps">YABBY</span> Gene Expression Required for Rice Leaf Development&#8217;. </span></span>,
-(j) from<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC26858/">Jiang 1999</a>:
+&#40;c) from<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">12</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC26858/">Jiang 1999</a>:
 &#8216;Multistep regulation of <span class="caps">DNA</span> replication by Cdk phosphorylation of HsCdc6&#8242;. </span></span>.
 Some of their terms come from ontologies, some others are yet to be added to official controlled vocabularies, especially relation terms.</p>
 <p><a name="short-story-4"></a>
@@ -607,7 +608,7 @@ Some of their terms come from ontologies, some others are yet to be added to off
 <p>Simple. Just read the phrase silently as: it&#8217;s a &#8220;mouse [being] white&#8221;.
 Meanwhile you add a trident, from &#8220;mouse&#8221; as a subject, to &#8220;white&#8221; as an object,
 but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup">
-You could also read it as<br />&#8220;mouse [having-attribute] white&#8221;, or as<br />&#8220;mouse [has-color] white&#8221;.
+You could also read it as<br />&#8220;mouse [specified-to-be] white&#8221;, or as<br />&#8220;mouse [has-color] white&#8221;.
 <br />And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </span></span>The connector now has only two legs, so we call it a <em>bident</em> :</p>
@@ -635,11 +636,11 @@ Still, the Full Story discusses some limitations to ensure computer-understandin
 Although this can be captured with a triple like &#8220;plant belongs-to class-of-blooming-things&#8221;,
 the task of stretching and reformulating such information to fit a triple structure is a burden that should not be imposed on the curator.
 <span class="caps">VSM</span> is focused on usability for the curator, and therefore the <span class="caps">VSM</span> UI supports tridents where one leg can be left away: <strong>bidents</strong>.
-In the example above, no object needs to be defined and the object leg is left out (Fig 2a).
+In the example above, no object needs to be defined and the object leg is left out (Fig 4a).
 A user could add this <strong>first type</strong> of bident just like a trident, but with the third mouse click outside the <span class="caps">VSM</span> component.</p>
 
 <p>Bidents also make the UI more consistent. For instance, compare the statements &#8220;X stimulates: A activates B&#8221;, and &#8220;X stimulates activation-of B&#8221;,
-where the latter uses a <strong>second type</strong> of bident, one that omits the subject leg (Fig 2b-c).
+where the latter uses a <strong>second type</strong> of bident, one that omits the subject leg (Fig 4b-c).
 Apart from using the appropriate synonym for the &#8220;activation&#8221; relation (with same ID),
 the principal difference is that the activator is unspecified in the latter case. Appropiately, the structure of both statements is similar, thanks to the bident.
 This consistency would not be present when using a second triple &#8220;activation having-activatee B&#8221; with an artificial relation inserted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup"> Note for experts:
@@ -659,11 +660,11 @@ Attributes include adjectives, adverbs, and numbers.
 For example, a statement about a &#8216;white mouse&#8217; would require a &#8220;mouse having-color white&#8221; when using only the triple structure.
 However, if the term &#8220;white&#8221; is already classified as &#8216;a color&#8217; in its vocabulary or ontology,
 then making curators explicitly insert the relation &#8220;having-color&#8221; would be a waste of effort, since it can be inferred automatically.
-Then a bident structure can be used, as in Fig 2d-e.</p>
+Then a bident structure can be used, as in Fig 4d-e.</p>
 
 <p>&bull; In general, any category of terms that can be used as attributes can be associated with
 its own default, implicit <strong>attribute relation</strong>. For example: numbers (&#8220;.. [has-count] 5&#8243;), measures (&#8220;.. [has-size] big&#8221;),
-or posttranslational modifications (&#8220;.. [has-state] phosphorylated&#8221;); see also Fig 2f-g.
+or posttranslational modifications (&#8220;.. [has-state] phosphorylated&#8221;); see also Fig 4f-g.
 <br />&bull; In other cases, it could be associated with the attribute&#8217;s target concept as well.
 For example: &#8220;&lt;gene&#8209;x&gt; expression&#8221; would mean &#8220;expression [of] &lt;gene&#8209;x&gt;&#8221;, e.g. &#8220;Cas9 expression&#8221;.
 Or &#8220;&lt;tree&#8209;x&gt;&nbsp;leaf&#8221; would mean &#8220;leaf [from] &lt;tree&#8209;x&gt;&#8221;, e.g. &#8220;oak leaf&#8221;.
@@ -671,8 +672,8 @@ Or &#8220;&lt;tree&#8209;x&gt;&nbsp;leaf&#8221; would mean &#8220;leaf [from] &l
 one must use either an explicit triple or a single term.
 For example, &#8216;actin filament&#8217; should then be represented as &#8220;filament composed-of actin&#8221; or &#8220;actin-filament&#8221;.</p>
 
-<p><img class="i55" src="img/Fig2.png" alt="" /></p>
-<p class="caption"><b>Fig 2. Bidents.</b>
+<p><img class="i55" src="img/Fig4.png" alt="" /></p>
+<p class="caption"><b>Fig 4. Bidents.</b>
 The user can add a trident that misses any one of its three legs, i.e. a bident, for ease of use as explained in the main text.
 The bident in (a) accomodates a verb without object. The bident in &#40;c) represents &#8220;activation-of B&#8221; with an unknown subject,
 which is structurally similar to case (b) where a subject &#8220;A&#8221; is known.
@@ -695,46 +696,46 @@ then connect their &#8220;and&#8221; to &#8220;and C&#8221;, and then connect th
 Then this construct with triples is artificial, as it may suggest that A and B combine first and then together combine with C.
 In addition, the longer a list, the more burdensome all the artificial triples become to the curator.</p>
 <p>With <span class="caps">VSM</span>&#8216;s <strong>list-connector</strong>, one can express that any number of <strong>list-item</strong> terms all come together as one group, in a way specified by a <strong>list-relation</strong> term.
-E.g. Fig 3a states that reactants all together react to D, as an unspecified group. The fact that the group order is unspecified,
+E.g. Fig 5a states that reactants all together react to D, as an unspecified group. The fact that the group order is unspecified,
 would be embedded in the meaning/ID of the chosen list-relation &#8220;and&#8221; (or: &#8220;and-(as-unordered-set)&#8221;).
 The curator is free to choose other list-relations as well: for instance a term &#8220;and-(as-ordered-list)&#8221;; or &#8220;sum&#8209;of&#8221;; or &#8220;either&#8209;or&#8221;,
-which is used in Fig 3b to state that &#8216;either A, B, or C bind to D&#8217;.
+which is used in Fig 5b to state that &#8216;either A, B, or C bind to D&#8217;.
 This term &#8220;either-or&#8221; is also an example of an idiosyncratic phrase in natural language, that must be captured with a single term in <span class="caps">VSM</span>.</p>
 
 <p>The examples also illustrate this: the specific concept that represents a group of all items combined in the way defined by the list-relation,
-is now embedded in this list-relation term. Just like how tridents function, the list-connectors in Fig 3a-b turn their list-relation term into a specific:
+is now embedded in this list-relation term. Just like how tridents function, the list-connectors in Fig 5a-b turn their list-relation term into a specific:
 &#8220;the-A-B-C-group&#8221;, and (for lack of a less artificial way of phrasing) &#8220;the-eitherOr-union-of-A-B-C&#8221;, respectively.
 Then once again, another connector can link to this term as it represents the specific, whole group.</p>
-<p><img class="i55" src="img/Fig3.png" alt="" /></p>
-<p class="caption"><b>Fig 3. List-connectors.</b>
+<p><img class="i55" src="img/Fig5.png" alt="" /></p>
+<p class="caption"><b>Fig 5. List-connectors.</b>
 (a) A list-connector assigns a list-relation, here &#8220;and&#8221;, which groups a number of list-elements.
 Here, the list-relation &#8220;and&#8221; now represents the combination of the list-elements &#8216;as a whole&#8217;, and as such can represent the left side of a reaction.
 (b) Other terms can be used as a list-relation. Here, the list-connector makes the <span class="caps">VSM</span>-term &#8220;either-or&#8221; represent the phrase &#8216;either A, B, or C&#8217;.</p>
 
-<p>In Fig 3 we propose a UI that distinguishes list-connectors by drawing them with a double &#8216;backbone&#8217;,
+<p>In Fig 5 we propose a UI that distinguishes list-connectors by drawing them with a double &#8216;backbone&#8217;,
 a leg ending in a filled square that connects to the list-relation, and undecorated legs that connect to list-items.
 The UI should enable the user to switch from tridents to list-connectors,
-for instance by holding the Shift button down while first clicking above the list-relation and next above all list-items.
+for instance by holding the Shift button down while first clicking above the list-relation, and next above all list-items.
 If order is important for the list-relation, then not click-order, but the order of terms in the <span class="caps">VSM</span>-sentence counts.</p>
 
 <p><a name="coreference"></a></p>
 <h3>2.5. Referring or further specifying: the co&#8209;reference</h3>
 
 <p>The <strong>coreference</strong> connector provides additional flexibility to handle advanced use cases.
-Its most basic function is to let users build human-readable sentences with terms that refer back to another term; for instance with a term &#8220;it&#8221;, as in Fig 4a.
+Its most basic function is to let users build human-readable sentences with terms that refer back to another term; for instance with a term &#8220;it&#8221;, as in Fig 6a.
 We call this &#8220;it&#8221; the <strong>child</strong> term. The child term is a placeholder that receives meaning from its <strong>parent</strong> term: the term it refers to.
-In Fig 4, the UI draws the coreference connector in dashed lines, with an undecorated leg connecting to the child, and open triangle arrow connecting to the parent;
+In Fig 6, the UI draws the coreference connector in dashed lines, with an undecorated leg connecting to the child, and open triangle arrow connecting to the parent;
 and the child term is surrounded with dashes. A user could add a coreference by first Ctrl+clicking above the child term, and next above the parent term.</p>
 <p>The usefulness of the reference connector goes further: it also enables a curator to work with <strong>two distinct concepts</strong>.
-Consider e.g. &#8220;Bob activates device in evening causes it beeps in morning&#8221; (Fig 4b).
+Consider e.g. &#8220;Bob activates device in evening causes it beeps in morning&#8221; (Fig 6b).
 The meaning embedded into the parent concept &#8220;device&#8221; is that it is activated by someone, but should not be that it is beeping yet.
 Therefore we should not connect &#8220;device&#8221; directly to &#8220;beeps&#8221; with a trident.
 Instead, a child concept is used, which <strong><em>inherits this context</em></strong> of having been activated in the evening,
 and in addition <strong><em>receives the extra context</em></strong> of &#8220;beeping in morning&#8221; from its own connection environment.
 These two concepts can then be separately enriched with more context, or referred to later on, e.g. &#8220;Jane charges it (#1)&#8221; and &#8220;Bob silences it (#2)&#8221;.
 A biological example could involve a molecule being tagged in one context, e.g. cell cycle phase or location, which causes it to form a bond in a next context.</p>
-<p><img class="i55" src="img/Fig4.png" alt="" /></p>
-<p class="caption"><b>Fig 4. The co-reference connector.</b>
+<p><img class="i55" src="img/Fig6.png" alt="" /></p>
+<p class="caption"><b>Fig 6. The co-reference connector.</b>
 (a-b) The coreference connector has two functions, as explained in the main text.
 First, it allows to build a <span class="caps">VSM</span>-sentence that is natural to read.
 Second, it enables one to work with two distinct concepts, each at a different stage of specification:
@@ -749,9 +750,9 @@ This notion is crucial to understand the following issue: the case where connect
 <p>When we connect multiple tridents or bidents to a term, we use one assumption: that the order of connecting them does not matter.
 This is usually true. In natural language one can test this by observing that the meaning of some statement does not change when switching attribute positions;
 e.g. &#8216;big white mouse&#8217; has the same meaning as &#8216;white big mouse&#8217;. Also in <span class="caps">VSM</span>, each new connection simply adds context in an interchangeable way:
-in Fig 5a, &#8220;mouse&#8221; is both &#8220;big&#8221; <em>and</em> &#8220;white&#8221; at the same time.</p>
+in Fig 7a, &#8220;mouse&#8221; is both &#8220;big&#8221; <em>and</em> &#8220;white&#8221; at the same time.</p>
 <p>However, in some cases order does matter, as e.g. in the statement &#8220;half-of black dogs&#8221;.
-By connecting &#8220;half-of&#8221; and &#8220;black&#8221; to &#8220;dogs&#8221;, one can construct three different meanings (see the sets in Fig 5b-d):</p>
+By connecting &#8220;half-of&#8221; and &#8220;black&#8221; to &#8220;dogs&#8221;, one can construct three different meanings (see the sets in Fig 7b-d):</p>
 <ol>
 	<li>&#8216;some half of the dogs, that happen to be black&#8217;: here &#8220;dogs&#8221; is limited to &#8220;half-of&#8221; <em>and</em> &#8220;black&#8221; at the same time (while still being half-of in total);</li>
 	<li>&#8216;some half of: black ones of the dogs&#8217;;</li>
@@ -760,17 +761,18 @@ By connecting &#8220;half-of&#8221; and &#8220;black&#8221; to &#8220;dogs&#8221
 <p>In <strong>case 1</strong>, the attributes are &#8216;applied&#8217; simultaneously, while in cases 2 and 3 they are applied in one of the two possible orders.</p>
 <p>What happens when order matters, conceptually, is that we first compose an idea, and then we isolate it and refer to it,
 without letting the further added context mix in with it.
-This is in fact exactly how also the coreference connector works: in e.g. <strong>case 2</strong> in Fig 5c one can first construct a parent concept (&#8220;black dogs&#8221;),
+This is in fact exactly how also the coreference connector works: in e.g. <strong>case 2</strong> in Fig 7c one can first construct a parent concept (&#8220;black dogs&#8221;),
 and then create a placeholder child concept (e.g. labeled &#8220;them&#8221;), which points with a coreference connector to the parent.
 This isolates the parent&#8217;s meaning and transfers it onto the child, unidirectionally.
 Finally, one can use this child term &#8220;them&#8221; for building the rest of the <span class="caps">VSM</span>-sentence, e.g. by connecting it to &#8220;half-of&#8221; and &#8220;escape&#8221;.
 The coreference connector points from the further-enriched child to its isolated, meaning-providing parent.</p>
-<p>Note that <strong>case 3</strong> (Fig 5d) is useful when one needs to further specify the isolated part, as in &#8216;black ones of: some female half-of dogs&#8217;.</p>
-<p>Also note that in natural language the phrase &#8216;<em>the</em> black half of dogs escapes&#8217; not only expresses the information in case 1 (Fig 5b),
+<p>Note that <strong>case 3</strong> (Fig 7d) is useful when one needs to further specify the isolated part, as in &#8216;black ones of: some female half-of dogs&#8217;.</p>
+<p>Also note that in natural language the phrase &#8216;<em>the</em> black half of dogs escapes&#8217; not only expresses the information in case 1 (Fig 7b),
 but also that &#8220;half-of dogs has-color black&#8221; which would require a second <span class="caps">VSM</span>-sentence.</p>
-<p><img class="i45" src="img/Fig5.png" alt="" /></p>
-<p class="caption"><b>Fig 5: Non-interchangeable attributes.</b>
-In advanced cases, the order in which multiple connections are added to a term can affect meaning.
+<p><img class="i45" src="img/Fig7.png" alt="" /></p>
+<p class="caption"><b>Fig 7. Interchangeable vs. non-interchangeable attributes.</b>
+In (a), attribute order does not matter. But
+in advanced cases, the order in which multiple connections are added to a term can affect meaning.
 Here, the attributes &#8220;half-of&#8221; and &#8220;black&#8221; can be applied either (b)&nbsp;simultaneously, or (c-d)&nbsp;in a particular order.
 In the latter cases, one applies the first connection to the term, then isolates the term as parent for a coreferencing child placeholder,
 e.g. labeled &#8216;them&#8217;, and then further connects this child.</p>
@@ -817,7 +819,7 @@ Our test-users literally loved all this.<span class="note fun popupHolder"><span
 <p><img class="i65 imgl vsm" src="img/vsm06-7.png" alt="" /></p>
 <p><img class="i65 imgl vsm" src="img/vsm06-8.png" alt="" /></p>
 <p><br />Boom!
-<br />Now we have a curation technology that works just like what exists, but is better at the same time,
+<br />Now we have a curation technology that works just like what exists, but is better at the same time (with term lookup),
 and that is immediately extensible to its full power!
 <br />So <span class="caps">VSM</span> is: easy to use, extremely flexible, and ready to be computed upon! Exactly what we <a href="intro.html#new-tech">wanted</a>.
 <br /><br /></p>
@@ -829,7 +831,7 @@ or the <a href="examples.html">Examples &rarr;</a> or the <a href="discussion.ht
 <p>While <span class="caps">VSM</span> enables flexible information capture, some curation tasks involve the repetitive entry of similarly structured facts.
 To streamline a routine entry of facts, one can envision a <strong><span class="caps">VSM</span>-template</strong>.
 This is a predefined structure of connectors, with a series of terms, and empty fields that need to be filled in with a term by the user.
-Fig 5 shows a template, and the process of filling in terms. Each empty field can be associated with one or more preferred dictionaries, e.g. genes or cell types.
+Fig 8 shows a template, and the process of filling in terms. Each empty field can be associated with one or more preferred dictionaries, e.g. genes or cell types.
 This can help an autocomplete function to either rank these terms accessibly on top, or limit entry to these terms only.
 Curators need not be restricted to capture only what a template was designed for: they can still add extra terms anywhere into the <span class="caps">VSM</span>-sentence and connect them up.
 For broader curation tasks, software could provide a number of <span class="caps">VSM</span>-templates in a menu,
@@ -841,8 +843,8 @@ by replacing certain terms or empty fields with more detailed template <strong><
 For example, a field for a protein term could be augmented with a <span class="caps">VSM</span>-structure to hold phosphorylation details;
 or it could be replaced by a list of proteins that act together; or a simple location field could be changed into a <span class="caps">VSM</span>-structure that includes
 cell type, tissue, species, developmental stage etc.</p>
-<p><img class="i60" src="img/Fig6.png" alt="" /></p>
-<p class="caption"><b>Fig 6. <span class="caps">VSM</span>-templates.</b>
+<p><img class="i60" src="img/Fig8.png" alt="" /></p>
+<p class="caption"><b>Fig 8. <span class="caps">VSM</span>-templates.</b>
 In the <span class="caps">VSM</span>-template in (a), the first two empty fields would be associated with protein terms, and the third field with cell types and cell lines.
 (b) is an example of this template filled in.
 &#40;c) shows a template where the relation is easily selectable, and where the last empty field would be linked to a controlled vocabulary of experiment types.</p>
@@ -858,8 +860,8 @@ This could for instance be used for unambiguously defining the steps of biologic
 <h4>Head</h4>
 <p>As explained earlier, each term receives extra &#8216;context&#8217; from all its connected terms.
 As a consequence, every term actually represents the entire content of the <span class="caps">VSM</span>-sentence, although from its own &#8216;perspective&#8217;:
-e.g. in Fig 1.2e the fifth term can be read as &#8216;the fork used for eating of chicken by John&#8217;.
-In natural language though, a sentence conveys information only from one particular perspective, e.g. in Fig 1.2e, the sentence implies focus on &#8216;the eating&#8217;.
+e.g. in Fig 2b the fifth term can be read as &#8216;the fork used for eating of chicken by John&#8217;.
+In natural language though, a sentence conveys information only from one particular perspective, e.g. in Fig 2b, the sentence implies focus on &#8216;the eating&#8217;.
 This perspective or &#8216;intended meaning&#8217; is embedded in the term &#8220;eats&#8221;;
 and this term is also the one that subsequent sentences would refer to when stating e.g. &#8220;<em>that</em> was observed in 2017&#8243;.
 The <span class="caps">VSM</span> UI could enable a user to assign this focal term or <strong>head</strong> in a <span class="caps">VSM</span>-sentence.</p>
@@ -881,7 +883,7 @@ In order to support all these three fundamentally different types, the <span cla
 and it could show them with a different background color.
 Then a <span class="caps">VSM</span>-sentence could express information like &#8220;duck (in general) is-a-type-of bird (in general) according-to ontology-version-X (specific)&#8221;,
 or &#8220;bird (in general) has 2 wings&#8221;, or &#8220;chicken (in general) has-alias hen (literal string)&#8221;, or &#8220;proteinX has-sequence <span class="caps">MRHIAHTQ</span> (literal,&nbsp;data)&#8221;.</p>
-<p>In fact, the distinction between general and specific concepts is 📖 <strong>The Fourth Founding Principle of <span class="caps">VSM</span></strong>,
+<p>In fact, the distinction between general and specific concepts is described in 📖 <strong>The Fourth Founding Principle of <span class="caps">VSM</span></strong>,
 but we can explain that much better after we show a picture of VSMGraphs, later on the <a href="vsmgraph.html">VSMGraphs</a> page.</p>
 <p>Note that in case one would use <span class="caps">VSM</span> as an interface to generate <span class="caps">RDF</span> or <span class="caps">OWL</span> models, <span class="caps">VSM</span> does not impose the use of either their <span class="caps">OWL</span> Instances or <span class="caps">OWL</span> Classes.
 In the <span class="caps">VSM</span> view, the only difference between (<span class="caps">VSM</span>&#8216;s) <em>specific</em> and <em>general</em>
@@ -991,7 +993,7 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
  We can make this context explicit by expanding the statements as e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
 </li>
 <li class="item"><span class="nr">16</span>
-You could also read it as<br>&#8220;mouse [having-attribute] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
+You could also read it as<br>&#8220;mouse [specified-to-be] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
 <br>And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </li>
