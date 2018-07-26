@@ -401,16 +401,12 @@ which <span class="caps">VSM</span> does not require. Because in <span class="ca
 <h4>Tridents: biological examples</h4>
 <script> addvsm( [ 'expression|d:3', 'of', 'YAB3|d:3|x:rice gene', 'is', 'reduced|d:3', 'in|c:111', 'Oryza', 'overexpressing|d:3', 'WOX3|d:3|x:rice gene'],
         [ [0,0,1,2], [0,0,3,4], [0,3,5,6], [0,6,7,8] ],  3,  'nms' ); </script>
-<script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3|x:A. thaliana gene', 'is', 'increased|d:3', 'at|c:115', '5', 'DAI|d:3|x:Days After Inoculation',
-          'in|c:111', 'TuMV|d:3|x:Turnip mosaic virus', 'infected|d:3|c:1139|t:1140|x:= infected by', 'Arabidopsis|d:3|x:Plant species Arabidopsis thaliana'],
-        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,11], [0,11,10,9] ],  4 ); </script>
+
 <script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3', 'is', 'increased', 'at', '5', 'DAI|d:3|x:days after inoculation', 'in|c:111',
-          'Arabidops|d:3', 'infected by|d:3|c:1139|t:1139', 'TuMV|d:3|x:Turnip mosaic virus'],
-        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4, 'nms' ); </script>
-<p>For representing the natural language phrase &#8216;TuMV-infected Arabidopsis&#8217;, the above two examples show alternative ways
-of label selection for the relation (but with same classID) and <span class="caps">VSM</span>-term order.
-But both resulting <span class="caps">VSM</span>-sentence graphs (the <span class="caps">VSM</span>-term IDs and connection structure) are identical, which is all what matters for computation.
-&nbsp;Still, the second choice may be the clearest for humans.</p>
+          'Arabidopsis|d:3|x:Arabidopsis thaliana, a plant species', 'infected by|d:3|c:1139|t:1139', 'TuMV|d:3|x:Turnip mosaic virus'],
+        [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4 ); </script>
+<p>The last three <span class="caps">VSM</span>-terms here represent the natural language phrase &#8216;TuMV-infected Arabidopsis&#8217;.</p>
+
 <script> addvsm( [ 'HsCdc6|d:3', 'translocates to|d:3', 'cytoplasm|d:3', 'at|c:115', 'start of', 'S phase|d:3',
                    'via', 'Crm1|d:3', 'depending|x:to depend on', 'transport'],
         [ [0,0,1,2], [0,1,3,5], [0,5,-1,4], [0,1,6,9], [0,9,8,7] ],  3 ); </script>
