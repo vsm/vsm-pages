@@ -256,9 +256,9 @@ This enhances user-friendliness in several ways.<span class="note dry popupHolde
 because gene and ontology terms often have many synonyms that are frequently used in the biological literature.
 When curating, synonyms (linked to the correct ID) may make it easier to mentally map a long <span class="caps">VSM</span>-sentence onto terminology used in the publication,
 especially for subsequent curators who double-check the <span class="caps">VSM</span>-sentence. One could still add a <acronym title="user interface"><span class="caps">UI</span></acronym>-option to display terms by their official name if wished.
-Second, some official terms may be excessively long (e.g. in GO<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example long term:
+Second, some official terms may be excessively long (e.g. in GO<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example of a long term:
 &#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and even longer ones.
-<br />Some terms are so long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
+<br />Some terms are that long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
 </span></span>),
 and curators may prefer to use an abbreviation to keep produced statements readable.
 And third, it enables to make <span class="caps">VSM</span>-sentences look more like natural language sentences! For example, consider a single relation concept that has two synonyms:
@@ -572,10 +572,10 @@ Each term represents an identifier from a controlled vocabulary, e.g. &#8220;lea
 and &#8220;twisted&#8221; by <span class="caps">PATO</span> (Phenotype And Trait Ontology).
 We want to accentuate that any additional biological context, like the details captured here, helps to increase the quality of the information.
 This could for instance resolve two seemingly contradictory &#8216;bare triple&#8217; statements through reconciliatory contextual details.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup"> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
- We can make this context explicit by expanding the statements as e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
+ We can make this context explicit by expanding the statements to e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
 </span></span></p>
 <p>The order in which connectors are added or displayed is irrelevant for the connection structure. Still, some ordering may look more intuitive than others,
-for example based on which subunit one thinks of as central in the statement (see &#8216;Head&#8217; later). Various visual sort algorithms can be developed for this UI aspect.</p>
+for example based on which subunit one thinks of as central in the statement (see &#8216;Head&#8217; later). Various visual sort algorithms may be developed for this UI aspect.</p>
 <p>Note that although this all can be mapped to <acronym title="Resource Description Framework"><span class="caps">RDF</span></acronym><span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">10</span><span class="popx popup"> See this <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Wikipedia page</a>,
    or the <a href="https://www.w3.org/RDF/">Resource Description Framework project site</a>. </span></span>,
 either directly when two non-relation legs connect to a term,
@@ -683,9 +683,10 @@ Here we also see that numbers can be represented with <span class="caps">VSM</sp
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
 For example, one could be an “approximately&nbsp; 5”, another a “5 &nbsp;&plusmn;&nbsp; 2”, and another an “at-least&nbsp; 5”.
-<br />So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
+<br />So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers, by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
-(This is implemented in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
+<br />(This was not yet implemented in the prototype used on these web pages,
+but it is implemented now in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
 see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>).
 </span></span></p>
 <p><a name="list-connector"></a></p>
@@ -782,7 +783,7 @@ e.g. labeled &#8216;them&#8217;, and then further connects this child.</p>
 We built some of these functions into our research-prototype UI already, while some others are still development ideas, or ideas in development.</p>
 
 <p><a name="templates"></a></p>
-<h4>Templates</h4>
+<h4>3.1. Templates</h4>
 <div class="shortstory">
 <h5>The Short Story <span class="ssr">5/5</span></h5>
 
@@ -849,7 +850,7 @@ In the <span class="caps">VSM</span>-template in (a), the first two empty fields
 (b) is an example of this template filled in.
 &#40;c) shows a template where the relation is easily selectable, and where the last empty field would be linked to a controlled vocabulary of experiment types.</p>
 <p><a name="external-coreference"></a></p>
-<h4>External coreference</h4>
+<h4>3.2. External coreference</h4>
 <p>In natural language, one can build a <strong>story</strong> by referring back to any concept that was conveyed in an earlier sentence
 (e.g. &#8216;John buys cheese&#8217;; &#8216;One hour after <em>that</em>, mouse eats <em>it</em>&#8216;).
 Because each term in a <span class="caps">VSM</span>-sentence is a specific concept, one could refer back to any of them, similarly, from other <span class="caps">VSM</span>-sentences.
@@ -857,7 +858,7 @@ Software for managing multiple <span class="caps">VSM</span>-sentences could sup
 This could for instance be used for unambiguously defining the steps of biological experiment protocols.</p>
 
 <p><a name="head"></a></p>
-<h4>Head</h4>
+<h4>3.3. Head</h4>
 <p>As explained earlier, each term receives extra &#8216;context&#8217; from all its connected terms.
 As a consequence, every term actually represents the entire content of the <span class="caps">VSM</span>-sentence, although from its own &#8216;perspective&#8217;:
 e.g. in Fig 2b the fifth term can be read as &#8216;the fork used for eating of chicken by John&#8217;.
@@ -875,7 +876,7 @@ this <span class="caps">VSM</span>-phrase&#8217;s first term must be assigned as
 A UI could support head assignment via an Alt+click above a <span class="caps">VSM</span>-term, and by drawing dashes above the term and under the connectors.</p>
 
 <p><a name="term-types"></a></p>
-<h4>General and Data terms</h4>
+<h4>3.4. General and Data terms</h4>
 <p>As <span class="caps">VSM</span> terms are embedded into a particular context, they represent <strong>specific concepts</strong>.
 Ontologies, however, define relations between <strong>general concepts</strong>, i.e. <em>concepts that are not bound to a particular context</em>.
 In addition, <span class="caps">RDF</span> is able to work with <strong>literal text-strings</strong> or data, which do not represent any &#8216;concept&#8217;.
@@ -990,7 +991,7 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
  <a href="vsmgraph.html#principle-4">Principle 4</a> on a further page already).
 </li>
 <li class="item"><span class="nr">15</span> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
- We can make this context explicit by expanding the statements as e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
+ We can make this context explicit by expanding the statements to e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
 </li>
 <li class="item"><span class="nr">16</span>
 You could also read it as<br>&#8220;mouse [specified-to-be] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
@@ -1010,9 +1011,10 @@ Here we also see that numbers can be represented with <span class="caps">VSM</sp
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
 For example, one could be an “approximately&nbsp; 5”, another a “5 &nbsp;&plusmn;&nbsp; 2”, and another an “at-least&nbsp; 5”.
-<br>So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
+<br>So the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers, by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
-(This is implemented in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
+<br>(This was not yet implemented in the prototype used on these web pages,
+but it is implemented now in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
 see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>).
 </li>
 <li class="item"><span class="nr">19</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
@@ -1044,9 +1046,9 @@ see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.
 <br>&bull; <a href="https://www.ncbi.nlm.nih.gov/gene/">https://www.ncbi.nlm.nih.gov/gene/</a>
 </li>
 <li class="item"><span class="nr">4</span> <a href="https://www.ncbi.nlm.nih.gov/pubmed/23110757">Jointly creating digital abstracts: dealing with synonymy and polysemy</a>, <span class="caps">BMC</span> Res Notes, 2012. </li>
-<li class="item"><span class="nr">5</span> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example long term:
+<li class="item"><span class="nr">5</span> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example of a long term:
 &#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and even longer ones.
-<br>Some terms are so long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
+<br>Some terms are that long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
 </li>
 <li class="item"><span class="nr">6</span>
 &bull; <span class="caps">RDF</span> in general: <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Wiki:RDF</a>, <a href="https://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"><span class="caps">W3C</span></a>,
