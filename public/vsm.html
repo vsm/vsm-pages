@@ -229,8 +229,8 @@ that&#8217;s for after the Full Story on <span class="caps">VSM</span>-terms, if
 <br /></p>
 </div>
 <h4>The Full Story &nbsp;<span class="smaller">(formal story)</span></h4>
-<p>The user-interface of <span class="caps">VSM</span> is a component called a <i><span class="caps">VSM</span>-box</i>.
-A <span class="caps">VSM</span>-box supports the entering of terms by an autocomplete function,
+<p>A <i><span class="caps">VSM</span>-box</i>, the user-interface of <span class="caps">VSM</span>,
+supports the entering of terms by an autocomplete function,
 which displays a selection panel that lets users choose specific terms (Fig 1a).
 Each <strong>term</strong> represents a single <strong>concept</strong>,<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> <a href="https://en.wikipedia.org/wiki/Concept">Wikipedia:Concept</a> </span></span>or a &#8216;unit of meaning&#8217;. It can consist of one or more words, for instance &#8220;homo sapiens&#8221;, &#8220;is located in&#8221;, or &#8220;binds to&#8221;.
 A term is in fact a human-friendly representation for a unique <strong>identifier</strong> (ID): a number or code that computers work with.
@@ -256,12 +256,12 @@ This enhances user-friendliness in several ways.<span class="note dry popupHolde
 because gene and ontology terms often have many synonyms that are frequently used in the biological literature.
 When curating, synonyms (linked to the correct ID) may make it easier to mentally map a long <span class="caps">VSM</span>-sentence onto terminology used in the publication,
 especially for subsequent curators who double-check the <span class="caps">VSM</span>-sentence. One could still add a <acronym title="user interface"><span class="caps">UI</span></acronym>-option to display terms by their official name if wished.
-Second, some official terms may be excessively long (e.g. in GO<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example of a long term:
-&#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and even longer ones.
+<br />Second, some official terms may be excessively long (e.g. in GO<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example of a long term:
+&#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and there are even longer ones.
 <br />Some terms are that long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
 </span></span>),
 and curators may prefer to use an abbreviation to keep produced statements readable.
-And third, it enables to make <span class="caps">VSM</span>-sentences look more like natural language sentences! For example, consider a single relation concept that has two synonyms:
+<br />And third, it enables to make <span class="caps">VSM</span>-sentences look more like natural language sentences. For example, consider a single relation concept that has two synonyms:
 the verb &#8220;is-located-in&#8221; and the preposition &#8220;in&#8221;, so that both represent the same ID. Then the <span class="caps">VSM</span>-sentence &#8220;A activates B in C&#8221; is most natural to read
 when one can use the preposition &#8220;in&#8221; instead of the verb form (Fig 1b vs 1c).</p>
 <p>In summary: <span class="caps">VSM</span> enables a curator to write and read information
@@ -270,7 +270,7 @@ and once specified, each term in a statement represents one specific ID.</p>
 
 <p><img class="i70" src="img/Fig1.png" alt="" /></p>
 <p class="caption"><b>Fig 1. Entering <span class="caps">VSM</span> terms.</b>
-(a) A curator enters a sequence of terms, each linked to an identifier to represent a particular &#8216;concept&#8217;.
+(a) A curator enters a sequence of terms, each linked to an identifier that represents a particular &#8216;concept&#8217;.
 (b) The full sequence of terms. This is just as easily readable as a natural language sentence,
 among others because the user was able to use the preposition &#8220;in&#8221; for the relation &#8220;is located in&#8221;, both of which would here represent the same identifier.
 &#40;c) This sequence represent the same five IDs but illustrates a less &#8216;natural&#8217; choice of terms.</p>
@@ -364,10 +364,10 @@ so we&#8217;ll need to clarify the structure of a sentence in some other (prefer
 
 <p>📖 <strong>The First Founding Principle of <span class="caps">VSM</span>.</strong>
 &nbsp;A <span class="caps">VSM</span>-sentence is a curator&#8217;s interpretation, or distillation, of some information&#8217;s essence.
-And hereby, a curator needs to reflect this &#8216;understanding&#8217; by entering terms
+A curator needs to reflect this &#8216;understanding&#8217; by entering terms
 in such a way that a syntax, i.e. a structure of how <span class="caps">VSM</span>-terms link together to create a composed meaning,
 can be specified with <span class="caps">VSM</span>&#8216;s &#8216;syntax connectors&#8217; or <span class="caps">VSM</span>-connectors.
-These <span class="caps">VSM</span>-connectors are added with the user interface, and they are available in three main types: the trident, the list connector, and the co-reference.</p>
+These <span class="caps">VSM</span>-connectors are added with the user interface, and they are available in three main types: the trident, the list-connector, and the co-reference.</p>
 
 
 <p>In what follows, we explain how <span class="caps">VSM</span>-connectors are used to syntactically specify anything from simple statements,
@@ -544,7 +544,7 @@ In other words: each term is placed the context of its connected terms, and beco
 For example in Fig 2a, the first trident makes &#8220;eats&#8221; become &#8216;the eating, of a chicken, by John&#8217;;
 likewise &#8220;chicken&#8221; becomes &#8216;the chicken eaten by John&#8217;; and also &#8220;John&#8221; becomes a more specific concept.
 Then, when one connects a second trident to any of these terms, one in fact refers to that term&#8217;s full, context-enriched meaning.
-So the second trident Fig 2b states: &#8220;the-eating-of-chicken-by-John happens-with fork&#8221;.
+So the second trident in Fig 2b states: &#8220;the-eating-of-chicken-by-John happens-with fork&#8221;.
 And by induction, all five of its terms now carry an enriched meaning, accumulated from the other four.
 This makes each term individually referable again, in the same way. Like this one can <em>keep adding further or nested context to every single term</em>, recursively.
 <br />For instance to express &#8216;John eats a chicken, occasionally using a fork&#8217;, one would connect a new trident to &#8220;using&#8221;, and create a new triple that states:
@@ -667,10 +667,10 @@ its own default, implicit <strong>attribute relation</strong>. For example: numb
 or posttranslational modifications (&#8220;.. [has-state] phosphorylated&#8221;); see also Fig 4f-g.
 <br />&bull; In other cases, it could be associated with the attribute&#8217;s target concept as well.
 For example: &#8220;&lt;gene&#8209;x&gt; expression&#8221; would mean &#8220;expression [of] &lt;gene&#8209;x&gt;&#8221;, e.g. &#8220;Cas9 expression&#8221;.
-Or &#8220;&lt;tree&#8209;x&gt;&nbsp;leaf&#8221; would mean &#8220;leaf [from] &lt;tree&#8209;x&gt;&#8221;, e.g. &#8220;oak leaf&#8221;.
+Or &#8220;&lt;tree&#8209;x&gt;&nbsp;leaf&#8221; would mean &#8220;leaf [from-tree-of-species] &lt;tree&#8209;x&gt;&#8221;, e.g. &#8220;oak leaf&#8221;.
 <br />&bull; However, for attribute constructions in natural language that use an implicit relation that is not yet automatically inferable,
 one must use either an explicit triple or a single term.
-For example, &#8216;actin filament&#8217; should then be represented as &#8220;filament composed-of actin&#8221; or &#8220;actin-filament&#8221;.</p>
+For example, &#8216;actin filament&#8217; should then be represented as &#8220;filament composed-of actin&#8221; or as &#8220;actin-filament&#8221;.</p>
 
 <p><img class="i55" src="img/Fig4.png" alt="" /></p>
 <p class="caption"><b>Fig 4. Bidents.</b>
@@ -725,7 +725,7 @@ If order is important for the list-relation, then not click-order, but the order
 <p>The <strong>coreference</strong> connector provides additional flexibility to handle advanced use cases.
 Its most basic function is to let users build human-readable sentences with terms that refer back to another term; for instance with a term &#8220;it&#8221;, as in Fig 6a.
 We call this &#8220;it&#8221; the <strong>child</strong> term. The child term is a placeholder that receives meaning from its <strong>parent</strong> term: the term it refers to.
-In Fig 6, the UI draws the coreference connector in dashed lines, with an undecorated leg connecting to the child, and open triangle arrow connecting to the parent;
+In Fig 6, the UI draws the coreference connector in dashed lines, with an undecorated leg connecting to the child, and an open triangle arrow connecting to the parent;
 and the child term is surrounded with dashes. A user could add a coreference by first Ctrl+clicking above the child term, and next above the parent term.</p>
 <p>The usefulness of the reference connector goes further: it also enables a curator to work with <strong>two distinct concepts</strong>.
 Consider e.g. &#8220;Bob activates device in evening causes it beeps in morning&#8221; (Fig 6b).
@@ -864,7 +864,7 @@ As a consequence, every term actually represents the entire content of the <span
 e.g. in Fig 2b the fifth term can be read as &#8216;the fork used for eating of chicken by John&#8217;.
 In natural language though, a sentence conveys information only from one particular perspective, e.g. in Fig 2b, the sentence implies focus on &#8216;the eating&#8217;.
 This perspective or &#8216;intended meaning&#8217; is embedded in the term &#8220;eats&#8221;;
-and this term is also the one that subsequent sentences would refer to when stating e.g. &#8220;<em>that</em> was observed in 2017&#8243;.
+and this term is also the one that subsequent sentences would refer to when stating e.g. &#8220;<em>that</em> was observed in 2018&#8243;.
 The <span class="caps">VSM</span> UI could enable a user to assign this focal term or <strong>head</strong> in a <span class="caps">VSM</span>-sentence.</p>
 
 <p>Next, when one wants to refer to a sentence as a whole, e.g. for adding meta-information,
@@ -1047,7 +1047,7 @@ see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.
 </li>
 <li class="item"><span class="nr">4</span> <a href="https://www.ncbi.nlm.nih.gov/pubmed/23110757">Jointly creating digital abstracts: dealing with synonymy and polysemy</a>, <span class="caps">BMC</span> Res Notes, 2012. </li>
 <li class="item"><span class="nr">5</span> Gene Ontology (<a href="http://www.geneontology.org/">geneontology.org</a>) is a dictionary about gene functionality etc. &#8211; Example of a long term:
-&#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and even longer ones.
+&#8220;<a href="http://amigo.geneontology.org/amigo/term/GO:0045944">positive regulation of transcription from <span class="caps">RNA</span> polymerase II promoter</a>&#8220;, and there are even longer ones.
 <br>Some terms are that long because GO classifies biological concepts in an extensive tree structure of ever-more-specific terminology.
 </li>
 <li class="item"><span class="nr">6</span>

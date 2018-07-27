@@ -87,6 +87,7 @@ yet in a format that is both easily readable by humans and comprehensible by alg
 <span class="caps">VSM</span>&#8216;s connectors enable a user to disambiguate the internal structure of information,
 and support an uniform and intuitive method for creating statements with high structural transparency.
 Tridents, bidents, and lists cover many use cases; coreferences support advanced cases.
+The three Principles give conceptual descriptions for working with terms and connectors.
 Templates make <span class="caps">VSM</span> as easy as filling in spreadsheets or forms, or easier because of autocomplete support.
 Extra features make <span class="caps">VSM</span> even more expressive.</p>
 <p><span class="caps">VSM</span> thus forms a bridge that makes computational understanding of extremely diverse, human-readable quasi-sentences a reality.
@@ -147,7 +148,7 @@ and is comfortably augmented with ontology lookup and term auto-completion.
 More experienced curators who encounter the actual need to capture information that goes beyond a template,
 may gradually venture into learning more about <span class="caps">VSM</span> and add and connect extra terms and structure.</p>
 <p><em>For IT experts.</em> Templates are also a good start for being able to write queries in the standard way,
-which is: relying on a data-schema that tells us precisely what kind of information we have available.
+which is: relying on a data-schema that tells precisely what kind of information is available for querying.
 Still, when a curator captures information that exceeds the template (e.g. extra details about a protein),
 then a query could return a term, plus its attached subgraph. This would be a <span class="caps">VSM</span>-phrase that is already conveniently human-readable.
 If a certain type of extension occurs often, then queries could be updated to search specifically for that information too.
@@ -158,16 +159,16 @@ This exciting prospect enables a focus on semantic preservation first, which the
 <p><em>For third parties.</em> Templates may also be useful to ensure that captured information is readily translatable to other data formats.
 For example, we are using templates in a pilot curation project, and these are helpful to export relevant parts of <span class="caps">VSM</span>-sentences
 and to contribute to established projects like GO Annotations and IntAct.
-Furthermore, the user-friendliness of the interface could stimulate the design of dedicated templates for entry of knowledge into formats like<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> &bull; BioPAX: <a href="https://en.wikipedia.org/wiki/BioPAX">Wikipedia:BioPAX</a>, <a href="http://www.biopax.org">biopax.org</a>,
+Furthermore, the user-friendliness of the interface could stimulate the design of dedicated templates for entry of knowledge into other formats like
+<acronym title="Biological PAthway data eXchange language"><span class="caps">BioPAX</span></acronym>,
+<acronym title="Systems Biology Graphical Notation"><span class="caps">SBGN</span></acronym> and <acronym title="Systems Biology Markup Language"><span class="caps">SBML</span></acronym>.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> &bull; BioPAX: <a href="https://en.wikipedia.org/wiki/BioPAX">Wikipedia:BioPAX</a>, <a href="http://www.biopax.org">biopax.org</a>,
    <a href="https://www.ncbi.nlm.nih.gov/pubmed/20829833">Demir E, et al: The BioPAX community standard for pathway data sharing (2010), Nature Biotechnology</a>;
    <br />&bull; <span class="caps">SBGN</span>: <a href="https://en.wikipedia.org/wiki/Systems_Biology_Graphical_Notation">Wikipedia:SBGN</a>, <a href="http://sbgn.org">sbgn.org</a>,
    <a href="https://www.ncbi.nlm.nih.gov/pubmed/19668183">Le Novère N, et al: The Systems Biology Graphical Notation (2009), Nature Biotechnology</a>;
    <br />&bull; <span class="caps">SBML</span>: <a href="https://en.wikipedia.org/wiki/SBML">Wikipedia:SBML</a>, <a href="http://sbml.org">sbml.org</a>,
    <a href="https://www.ncbi.nlm.nih.gov/pubmed/12611808">Hucka M, et al: The systems biology markup language (<span class="caps">SBML</span>): a medium for representation and exchange of biochemical network models (2003), Bioinformatics</a>.
-</span></span><acronym title="Biological PAthway data eXchange language"><span class="caps">BioPAX</span></acronym>,
-<acronym title="Systems Biology Graphical Notation"><span class="caps">SBGN</span></acronym> and <acronym title="Systems Biology Markup Language"><span class="caps">SBML</span></acronym>.
-Validity checks or constraints could accompany these templates to ensure compliance.</p>
-<p>Also, when natural language processing (<span class="caps">NLP</span>) algorithms extract specific information types from literature, they could place the extracted facts
+</span></span>Validity checks or constraints could accompany these templates to ensure compliance.</p>
+<p>Also, when natural language processing (<span class="caps">NLP</span>) algorithms extract specific information types from literature, they could fill in the extracted facts
 into corresponding <span class="caps">VSM</span>-templates. These, curators may then verify, correct or extend.
 Vice versa, manually filled templates may serve as a &#8216;training corpus&#8217; for <span class="caps">NLP</span>, resulting in a virtuous circle of co-improvement.</p>
 
@@ -179,12 +180,12 @@ which are then flagged as new entries that should be considered by ontology expe
 
 <p><em>Paraphrasing.</em> A second challenge is related to flexibility: there is freedom to express the same piece of information, with different levels of structural detail.
 For example, the single term &#8220;liver-cell&#8221; is equivalent to the more structurally transparent triple &#8220;cell in liver&#8221;,
-and both expressions will likely be entered by curators.
+and both expressions will likely be entered by curators, in a large enough project.
 This calls for mechanisms that can map structures with equivalent meaning, in order to retrieve all variants for a particular query.
 Still, this process will be less complicated than finding all variants that paraphrasing allows in natural language,
 because <span class="caps">VSM</span> represents the information in clearly defined graph structures.</p>
 <p><em>Assistance.</em> Swift and nimble curation with full <span class="caps">VSM</span> may be achieved with assistance tools.
-First, intelligent autocompletion may be trained, to suggest e.g. common prepositions after entered relations.
+First, intelligent autocompletion may be trained, that suggest e.g. common prepositions after entered relations.
 Also, <span class="caps">NLP</span> techniques could suggest and add <span class="caps">VSM</span>-connectors. Finally, algorithms could suggest partial or full translations of free text (or figures) to <span class="caps">VSM</span>.
 This may be accelerated by compiling a set of <span class="caps">VSM</span> translations for common free-text phrases.
 In the long term, a <span class="caps">VSM</span>-sentence may serve as an interface to show how a machine understood a free-text sentence.</p>
