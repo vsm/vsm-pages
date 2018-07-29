@@ -549,7 +549,14 @@ And by induction, all five of its terms now carry an enriched meaning, accumulat
 This makes each term individually referable again, in the same way. Like this one can <em>keep adding further or nested context to every single term</em>, recursively.
 <br />For instance to express &#8216;John eats a chicken, occasionally using a fork&#8217;, one would connect a new trident to &#8220;using&#8221;, and create a new triple that states:
 &#8216;the use of fork (for eating of chicken by John), happens occasionally&#8217;. (See also Bidents below for how to intuitively add adverbs).<br />
-– (More on &#8216;context&#8217;:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup">
+– (More on Principle 2 vs 3:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">14</span><span class="popx popup">
+While Principle 2 defines the meaning of individual <span class="caps">VSM</span>-terms,
+Principle 3 defines how the meaning of each of&nbsp;them changes by attaching one, or multiple connectors to them.
+<br />At this point, Principle 3 may be intuitive or even seem trivial for simple cases as in Fig 2,
+but it will be a crucial insight for working with more advanced cases that need the coreference connector
+(sections 2.5 and 2.6).
+</span></span>.
+&nbsp; More on &#8216;context&#8217;:&nbsp;<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup">
  In more technical terms,
  &#8216;<span style="font-weight: bold">adding more context</span>&#8216; means:
  &#8216;<span style="font-weight: bold">further narrowing down the meaning of a concept,
@@ -571,7 +578,7 @@ Note that here, the term &#8220;in&#8221; will have been linked by the curator t
 Each term represents an identifier from a controlled vocabulary, e.g. &#8220;leaf lamina&#8221; is provided by PO (Plant Ontology)
 and &#8220;twisted&#8221; by <span class="caps">PATO</span> (Phenotype And Trait Ontology).
 We want to accentuate that any additional biological context, like the details captured here, helps to increase the quality of the information.
-This could for instance resolve two seemingly contradictory &#8216;bare triple&#8217; statements through reconciliatory contextual details.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">15</span><span class="popx popup"> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
+This could for instance resolve two seemingly contradictory &#8216;bare triple&#8217; statements through reconciliatory contextual details.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup"> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
  We can make this context explicit by expanding the statements to e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
 </span></span></p>
 <p>The order in which connectors are added or displayed is irrelevant for the connection structure. Still, some ordering may look more intuitive than others,
@@ -607,7 +614,7 @@ Some of their terms come from ontologies, some others are yet to be added to off
 <p>A phrase like &#8216;white mouse&#8217; is not a triplet of terms. So how do we write this with <span class="caps">VSM</span>?</p>
 <p>Simple. Just read the phrase silently as: it&#8217;s a &#8220;mouse [being] white&#8221;.
 Meanwhile you add a trident, from &#8220;mouse&#8221; as a subject, to &#8220;white&#8221; as an object,
-but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">16</span><span class="popx popup">
+but you skip the <em>implicit relation</em>&#8216;s leg: just click twice over &#8220;white&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup">
 You could also read it as<br />&#8220;mouse [specified-to-be] white&#8221;, or as<br />&#8220;mouse [has-color] white&#8221;.
 <br />And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
@@ -643,7 +650,7 @@ A user could add this <strong>first type</strong> of bident just like a trident,
 where the latter uses a <strong>second type</strong> of bident, one that omits the subject leg (Fig 4b-c).
 Apart from using the appropriate synonym for the &#8220;activation&#8221; relation (with same ID),
 the principal difference is that the activator is unspecified in the latter case. Appropiately, the structure of both statements is similar, thanks to the bident.
-This consistency would not be present when using a second triple &#8220;activation having-activatee B&#8221; with an artificial relation inserted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">17</span><span class="popx popup"> Note for experts:
+This consistency would not be present when using a second triple &#8220;activation having-activatee B&#8221; with an artificial relation inserted.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">18</span><span class="popx popup"> Note for experts:
 <br />One could also enter &#8220;activation&nbsp; <strong>of</strong> &nbsp;B&#8221;, by using an explicit <span class="caps">VSM</span>-term &#8220;<strong>of</strong>&#8220;, which would have the meta-meaning
 &#8216;has&nbsp;object&#8217;.
 <br /><br />Note #2: please do not misunderstand and think that &#8216;VSM knows&#8217; if two sentences (two graph structures) would represent a same, rephrased meaning.
@@ -678,7 +685,7 @@ The user can add a trident that misses any one of its three legs, i.e. a bident,
 The bident in (a) accomodates a verb without object. The bident in &#40;c) represents &#8220;activation-of B&#8221; with an unknown subject,
 which is structurally similar to case (b) where a subject &#8220;A&#8221; is known.
 The bident in (d) frees the curator from the obligation to explicitly define a relation that could be computationally inferred, as in (e).
-(f-g) show other attributes with an implicit, inferable relation: &#8220;has-precision&#8221;, &#8220;has-count&#8221;, and &#8220;has-concentration&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">18</span><span class="popx popup">
+(f-g) show other attributes with an implicit, inferable relation: &#8220;has-precision&#8221;, &#8220;has-count&#8221;, and &#8220;has-concentration&#8221;.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">19</span><span class="popx popup">
 Here we also see that numbers can be represented with <span class="caps">VSM</span>-terms.
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
@@ -802,12 +809,12 @@ and then enter it repetitively into a spreadsheet or database form.</p>
 <p><img class="i65 imgl vsm" src="img/vsm06-5.png" alt="" /></p>
 <p><span class="caps">VSM</span>-templates imitate spreadsheet rows or entry forms. But in addition they offer a convenient autocomplete
 (which is quicker and less error-prone that spreadsheets),
-with each field linked to its own, particular set of term dictionaries.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">19</span><span class="popx popup">Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
+with each field linked to its own, particular set of term dictionaries.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">20</span><span class="popx popup">Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
  <br /><br />Note for experts:&nbsp; In our prototype UI, we can specify a number of &#8220;preferred <acronym title="Controlled Vocabulary"><span class="caps">CV</span></acronym> s&#8221; for each empty field.
  Terms from those CVs are then conveniently ranked on top of the autocomplete suggestion list. &#8211; Alternatively,
  one may want to configure the template-UI to leave less flexibility,
  and to require that users enter terms only from a specific CV. </span></span>And they offer an intuitive clarity of what to fill in where, because of the readable &#8216;sentence&#8217; format.
-Our test-users literally loved all this.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">20</span><span class="popx popup"> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
+Our test-users literally loved all this.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">21</span><span class="popx popup"> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
  our test-users would be horrified if they had to go back to the technology they used before <span class="caps">VSM</span>-templates.
  <br /><br />They described this new curation technology &#8211; <span class="caps">VSM</span> &#8211; and
  what could be done automatically for them as a result,
@@ -978,6 +985,13 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
 (I thank him for immunizing us against one more possible misunderstanding though).
 </li>
 <li class="item"><span class="nr">14</span>
+While Principle 2 defines the meaning of individual <span class="caps">VSM</span>-terms,
+Principle 3 defines how the meaning of each of&nbsp;them changes by attaching one, or multiple connectors to them.
+<br>At this point, Principle 3 may be intuitive or even seem trivial for simple cases as in Fig 2,
+but it will be a crucial insight for working with more advanced cases that need the coreference connector
+(sections 2.5 and 2.6).
+</li>
+<li class="item"><span class="nr">15</span>
  In more technical terms,
  &#8216;<span style="font-weight: bold">adding more context</span>&#8216; means:
  &#8216;<span style="font-weight: bold">further narrowing down the meaning of a concept,
@@ -990,15 +1004,15 @@ Because they look a bit like it. &#8211; He later admitted he had been answering
  further specify about it, but that would lead us to
  <a href="vsmgraph.html#principle-4">Principle 4</a> on a further page already).
 </li>
-<li class="item"><span class="nr">15</span> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
+<li class="item"><span class="nr">16</span> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
  We can make this context explicit by expanding the statements to e.g. &#8220;cat is alive in 2018&#8243; and &#8220;cat is dead in 2088&#8243;.
 </li>
-<li class="item"><span class="nr">16</span>
+<li class="item"><span class="nr">17</span>
 You could also read it as<br>&#8220;mouse [specified-to-be] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
 <br>And the computer would understand it like that too, because it should already know that &#8220;white&#8221; is a color,
 and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if needed.
 </li>
-<li class="item"><span class="nr">17</span> Note for experts:
+<li class="item"><span class="nr">18</span> Note for experts:
 <br>One could also enter &#8220;activation&nbsp; <strong>of</strong> &nbsp;B&#8221;, by using an explicit <span class="caps">VSM</span>-term &#8220;<strong>of</strong>&#8220;, which would have the meta-meaning
 &#8216;has&nbsp;object&#8217;.
 <br>Note #2: please do not misunderstand and think that &#8216;VSM knows&#8217; if two sentences (two graph structures) would represent a same, rephrased meaning.
@@ -1006,7 +1020,7 @@ and so it could infer the more specific &#8220;[has&#8209;color]&#8221; if neede
 to be used by people and algorithms. &#8211; Just
 like &#8216;English does not know&#8217; what you mean. Your brain does, and it uses English to represent information at some level.
 </li>
-<li class="item"><span class="nr">18</span>
+<li class="item"><span class="nr">19</span>
 Here we also see that numbers can be represented with <span class="caps">VSM</span>-terms.
 This makes sense because one “5” can be conceptually different from another “5”;
 because just like other <span class="caps">VSM</span>-terms, a number&#8209;concept can be embedded in a particular context.
@@ -1017,12 +1031,12 @@ after the user presses Enter.
 but it is implemented now in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module:
 see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>).
 </li>
-<li class="item"><span class="nr">19</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
+<li class="item"><span class="nr">20</span>Each dictionary (or Controlled Vocabulary, CV) is a list of terms or words, with an agreed-upon meaning and definition, within a particular topic.
  <br>Note for experts:&nbsp; In our prototype UI, we can specify a number of &#8220;preferred <acronym title="Controlled Vocabulary"><span class="caps">CV</span></acronym> s&#8221; for each empty field.
  Terms from those CVs are then conveniently ranked on top of the autocomplete suggestion list. &#8211; Alternatively,
  one may want to configure the template-UI to leave less flexibility,
  and to require that users enter terms only from a specific CV. </li>
-<li class="item"><span class="nr">20</span> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
+<li class="item"><span class="nr">21</span> Isn&#8217;t it funny that &#8216;literally&#8217; has become a <a href="https://www.merriam-webster.com/words-at-play/misuse-of-literally">figuratively</a> used expression? &mdash; But really,
  our test-users would be horrified if they had to go back to the technology they used before <span class="caps">VSM</span>-templates.
  <br>They described this new curation technology &#8211; <span class="caps">VSM</span> &#8211; and
  what could be done automatically for them as a result,
