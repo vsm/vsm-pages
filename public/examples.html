@@ -82,17 +82,6 @@ function setNavbarAActive(id) {
 
 <div id="content" class="content examples">
   <h2>4. &nbsp; <span class="caps">VSM</span> Examples</h2>
-
-
-
-
-
-
-
-
-
-
-
 <p>It&#8217;s time for lots of explained, <strong>interactive</strong> examples.</p>
 <p>Make sure to have read the&nbsp; <a href="summary.html">&#8216;VSM in a nutshell&#8217; summary</a> &nbsp; at least! :</p>
 <p><a href="summary.html"><img class="vsm i15" src="img/summary-thumb.png" alt="" /></a></p>
@@ -132,22 +121,8 @@ function setNavbarAActive(id) {
 	<li class="cnt1">&nbsp;<a href="examples.html#extra-bio"><strong>Various biological use-cases</strong></a>: &nbsp;inspired by you</li>
 	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Various use-cases</strong></a>: &nbsp;inspired by you</li>
 </ol>
-
-
-
 <p><a name="vsm-box"></a></p>
 <h3>1. How to interact with the <em><span class="caps">VSM</span>-box</em> prototype</h3>
-
-
-
-
-
-
-
-
-
-
-
 <script> addvsm([], [], 0, 'nm'); </script>
 <ul>
 	<li>To enter a <span class="caps">VSM</span>-term:
@@ -184,7 +159,6 @@ Connector stacking order is auto-reoptimized.</li>
 		<li class="smaller">To change <strong>term type</strong> (specific/general/data):&nbsp; <code>Ctrl</code> + click on the <span class="caps">VSM</span>-term itself.</li>
 	</ul></li>
 </ul>
-
 <p><a name="basic"></a></p>
 <h3>2. Short Story examples, and more</h3>
 <p><a name="chicken"></a></p>
@@ -218,8 +192,6 @@ So it&#8217;s specifically <em>the eating</em>, that happens &#8216;with&#8217;/
 		<li class="smaller">(As said before: these IDs are only stored in a temporary example-dictionary, embedded in this web page, and not in an online database).</li>
 	</ul></li>
 </ul>
-
-
 <p><a name="chicken-showcase"></a></p>
 <h4>Two chicken showcases</h4>
 <script> addvsm( ['chicken|c:7000104', 'eats', 'chicken', 'with|c:107', 'Na+Cl-', 'with', 'fork'],  [ [0,0,1,2], [0,2,3,4], [0,1,5,6] ],  3 ); </script>
@@ -228,7 +200,6 @@ So it&#8217;s specifically <em>the eating</em>, that happens &#8216;with&#8217;/
 	<li>Also, we have two different meanings for &#8220;with&#8221; here: the first one means &#8216;accompanied with&#8217;,
 and the second one means &#8216;using&#8217;. (So we could also have used the synonym &#8220;using&#8221;, like earlier).</li>
 </ul>
-
 <script> addvsm( ['John', 'reading', 'newspaper', 'eats', 'very', 'burnt', 'chicken', 'with', 'dirty', 'fork'],
         [ [0,0,1,2], [0,0,3,6], [0,6,-1,5], [0,5,-1,4], [0,3,7,9], [0,9,-1,8] ], 4 ); </script>
 <p><strong>= Key demo:</strong> &nbsp;You can always add more context details, to any <span class="caps">VSM</span>-term. You do this by adding more terms,
@@ -263,8 +234,6 @@ Mousehover the &#8216;<em>in</em>&#8216; here and the one above, to see that the
 (<strong>Click to the right of the last term</strong> to enter an extra term).</li>
 	</ul></li>
 </ul>
-
-
 <p><a name="further"></a></p>
 <h3>3. Full Story and Various examples</h3>
 <p><a name="bidents"></a></p>
@@ -272,7 +241,6 @@ Mousehover the &#8216;<em>in</em>&#8216; here and the one above, to see that the
 <p>The trident can miss any of its three legs, and become a bident:</p>
 <p>&#9679;  Bident without Object leg: &nbsp;(for relations that have no object):</p>
 <script> addvsm( ['plant', 'grows'],  [ [0,0,1,-1] ],  0, 'nm' ); </script>
-
 <p><br />&#9679;  Bident without Subject leg. &#8211; And compare the structural similarity with the case where a Subject <em>is</em> known:</p>
 <script> addvsm( ['X', 'stimulates', 'A', 'activates', 'B'],  [ [0,0,1,3], [0,2,3,4] ],  0, 'nm' ); </script>
 <script> addvsm( ['X', 'stimulates', 'activation', 'B'],  [ [0,0,1,2], [0,-1,2,3] ],  0, 'nms' ); </script>
@@ -306,7 +274,6 @@ the made-explicit relation is associated with the attribute &#8220;gene&#8221;&#
 <script> addvsm( ['X|F', 'having count', '5'],  [ [0,0,1,2] ],  0, 'nms' ); </script>
 <p>The implicit relation in the 1st sentence was made explicit in the second sentence: it is
 &#8220;having&nbsp;count&#8221;, based on the fact that “5” represents a numeric concept.</p>
-
 <script> addvsm( ['approximately', '5', 'X'],  [ [0,1,-1,0], [0,2,-1,1] ] ); </script>
 <p>The term &#8220;approximately&#8221; modifies the term “5”.</p>
 <p>Note! :&nbsp; this illustrates that “5” is not always a concept that represents ‘an exact 5’ !
@@ -396,17 +363,14 @@ which represents: &#8216;Tom believes that Mary wants to marry a sailor&#8217;.<
 	<li>Note: A CG would require the curator to insert meta-information around relations, like the &#8216;Agent&#8217;, &#8216;Theme&#8217;, &#8216;Instrument&#8217;, &#8216;Destination&#8217;,
 which <span class="caps">VSM</span> does not require. Because in <span class="caps">VSM</span> such semantics would be encapsulated in (/could be inferred from) the relation-term that the curator selected.</li>
 </ul>
-
 <p><a name="tridents-bio"></a></p>
 <h4>Tridents: biological examples</h4>
 <script> addvsm( [ 'expression|d:3', 'of', 'YAB3|d:3|x:rice gene', 'is', 'reduced|d:3', 'in|c:111', 'Oryza', 'overexpressing|d:3', 'WOX3|d:3|x:rice gene'],
         [ [0,0,1,2], [0,0,3,4], [0,3,5,6], [0,6,7,8] ],  3,  'nms' ); </script>
-
 <script> addvsm( [ 'expression|d:3', 'of', 'PAD4|d:3', 'is', 'increased', 'at', '5', 'DAI|d:3|x:days after inoculation', 'in|c:111',
           'Arabidopsis|d:3|x:Arabidopsis thaliana, a plant species', 'infected by|d:3|c:1139|t:1139', 'TuMV|d:3|x:Turnip mosaic virus'],
         [ [0,0,1,2], [0,0,3,4], [0,3,5,7], [0,7,-1,6], [0,3,8,9], [0,9,10,11] ],  4 ); </script>
 <p>The last three <span class="caps">VSM</span>-terms here represent the natural language phrase &#8216;TuMV-infected Arabidopsis&#8217;.</p>
-
 <script> addvsm( [ 'HsCdc6|d:3', 'translocates to|d:3', 'cytoplasm|d:3', 'at|c:115', 'start of', 'S phase|d:3',
                    'via', 'Crm1|d:3', 'depending|x:to depend on', 'transport'],
         [ [0,0,1,2], [0,1,3,5], [0,5,-1,4], [0,1,6,9], [0,9,8,7] ],  3 ); </script>
@@ -433,7 +397,6 @@ It does not change that <span class="caps">PAD4</span> still represents a gene. 
 and then we further connect to this narrowed-down &#8220;S-phase&#8221; concept itself;&nbsp;
 while &#8220;expression&#8221; is a distinct concept related to &#8220;<span class="caps">PAD4</span>&#8220;, so we further connect to &#8220;expression&#8221;.</p>
 </blockquote>
-
 <script> addvsm( [ 'approximately', '500', 'tumor cells|d:3', 'placed in', 'solution|d:3', 'containing', '5', 'mg/l', 'drug X|d:3' ],
         [ [0,1,-1,0], [0,2,-1,1], [0,2,3,4], [0,4,5,8], [0,7,-1,6], [0,8,-1,7] ],  4 ); </script>
 <p>(A first shot at creating one line of some protocol description).<br />
@@ -443,8 +406,6 @@ because the attribute term &#8216;<em>mg/l</em>&#8216; would have been classifie
 may not be optimal here. The &#8220;&#8230; containing &#8230;&#8221; connector would better
 have been placed under the &#8220;&#8230; placed-in &#8230;&#8221; one.
 Maybe that more intuitive ordering has something to do with &#8220;tumor-cells&#8221; actually being the Head of the <span class="caps">VSM</span>-phrase).</p>
-
-
 <p><a name="list-connector"></a></p>
 <h4>List connector</h4>
 <script> addvsm( ['and', 'A', 'B', 'C', 'react to', 'D'],  [ [1,0,1,2,3], [0,0,4,5] ],  0, 'nm' ); </script>
@@ -496,7 +457,6 @@ It is only a label, for making a sentence more easily  human-readable.</li>
 	<li>Each child term (&#8220;it&#8221;/&#8220;device&#8221;/&#8230;) gets its own Instance ID and can be referred to again,
 in the same or in next sentences.</li>
 </ul>
-
 <script> addvsm( [ 'Eve|i:901', 'activates|c:7000014|i:902', 'device|i:903|c:7000017', 'in|c:7|i:904', 'China|i:905',
           'causes|i:906', 'it|t:11|i:907|c:7000017|R:903', 'explodes|i:908'],
         [ [0,0,1,2], [0,2,3,4], [0,1,5,7], [0,6,7,-1], [2,6,2]  ],  4 ); </script>
@@ -511,7 +471,6 @@ illustrates again why <span class="caps">VSM</span> connectors connect to single
 <script> addvsm( [ 'Alice|i:771', 'writes|i:772', 'book|i:773', 'means|i:774',
           'she|i:775|R:771|c:7000500|t:30', 'is|i:776', 'author|i:777', 'of|i:778', 'book|i:779|R:773|c:126'],
         [ [0,0,1,2], [0,1,3,5], [0,4,5,6], [0,6,7,8], [2,4,0], [2,8,2] ],  5, 'nms' ); </script>
-
 <script> addvsm( [ 'Eve|i:1111', 'says|i:1112', 'she|R:1111|i:1113', 'sees|i:1114', 'flying|i:1115', 'pigs|i:1116'],
                 [ [0,0,1,3], [0,2,3,5], [0,5,-1,4], [2,2,0] ] ); </script>
 <script> addvsm( [ 'that|t:8|i:1121|c:69|R:1114', 'is|i:1122', 'untrue|i:1123', 'according to|i:1124', 'Alice|i:1125'],
@@ -531,7 +490,7 @@ second sentence shows that one can express that another sentence, or even someth
 <script> addvsm( ['black', 'half of', 'dogs', 'escape'],  [ [0,2,-1,0], [0,2,-1,1], [0,2,3,-1] ],  3 ); </script>
 <script> addvsm( ['half of', 'them|R', 'black', 'dogs', 'escape'],  [ [0,1,-1,0], [0,3,-1,2], [2,1,3], [0,1,4,-1] ],  3,  'nms' ); </script>
 <script> addvsm( ['black', 'them|R', 'half of', 'dogs', 'escape'],  [ [0,1,-1,0], [0,3,-1,2], [2,1,3], [0,1,4,-1] ],  3,  'nms' ); </script>
-<script> addvsm( ['black', 'ones of the|s:i|R', 'female', 'half of', 'dogs', 'escape'],  [ [0,1,-1,0], [0,4,-1,3], [2,1,4], [0,1,5,-1], [0,4,-1,2] ],  4 ); </script>
+<script> addvsm( ['black', 'ones of a|s:i|R', 'female', 'half of', 'dogs', 'escape'],  [ [0,1,-1,0], [0,4,-1,3], [2,1,4], [0,1,5,-1], [0,4,-1,2] ],  4 ); </script>
 <p>&#8230; which just uses another label for the child concept, and adds some extra specifying context (&#8220;female&#8221;) to the parent concept.</p>
 <p><a name="templates"></a></p>
 <h4>Templates</h4>
@@ -589,7 +548,6 @@ As mentioned before, the blue / yellow / red colored <span class="caps">VSM</spa
 <script> addvsm( ['chicken|C', 'has alias', 'hen|D'],  [ [0,0,1,2] ] ); </script>
 <p>A general concept has a label. It could be connected to many different labels like this.
 <br />It could be connected to a standardized name for it, with a &#8220;has-main-alias&#8221; relation.</p>
-
 <script> addvsm( ['protein X', 'has sequence', 'TDRMCRDREACEQCAKESWF|D|w:200,,70'],  [ [0,0,1,2] ] ); </script>
 <p><a name="further-various"></a></p>
 <p><a name="add-connectors"></a></p>
@@ -609,9 +567,6 @@ As mentioned before, the blue / yellow / red colored <span class="caps">VSM</spa
 <script> addvsm( ['nuclear', 'A', 'signals', 'B'],  [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
 <script> addvsm( ['nuclear A', 'signals', 'B'],  [ [0,0,1,2] ],  0,  'nms' ); </script>
 <p>This should be mappable onto each other using some graph-equivalency algorithm.</p>
-
-
-
 <script> addvsm( ['A', 'phosphorylates', 'B'],  [ [0,0,1,2 ] ] ); </script>
 <script> addvsm( ['A', 'transforms', 'B', 'into', 'phosphorylated', 'B'],  [ [0,0,1,2], [0,1,3,5], [0,5,-1,4] ],  0,  'nms' ); </script>
 <script> addvsm( ['A', 'catalyzes', 'B', 'reacts to', 'phosphorylated B'],  [ [0,0,1,3], [0,2,3,4] ],  0,  'nms' ); </script>
@@ -659,7 +614,6 @@ the trident was added with three clicks in the normal order of Subject, Relation
 It would be clearer if the leftmost trident were placed above the other two. Here the current connector-ordering algorithm still works suboptimally).</li>
 	</ul></li>
 </ul>
-
 <p>The <span class="caps">VSM</span>-sentence looks weird (perhaps), but it&#8217;s because we&#8217;re used to see mathematical expressions in that order.
 Here is the exact <strong>same</strong> sentence but with terms reordered (and same connections).</p>
 <script> addvsm( [ 'x', hdec('&lt;'), 'y', 'for some', 'y', 'for all', 'x' ],  [ [0,0,1,2], [0,1,3,4], [0,3,5,6], [2,0,6], [2,2,4] ],  5, 'nms' ); </script>
@@ -674,7 +628,6 @@ Here is the exact <strong>same</strong> sentence but with terms reordered (and s
 <p><a name="extra-bio"></a></p>
 <h3>4. Various biological use-cases <em>&nbsp; <span class="smaller">(Inspired by you)</span></em></h3>
 <h4>Binding of two proteins which then together activate a third</h4>
-
 <p>If you&#8217;d want to represent this on the biochemical-reaction level, then you may actually be dealing with two units of information here:
 &#8220;A and B bind-to-form some-complex&#8221;, and &#8220;<i>that</i>-complex activates C&#8221;.
 <br />This could be captured with an overarching &#8216;and&#8217; list-connector on top of both units.
@@ -725,7 +678,6 @@ then you can insert a &#8220;causes&#8221; relation and a referring &#8220;it&#8
 <br /> &nbsp; <span class="smaller pre"><span class="caps">SET</span> CellLine = &#34;<span class="caps">U266</span>&#34;</span>
 <br /> &nbsp; <span class="smaller pre">proteinAbundance(<span class="caps">HGNC</span>:IL6) increases rnaAbundance(<span class="caps">HGNC</span>:ENO1)</span>
 <br />Or line 2 in short-form: &nbsp; <span class="smaller pre">p(<span class="caps">HGNC</span>:IL6) -&gt; r(<span class="caps">HGNC</span>:ENO1)</span></p>
-
 <p><span class="caps">BEL</span> uses two lines for this. The second line is conveniently short when written in short-form.
 <br />The <span class="caps">VSM</span>-sentence may be quick to construct when using <span class="caps">VSM</span>-templates,
 which in addition supports the curator with convenient autocomplete functionality.
@@ -757,7 +709,6 @@ under <a href="http://openbel.org/language/version_2.0/bel_specification_version
 But a simple &#8216;MeSHDisease = &#8230;&#8217; context with <span class="caps">BEL</span> does not capture this level of detail.
 &nbsp;It is easy to specify this with <span class="caps">VSM</span>).</span></p>
 <h4>And more?</h4>
-
 <ul>
 	<li>Maybe some <a href="https://en.wikipedia.org/wiki/SBML"><span class="caps">SBML</span></a> example.</li>
 	<li>Maybe some <a href="https://en.wikipedia.org/wiki/Systems_Biology_Graphical_Notation"><span class="caps">SBGN</span></a> graph,
