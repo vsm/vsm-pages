@@ -1,8 +1,8 @@
 *
 !.gitignore
 !README.md
-!public/
-!public/*
-!public/ie/*
-!public/img/*
-public/google*
+!docs/
+!docs/*
+!docs/ie/*
+!docs/img/*
+docs/google*
