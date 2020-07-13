@@ -73,9 +73,10 @@ function toggleNavbarIcon() {
 }
 function setNavbarAActive(id) {
   document.getElementById(id).className += ' active';
-  var u = 'http://scicura.org';
-  u = window.location.replace('https://vsmjs.github.io/vsm-pages', u);
-  document.getElementById('infv').src = u + '/infv/' + id;
+  if (window.location.startsWith('https://vsmjs.github.io') {
+    var u = 'http://scicura.org';
+    document.getElementById('infv').src = u + '/infv/' + id;
+  }
 }
 </script>
 <script>setNavbarAActive('intro');</script>
