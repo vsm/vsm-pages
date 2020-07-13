@@ -10,21 +10,21 @@
   <meta name="description" content="A simple curation tool with high flexibility."/>
 
   <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
-  <meta itemprop="description" content="VSM: A neat way to teach our future overlords.">
-  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+  <meta itemprop="description" content="VSM: Intuitive representation of knowledge in computable form.">
+  <meta itemprop="image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@stcruy">
   <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
-  <meta name="twitter:description" content="VSM: A neat way to teach our future overlords.">
+  <meta name="twitter:description" content="VSM: Intuitive representation of knowledge in computable form.">
   <meta name="twitter:creator" content="@stcruy">
-  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+  <meta name="twitter:image:src" content="https://vsmjs.github.io/vsm-pages/img/TW-2.png">
 
   <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="http://scicura.org/vsm" />
-  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
-  <meta property="og:description" content="VSM: A neat way to teach our future overlords." />
+  <meta property="og:url" content="https://vsmjs.github.io/vsm-pages" />
+  <meta property="og:image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png" />
+  <meta property="og:description" content="VSM: Intuitive representation of knowledge in computable form." />
   <meta property="og:site_name" content="The VSM-pages" />
   <meta property="fb:admins" content="404986372864030" />
   <script src="code.js"></script>
@@ -76,27 +76,28 @@ function toggleNavbarIcon() {
 }
 function setNavbarAActive(id) {
   document.getElementById(id).className += ' active';
-  document.getElementById('infv').src += '/infv/' + id;
+  var u = 'http://scicura.org';
+  document.getElementById('infv').src = u + '/infv/' + id;
 }
 </script>
 <script>setNavbarAActive('examples');</script>
 
 <div id="content" class="content examples">
   <h2>4. &nbsp; <span class="caps">VSM</span> Examples</h2>
-<p>It&#8217;s time for lots of explained, <strong>interactive</strong> examples.</p>
+<p>Here are lots of explained, <strong>interactive</strong> examples.</p>
 <p>Make sure to have read the&nbsp; <a href="summary.html">&#8216;VSM in a nutshell&#8217; summary</a> &nbsp; at least! :</p>
 <p><a href="summary.html"><img class="vsm i15" src="img/summary-thumb.png" alt="" /></a></p>
 <h3>Contents</h3>
 <ol>
-	<li class="cnt1">&nbsp;<a href="examples.html#vsm-box"><strong>How to play with <em><span class="caps">VSM</span>-boxes</em> !</strong></a></li>
-	<li class="cnt1">&nbsp;<a href="examples.html#basic"><strong>Short Story examples</strong></a>
+	<li class="cnt1">&nbsp;<a href="examples.html#vsm-box"><strong>How to use <em><span class="caps">VSM</span>-boxes</em> !</strong></a></li>
+	<li class="cnt1">&nbsp;<a href="examples.html#basic"><strong>Short Story&#8217;s examples</strong></a>
 	<ul>
 		<li>&nbsp;<a href="examples.html#chicken">Tridents: John and the chicken</a></li>
 		<li>&nbsp;<a href="examples.html#chicken-showcase">Two chicken showcases</a></li>
 		<li>&nbsp;<a href="examples.html#bio-simple">Tridents: a simple biological case</a></li>
 		<li>&nbsp;<a href="examples.html#bio-showcase">The biological showcase</a></li>
 	</ul></li>
-	<li class="cnt1">&nbsp;<a href="examples.html#further"><strong>Full Story and Various examples</strong></a>
+	<li class="cnt1">&nbsp;<a href="examples.html#further"><strong>Full Story&#8217;s and Various examples</strong></a>
 	<ul>
 		<li>&nbsp;<a href="examples.html#bidents">Bidents</a></li>
 		<li>&nbsp;<a href="examples.html#bidents-more">Bidents: more examples</a></li>
@@ -119,11 +120,11 @@ function setNavbarAActive(id) {
 			<li>&nbsp;<a href="examples.html#styled-terms">Styled <span class="caps">VSM</span>-terms</a></li>
 		</ul></li>
 	</ul></li>
-	<li class="cnt1">&nbsp;<a href="examples.html#extra-bio"><strong>Various biological use-cases</strong></a>: &nbsp;inspired by you</li>
-	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Various use-cases</strong></a>: &nbsp;inspired by you</li>
+	<li class="cnt1">&nbsp;<a href="examples.html#extra-bio"><strong>Various biological use cases</strong></a>:</li>
+	<li class="cnt1">&nbsp;<a href="examples.html#extra"><strong>Various use cases</strong></a>: &nbsp;inspired by you</li>
 </ol>
 <p><a name="vsm-box"></a></p>
-<h3>1. How to interact with the <em><span class="caps">VSM</span>-box</em> prototype</h3>
+<h3>1. How to interact with the <em><span class="caps">VSM</span>-box</em> (prototype version)</h3>
 <script> addvsm([], [], 0, 'nm'); </script>
 <ul>
 	<li>To enter a <span class="caps">VSM</span>-term:
@@ -161,7 +162,7 @@ Connector stacking order is auto-reoptimized.</li>
 	</ul></li>
 </ul>
 <p><a name="basic"></a></p>
-<h3>2. Short Story examples, and more</h3>
+<h3>2. Short Story&#8217;s examples, and more</h3>
 <p><a name="chicken"></a></p>
 <h4>Tridents:&nbsp; John and the chicken</h4>
 <script> addvsm( ['John', 'eats', 'chicken', 'with', 'fork'],  [ [0,0,1,2], [0,1,3,4] ],  0, 'nm' ); </script>
@@ -236,7 +237,7 @@ Mousehover the &#8216;<em>in</em>&#8216; here and the one above, to see that the
 	</ul></li>
 </ul>
 <p><a name="further"></a></p>
-<h3>3. Full Story and Various examples</h3>
+<h3>3. Full Story&#8217;s and Various examples</h3>
 <p><a name="bidents"></a></p>
 <h4>Bidents</h4>
 <p>The trident can miss any of its three legs, and become a bident:</p>
@@ -542,7 +543,7 @@ As mentioned before, the blue / yellow / red colored <span class="caps">VSM</spa
 <p>A classification as in an ontology, or concept hierarchy. Between general concepts, not specific ones.</p>
 <script> addvsm( ['duck|C', 'is a type of', 'bird|C', 'according to', 'NEWT Taxonomy v1.2'],  [ [0,0,1,2], [0,1,3,4] ] ); </script>
 <p>A classification, with as context the taxonomy version that declares this relation.</p>
-<script> addvsm( ['bird|C', 'has', '2', 'wings'],  [ [0,0,1,3], [0,3,-1,2] ] ); </script>
+<script> addvsm( ['bird|C', 'has description', 'animal', 'having', '2', 'wings'],  [ [0,0,1,2], [0,2,3,5], [0,5,-1,4] ] ); </script>
 <p>A description of a general concept.</p>
 <script> addvsm( [ 'm/s|C', 'is defined as', 'meter', 'per|x:... divided by ..., division of ... by ..., fraction of ... and ...', 'second' ],
         [ [0,0,1,3], [0,2,3,4] ]  ); </script>
@@ -553,12 +554,12 @@ As mentioned before, the blue / yellow / red colored <span class="caps">VSM</spa
 <p><a name="further-various"></a></p>
 <p><a name="add-connectors"></a></p>
 <h4>Add-the-connectors-yourself example</h4>
-<script> addvsm( [ 'A', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'B',
+<script> addvsm( [ 'B', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'C',
           'in|c:7', 'chloroplast|d:3|x:cellular compartment', 'during', 'G2|d:3|x:cell cycle phase'],
         [ [0,0,1,2], [0,0,4,6], [0,4,-1,3], [0,6,-1,5], [0,4,7,8], [0,4,9,10] ],  4, 'nm' ); </script>
 <p><br />Try it yourself! Because it&#8217;s easy and fun to add <span class="caps">VSM</span>-connectors &nbsp;(if you know a bit of the biology).
 <br />It&#8217;s like <a href="https://en.wikipedia.org/wiki/Sentence_diagram">diagramming sentences</a> in high school, but simpler :</p>
-<script> addvsm( [ 'A', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'B',
+<script> addvsm( [ 'B', 'bound to', 'β-Carotene', 'transiently', 'binds', 'phosphorylated|d:3', 'C',
           'in|c:7', 'chloroplast|d:3|x:cellular compartment', 'during', 'G2|d:3|x:cell cycle phase'],  [],  0,  'nms' ); </script>
 <p class="smaller"><br />(Remember to click a second time above a same term,
 <br />to skip the relation-leg and make a bident).</p>
@@ -567,24 +568,23 @@ As mentioned before, the blue / yellow / red colored <span class="caps">VSM</spa
 <script> addvsm( ['A', 'located in', 'nucleus', 'signals', 'B'],  [ [0,0,1,2], [0,0,3,4] ],  0,  'nm' ); </script>
 <script> addvsm( ['nuclear', 'A', 'signals', 'B'],  [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
 <script> addvsm( ['nuclear A', 'signals', 'B'],  [ [0,0,1,2] ],  0,  'nms' ); </script>
-<p>This should be mappable onto each other using some graph-equivalency algorithm.</p>
+<p>These should be mappable onto each other using some graph-equivalency algorithm.</p>
 <script> addvsm( ['A', 'phosphorylates', 'B'],  [ [0,0,1,2 ] ] ); </script>
 <script> addvsm( ['A', 'transforms', 'B', 'into', 'phosphorylated', 'B'],  [ [0,0,1,2], [0,1,3,5], [0,5,-1,4] ],  0,  'nms' ); </script>
 <script> addvsm( ['A', 'catalyzes', 'B', 'reacts to', 'phosphorylated B'],  [ [0,0,1,3], [0,2,3,4] ],  0,  'nms' ); </script>
-<p>Mapping these and others sentences for which the equivalence needs some &#8216;reasoning&#8217;, may be more programming work.
-Like also the three &#8216;Levels&#8217; of the <a href="https://en.wikipedia.org/wiki/SBML" title="Systems Biology Markup Language"><span class="caps">SMBL</span></a> language.</p>
+<p>Mapping sentences like these, for which the determination of equivalence needs a form of automated reasoning, may be more programming work.
+Compare to the three &#8216;Levels&#8217; of the <a href="https://en.wikipedia.org/wiki/SBML" title="Systems Biology Markup Language"><span class="caps">SMBL</span></a> language.</p>
 <p><a name="unwrapping"></a></p>
 <h4>Unwrapping a GO term, leading to Semantic Structure Transparency</h4>
-<p>Some of those very long <a href="http://www.geneontology.org/">Gene Ontology</a> terms could be made structurally transparent, as <span class="caps">VSM</span>-sentences:</p>
+<p>Some of the long <a href="http://www.geneontology.org/">Gene Ontology</a> (GO) terms could be shown using structurally more transparent <span class="caps">VSM</span> structures:</p>
 <script> addvsm( ['positive regulation of transcription from RNA polymerase II promoter|d:3|w:400,,500|x:Gene Ontology term'], [ ],  0, 'nm' ); </script>
 <script> addvsm( ['positive', 'regulation|F', 'of', 'transcription from RNA polymerase II promoter|d:3|w:400,,500'], [ [0,1,-1,0], [0,1,2,3] ],  0,  'nms' ); </script>
 <script> addvsm( ['positive', 'regulation|F', 'transcription from RNA polymerase II promoter|d:3|w:400,,500'], [ [0,1,-1,0], [0,-1,1,2] ],  0,  'nms' ); </script>
-<p>Because that&#8217;s what a <em>subject-less bident</em> does: it makes phrases like: &#8220;Relation-(of) &nbsp; Object&#8221;.
+<p>Because that&#8217;s what a <em>subject-omitting bident</em> does: it makes phrases like: &#8220;Relation-(of) &nbsp; Object&#8221;.
 <br />So here it made: &#8220;regulation-(of) &nbsp; (Object-term)&#8221;. &nbsp; (As in: &#8220;[unknown] &nbsp; regulates &nbsp; (Object)&#8221;).</p>
 <script> addvsm( ['positive', 'regulation|F', 'transcription|d:3', 'from', 'RNA polymerase II promoter|d:3|w:400,,500'],
         [ [0,1,-1,0], [0,-1,1,2], [0,2,3,4] ],  3,  'nms' ); </script>
-<p>Perhaps at some point this may help computers to more &#8216;deeply understand&#8217; and reason with such terms,
-which we now use mostly just to tag/classify genes with.</p>
+<p>By using GO terms&#8217; existing <span class="caps">OWL</span>-definitions, and so analyzing their internal conceptual structure, it should be possible to show GO annotations (as well as larger protein interaction models) as simpler, readable <span class="caps">VSM</span>-sentences.</p>
 <p><a name="special-terms"></a></p>
 <h4>English special terms</h4>
 <script> addvsm( ['condition A', 'if-then', 'action B', 'else', 'action C'], [ [0,0,1,2], [0,0,3,4] ],  0, 'nm' ); </script>
@@ -627,7 +627,7 @@ Here is the exact <strong>same</strong> sentence but with terms reordered (and s
 <p>Like superscript text for ions; or for showing human gene names in their standard, italicized way.</p>
 <script> addvsm( ['light speed', 'equals', '299792458', 'm/s2'], [ [0,0,1,3],  [0,3,-1,2] ] ); </script>
 <p><a name="extra-bio"></a></p>
-<h3>4. Various biological use-cases <em>&nbsp; <span class="smaller">(Inspired by you)</span></em></h3>
+<h3>4. Various biological use cases</h3>
 <h4>Binding of two proteins which then together activate a third</h4>
 <p>If you&#8217;d want to represent this on the biochemical-reaction level, then you may actually be dealing with two units of information here:
 &#8220;A and B bind-to-form some-complex&#8221;, and &#8220;<i>that</i>-complex activates C&#8221;.
@@ -719,13 +719,8 @@ written as a number of <span class="caps">VSM</span>-sentences.</li>
  Or see also the &#8216;500 tumor cells&#8217; example earlier.</li>
 </ul>
 <p><a name="extra"></a></p>
-<h3>5. Various use-cases <em>&nbsp; <span class="smaller"></span></em></h3>
-<script> addvsm( ['rare', 'black', 'squirrel', 'has become', 'regular', 'visitor', 'in', 'suburban', 'garden'],
-                 [ [0,2,-1,0], [0,2,-1,1], [0,2,3,5], [0,5,-1,4], [0,5,6,8], [0,8,-1,7] ],  4,  'nms' ); </script>
-<p>= &#8216;A rare black squirrel has become a regular visitor to a suburban garden&#8217;,
-from the <a href="http://news.bbc.co.uk/2/hi/uk_news/england/4365002.stm"><span class="caps">BBC</span></a>.</p>
-<h4>And more?</h4>
-<p>(If you have a particular use-case, let me know! &nbsp;I may add it here).</p>
+<h3>5. Various use cases <em>&nbsp; <span class="smaller"></span></em></h3>
+<p>If you have interesting examples, let me know! &nbsp;I may add it here.</p>
 <p><br /><br /></p>
 <p style="text-align:right"><br />Read about <span class="caps">VSM</span>&#8216;s implications and roll-out on <a class="next" href="discussion.html">the Discussion page<i class="arrow right"></i></a></p>
 <p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> page</p>

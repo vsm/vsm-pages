@@ -10,21 +10,21 @@
   <meta name="description" content="A simple curation tool with high flexibility."/>
 
   <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
-  <meta itemprop="description" content="VSM: A neat way to teach our future overlords.">
-  <meta itemprop="image" content="http://scicura.org/vsm/img/FB-2.png">
+  <meta itemprop="description" content="VSM: Intuitive representation of knowledge in computable form.">
+  <meta itemprop="image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@stcruy">
   <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
-  <meta name="twitter:description" content="VSM: A neat way to teach our future overlords.">
+  <meta name="twitter:description" content="VSM: Intuitive representation of knowledge in computable form.">
   <meta name="twitter:creator" content="@stcruy">
-  <meta name="twitter:image:src" content="http://scicura.org/vsm/img/TW-2.png">
+  <meta name="twitter:image:src" content="https://vsmjs.github.io/vsm-pages/img/TW-2.png">
 
   <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="http://scicura.org/vsm" />
-  <meta property="og:image" content="http://scicura.org/vsm/img/FB-2.png" />
-  <meta property="og:description" content="VSM: A neat way to teach our future overlords." />
+  <meta property="og:url" content="https://vsmjs.github.io/vsm-pages" />
+  <meta property="og:image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png" />
+  <meta property="og:description" content="VSM: Intuitive representation of knowledge in computable form." />
   <meta property="og:site_name" content="The VSM-pages" />
   <meta property="fb:admins" content="404986372864030" />
 </head>
@@ -71,7 +71,8 @@ function toggleNavbarIcon() {
 }
 function setNavbarAActive(id) {
   document.getElementById(id).className += ' active';
-  document.getElementById('infv').src += '/infv/' + id;
+  var u = 'http://scicura.org';
+  document.getElementById('infv').src = u + '/infv/' + id;
 }
 </script>
 <script>setNavbarAActive('about');</script>
@@ -79,42 +80,59 @@ function setNavbarAActive(id) {
 <div id="content" class="content">
   <h2>8. &nbsp; About</h2>
 <h4>Creator/s</h4>
-<p><a href="http://stcruy.com">Steven Vercruysse</a> created most of this site&#8217;s text, all its figures, and embedded software.
-<br />He is Researcher (PhD in Computational Biotechnology, MSc in Computer Science, MSc in Physics)
-<br />
-at the <a href="https://www.ntnu.edu/health/druglogics">DrugLogics</a> group,
-in a featured project (see <a href="http://phdcomics.com/tv/?v=N4NzEyo_HQo">PhdComics-TV</a>)
-of <acronym title="Norwegian University of Science and Technology"><span class="caps">NTNU</span></acronym> University,
-<br />
-in
-<a href="https://www.google.com/maps/place/Trondheim,+Norway/@60.3809367,-2.2723442,4z">Trondheim</a>,
-the technology capital of
-<a href="https://www.google.com/search?q=norway+nature&amp;tbm=isch">Norway, your next holiday destination</a>.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Come visit us if you like <span class="caps">VSM</span>! &#8211; Or invite us to your own city. </span></span></p>
-<p><br />In addition, <a href="http://www.ntnu.edu/employees/martin.kuiper">Martin Kuiper</a>
+<p>Dr. <a href="http://stcruy.com">Steven Vercruysse</a> created most of this site&#8217;s text, all its figures, and embedded software.
+<br />He is currently Independent Researcher (PhD in Computational Biotechnology, MSc in Computer Science, MSc in Physics)
+<!--
+&lt;br&gt;
+at the "DrugLogics":https://www.ntnu.edu/health/druglogics group,
+in a featured project (see "PhdComics-TV":http://phdcomics.com/tv/?v=N4NzEyo_HQo)
+of NTNU(Norwegian University of Science and Technology) University,
+&lt;br&gt;
+-->
+in <a href="https://www.google.com/maps/place/Trondheim,+Norway/@60.3809367,-2.2723442,4z">Trondheim</a>,
+Norway.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Come visit us if you like <span class="caps">VSM</span>! &#8211; Or invite us to your own city. </span></span></p>
+<p><br />In addition, Prof. Dr. <a href="http://www.ntnu.edu/employees/martin.kuiper">Martin Kuiper</a>
 (Professor in <a href="https://www.ntnu.edu/biology/research/molecular-systems-biology/systems-biology">Systems Biology</a>),
 contributed with feedback and edits to the formal parts of the How <span class="caps">VSM</span> Works and the Discussion page.
 He also took the role of afternoon sounding board during the evolution of ideas that formed <span class="caps">VSM</span>.
-<br />Martin Kuiper, and then also <a href="http://www.ntnu.edu/employees/astrid.lagreid">Astrid Lægreid</a>,
+<br />Martin Kuiper, and soon also <a href="http://www.ntnu.edu/employees/astrid.lagreid">Astrid Lægreid</a>,
 created a friendly, interdisciplinary research environment, that led wet-lab biologists and computer specialists to sit together
 and identify problems that could be addressed with combined expertise.</p>
-<p>We are also indebted to <a href="https://www.linkedin.com/in/florianleitner/">Florian Leitner</a>, <a href="https://www.linkedin.com/in/erickantezana/">Erick Antezana</a>,
-and <a href="https://www.linkedin.com/in/runesaetre/">Rune Sætre</a>
-for their feedback on and critical reading of the earlier, very different versions of the How <span class="caps">VSM</span> Works and Discussion texts. &#8211; We
-also thank <a href="https://www.linkedin.com/in/heri-ramampiaro-1a86351/">Heri Ramampiaro</a>,
-<a href="https://www.linkedin.com/in/arnejenssen/">Arne Jenssen</a>, <a href="https://www.linkedin.com/in/sophia-efstathiou-27275b29/">Sophia Efstathiou</a>,
-<a href="https://www.ntnu.edu/employees/maria.k.andersen">Maria K Andersen</a>,
-<a href="https://www.linkedin.com/in/vasundra-touré-912b91a4">Vasundra Touré</a>, <a href="https://www.ntnu.edu/employees/john.zobolas">John Zobolas</a>,
-and others for comments throughout the conception of the ideas
-and on earlier versions of that text. &#8211; We
-thank scientists at the European Bioinformatics Institute (<a href="http://www.ebi.ac.uk/"><span class="caps">EBI</span></a>)
-and members of the International Society for Biocuration (<a href="http://www.biocurator.org/"><span class="caps">ISB</span></a>) for valuable discussions and suggestions.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> Looking back to the beginning, I realize that at first we only had a rudimentary idea of how to explain <span class="caps">VSM</span>.
-<br />Florian&#8217;s, Erick&#8217;s and many dozens and dozens of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
-And they helped us offset <span class="caps">VSM</span> much better against existing technology.
+<p>We are indebted to
+<a href="https://www.linkedin.com/in/florianleitner">Florian Leitner</a>,
+<a href="https://www.linkedin.com/in/erickantezana">Erick Antezana</a>,
+<a href="https://www.linkedin.com/in/heri-ramampiaro-1a86351">Heri Ramampiaro</a>,
+<a href="https://www.linkedin.com/in/runesaetre">Rune Sætre</a>,
+and <a href="https://www.ntnu.edu/employees/maria.k.andersen">Maria K Andersen</a>
+for feedback on and critical reading of earlier, very different versions of the How <span class="caps">VSM</span> Works and Discussion texts. &#8211; We
+especially thank
+<a href="https://www.linkedin.com/in/chrismungall">Chris Mungall</a>,
+<a href="https://www.linkedin.com/in/vasundra-touré-912b91a4">Vasundra Touré</a>,
+<a href="https://www.ntnu.edu/employees/john.zobolas">John Zobolas</a>,
+<a href="http://www.ntnu.edu/employees/astrid.lagreid">Astrid Lægreid</a>,
+<a href="https://www.researchgate.net/profile/Marcio_Acencio">Marcio L. Acencio</a>,
+<a href="https://www.linkedin.com/in/sushil-tripathi-2a04a17">Sushil Tripathi</a>,
+<a href="https://www.linkedin.com/in/liv-thommesen-7033363b">Liv Thommesen</a>,
+<a href="https://www.linkedin.com/in/arnejenssen">Arne Jenssen</a>,
+<a href="https://www.linkedin.com/in/ane-møller-gabrielsen-87b24887">Ane M. Gabrielsen</a>,
+<a href="https://www.linkedin.com/in/sophia-efstathiou-27275b29">Sophia Efstathiou</a>,
+<a href="https://sites.google.com/usc.edu/thomaslab/dr-thomas">Paul D. Thomas</a>,
+<a href="https://www.linkedin.com/in/livia-perfetto-03238a48">Livia Perfetto</a>,
+<a href="https://www.linkedin.com/in/ruthlovering">Ruth Lovering</a>,
+for feedback and/or encouragement. &#8211; We also thank scientists at
+Norwegian University of Science and Technology (<a href="https://www.ntnu.edu"><span class="caps">NTNU</span></a>),
+European Bioinformatics Institute (<a href="http://www.ebi.ac.uk"><span class="caps">EBI</span></a>),
+International Society for Biocuration (<a href="http://www.biocurator.org"><span class="caps">ISB</span></a>),
+Gene Regulation Consortium (<a href="http://thegreco.org"><span class="caps">GRECO</span></a>),
+University of California / Lawrence Berkeley National Laboratory (<a href="http://www.berkeleybop.org"><span class="caps">BBOP</span></a>, UC Berkeley / <span class="caps">LNBL</span>),
+and many others for valuable discussions and suggestions.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">2</span><span class="popx popup"> Looking back to the beginning, I realize that at first we only had a rudimentary idea of how to explain <span class="caps">VSM</span>.
+<br />Florian&#8217;s, Erick&#8217;s and a few hundreds of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
+They gave us insight in how to explain <span class="caps">VSM</span> toward scientists with diverse backgrounds.
 <br />Thank you all for bearing through that!
 </span></span></p>
 <h4>Funding Information</h4>
 <p>First, the conception of the initial idea was supported by Funksjonell Genomforskning (<span class="caps">FUGE</span>) of Midt-Norge and <span class="caps">NTNU</span>.&nbsp; &#8211; &nbsp;Next,
-it was then further developed and implemented solely by private, otherwise unfunded efforts
+it was further developed and implemented solely by private, otherwise unfunded efforts
 by Steven Vercruysse.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup"> Yes&#8230; in today&#8217;s scientific funding system, you&#8217;re a temp forever. &#8211; And
   some years nothing at all, <span class=""><strong>if you dare to be passionate about your brainchild</strong></span>.
   <br />And this situation
@@ -128,13 +146,21 @@ by Steven Vercruysse.<span class="note fun popupHolder"><span class="popx nr" on
    project reviewers&#8230;, or try our luck in industry.
 </span></span>&nbsp; &#8211; &nbsp;Recently
 the further application of this prototype was funded via the &#8216;Well-constructed Knowledge Commons&#8217; project
-of The Research Council of Norway (<a href="https://www.forskningsradet.no"><span class="caps">NFR</span></a>). &nbsp; &#8211; &nbsp;For now, funding has ended again.</p>
-<h4>Please support my further work on <a href="https://www.patreon.com/stevencruy">Patreon</a>  &nbsp;&#x2b05;</h4>
+of The Research Council of Norway (<a href="https://www.forskningsradet.no"><span class="caps">NFR</span></a>). &nbsp; &#8211; &nbsp;Currently funding has ended again.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup">
+Facing the choice of 1) spending another year on writing a dozen  6%-chance-of-success grant applications
+(chance is especially low when working on a ground-breaking new technology),
+and 2) actually producing results that are beneficial for society
+(designing <span class="caps">VSM</span>, exploring its semantics, developing Vsmjs, and writing all papers),
+I chose&#8230; the responsible thing to do, which unfortunately leads to long bouts of unemployment.</p>
+<p></span></span></p>
+<p><br />
+&#10152;&nbsp;&#10152;&nbsp;&#10152;&nbsp; Please support my further work on <a href="https://www.patreon.com/stevencruy">Patreon/stevencruy</a>.  &nbsp;&#x2b05;&nbsp;&#x2b05;&nbsp;&#x2b05;</p>
 <h4>How we got here</h4>
 <p>The foundation of <span class="caps">VSM</span>&#8216;s design was laid starting in 2008. By then it had become obvious, from many interactions with biologists,
 that new methods for concerting their knowledge into some database format were dearly needed.
 After we created <span class="caps">VSM</span>&#8216;s foundations, and despite many attempts to raise funding for implementing <span class="caps">VSM</span>,
-we were unable to convince funding agencies of the importance of making research findings computable!</p>
+we were unable to convince funding agencies of the importance of making research findings computable,
+or to make a dedicated effort to develop technology to this end.</p>
 <p>We therefore implemented a proof-of-concept <span class="caps">VSM</span> <acronym title="user interface"><span class="caps">UI</span></acronym> without funding.
 We embedded it in a web application (<a href="scicura.html">SciCura v1</a>) and curators in our group were happy to test and use it.
 This gave us a clearer insight into the nature of <span class="caps">VSM</span>, how to use it, and how to explain it to third parties while avoiding common misunderstandings.
@@ -144,8 +170,8 @@ This process was crucial for the text on this site.</p>
 to mature their groundbreaking ideas into transformative implementations,
 and calls for new modalities of project support by funding agencies.</p>
 </blockquote>
-<h4>We&#8217;re people too</h4>
-<p>If you really enjoyed this site, it would be nice to hear a friendly, simple
+<h4>We are only human</h4>
+<p>If you enjoyed this site, it would be nice to hear a simple
 <a href="mailto:steven.vercruysse@ntnu.no?subject=The VSM-pages&amp;body=Hi! :)">&#8216;Hi!&#8217;</a>
 from you.
 &nbsp;Just to keep our spirits high and to know if we&#8217;re making an impact.</p>
@@ -157,8 +183,8 @@ from you.
 <br><hr><p>Blue notes list:</p>
 <li class="item"><span class="nr">1</span> Come visit us if you like <span class="caps">VSM</span>! &#8211; Or invite us to your own city. </li>
 <li class="item"><span class="nr">2</span> Looking back to the beginning, I realize that at first we only had a rudimentary idea of how to explain <span class="caps">VSM</span>.
-<br>Florian&#8217;s, Erick&#8217;s and many dozens and dozens of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
-And they helped us offset <span class="caps">VSM</span> much better against existing technology.
+<br>Florian&#8217;s, Erick&#8217;s and a few hundreds of others&#8217; input helped us improve many ways in which our earlier explanations were quite unclear.
+They gave us insight in how to explain <span class="caps">VSM</span> toward scientists with diverse backgrounds.
 <br>Thank you all for bearing through that!
 </li>
 <li class="item"><span class="nr">3</span> Yes&#8230; in today&#8217;s scientific funding system, you&#8217;re a temp forever. &#8211; And
@@ -173,6 +199,13 @@ And they helped us offset <span class="caps">VSM</span> much better against exis
    <a href="https://translate.google.com/translate?sl=auto&amp;tl=en&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=https%3A%2F%2Fwww.forskningsradet.no%2Fno%2FNyheter%2FForskningsradet_bor_ta_mer_risiko%2F1253977676638&amp;edit-text=&amp;act=url">risk&#8209;averse</a>
    project reviewers&#8230;, or try our luck in industry.
 </li>
+<li class="item"><span class="nr">4</span>
+Facing the choice of 1) spending another year on writing a dozen  6%-chance-of-success grant applications
+(chance is especially low when working on a ground-breaking new technology),
+and 2) actually producing results that are beneficial for society
+(designing <span class="caps">VSM</span>, exploring its semantics, developing Vsmjs, and writing all papers),
+I chose&#8230; the responsible thing to do, which unfortunately leads to long bouts of unemployment.</p>
+<p></li>
 
 </ol> <ol class="noteList dry">
 </ol>
