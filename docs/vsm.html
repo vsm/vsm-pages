@@ -52,21 +52,21 @@
     <a class="_fill" href="">&nbsp;</a>
     <!--
     <div class="dropdown">
-      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <a id="intro"  href="intro" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
       <div class="dropcont">
-        <a href="intro.html#fun-intro">General Intro</a>
-        <a href="intro.html#deeper-intro">Deeper Intro</a>
+        <a href="intro#fun-intro">General Intro</a>
+        <a href="intro#deeper-intro">Deeper Intro</a>
       </div>
     </div>
     -->
-    <a id="intro"      href="intro.html">Introduction</a>
-    <a id="vsm"        href="vsm.html">How VSM works</a>
-    <a id="summary"    href="summary.html">Summary</a>
-    <a id="examples"   href="examples.html">Examples</a>
-    <a id="discussion" href="discussion.html">Discussion</a>
-    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
-    <a id="scicura"    href="scicura.html">SciCura</a>
-    <a id="about"      href="about.html">About</a>
+    <a id="intro"      href="intro">Introduction</a>
+    <a id="vsm"        href="vsm">How VSM works</a>
+    <a id="summary"    href="summary">Summary</a>
+    <a id="examples"   href="examples">Examples</a>
+    <a id="discussion" href="discussion">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph">Graphs</a>
+    <a id="scicura"    href="scicura">SciCura</a>
+    <a id="about"      href="about">About</a>
     <a class="_logo"   href="https://vsmjs.github.io"><img src="img/vsmjs-logo.png" height="35"></a>
   </div>
 </div>
@@ -103,10 +103,10 @@ var showMain = 1;
 <h2>2. &nbsp; <span class="caps">VSM</span> &nbsp;<span class="smaller">(Visual Syntax Method)</span></h2>
 <p class="smaller"><i>(This is older text. The latest version is in the <b>official publication</b>, see <a href="https://vsmjs.github.io">vsmjs.github.io</a>.)</i></p>
 <h4>i. Goal</h4>
-<p>With developing <span class="caps">VSM</span>, we aimed for a method that enables people to consider any <a href="intro.html#piece-of-information">unit of information</a>, and <a href="intro.html#biocuration">reformulate</a> it into a semantically precise, <a href="intro.html#computable-information">computable form</a> that clarifies its full meaning and <a href="intro.html#context">context</a>.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Please read the <a href="intro.html">Introduction page</a> if you still need to understand why this is important.<br />Or at least read the Blue Boxes with our key concepts:
-  &#8216;<a href="intro.html#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro.html#context">Context&nbsp;details</a>&#8216;,
-  &#8216;<a href="intro.html#computable-information">Computable&nbsp;Information</a>&#8216;.
-  <br /><br />See also the introduction&#8217;s <a href="intro.html#new-tech">Venn diagram</a>.
+<p>With developing <span class="caps">VSM</span>, we aimed for a method that enables people to consider any <a href="intro#piece-of-information">unit of information</a>, and <a href="intro#biocuration">reformulate</a> it into a semantically precise, <a href="intro#computable-information">computable form</a> that clarifies its full meaning and <a href="intro#context">context</a>.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Please read the <a href="intro">Introduction page</a> if you still need to understand why this is important.<br />Or at least read the Blue Boxes with our key concepts:
+  &#8216;<a href="intro#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro#context">Context&nbsp;details</a>&#8216;,
+  &#8216;<a href="intro#computable-information">Computable&nbsp;Information</a>&#8216;.
+  <br /><br />See also the introduction&#8217;s <a href="intro#new-tech">Venn diagram</a>.
   </span></span></p>
 <p><span class="caps">VSM</span> should be applicable to the widest range of use-cases, so it works for diverse, heterogeneous information. At the same time, <span class="caps">VSM</span> should be easily usable by many people with diverse expertise, which requires that it keeps the inherent complexity that real-world information may possess, manageable for humans. So, <span class="caps">VSM</span> enables people to manually create <strong>computable information</strong>, with high <strong>ease of use</strong>, and <strong>high expressive power</strong>.
 <br />
@@ -127,7 +127,7 @@ var showMain = 1;
   But unlike them, <span class="caps">VSM</span> does not use their complicated rules on word order.
   Instead, <span class="caps">VSM</span> uses a simpler and more powerful way to clarify structure, as we will show. </span></span>that is flexible and intuitive for humans to work with. Just as a natural language consist of words and a grammar, <span class="caps">VSM</span> has two building blocks too: <em><span class="caps">VSM</span>-terms</em> and <em><span class="caps">VSM</span>-connectors</em>. <span class="caps">VSM</span>&#8216;s rules describe how these can be meaningfully combined into virtually limitless combinations, in order to semantically represent essentially any type of complex information.</p>
 <h4>iii. Current status</h4>
-<p>We have built a prototype <span class="caps">VSM</span> user-interface, for the purpose of demonstrating <span class="caps">VSM</span>&#8216;s utility. It is embedded in the <a href="examples.html">page</a> with interactive examples. We have also been using it at our lab for a specific biocuration <a href="scicura.html">project</a>, to test its use in real life. A full-fledged and well-designed, easily reusable web-component for curation based on <span class="caps">VSM</span>, however, needs a large programming effort. This is currently happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
+<p>We have built a prototype <span class="caps">VSM</span> user-interface, for the purpose of demonstrating <span class="caps">VSM</span>&#8216;s utility. It is embedded in the <a href="examples">page</a> with interactive examples. We have also been using it at our lab for a specific biocuration <a href="scicura">project</a>, to test its use in real life. A full-fledged and well-designed, easily reusable web-component for curation based on <span class="caps">VSM</span>, however, needs a large programming effort. This is currently happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
 There we&#8217;re building several modules that culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
 </span></span></p>
 <h4>iv. Caveat</h4>
@@ -177,7 +177,7 @@ This is because we&#8217;re capturing information embedded in a context &#8211; 
 the specific observation that some entity behaved in some way in some particular situation / experiment.</p>
 <p>Next, we&#8217;ll have to clarify to the computer how these 5 terms hang together, i.e. the syntax of the sentence. &#8211; But
 that&#8217;s for after the Full Story on <span class="caps">VSM</span>-terms, if you like :</p>
-<p><span class="ssr ssri">(or jump to <a href="vsm.html#short-story-2">Short Story 2 &rarr;</a>)</span>
+<p><span class="ssr ssri">(or jump to <a href="vsm#short-story-2">Short Story 2 &rarr;</a>)</span>
 <br /></p>
 </div>
 <h4>The Full Story &nbsp;<span class="smaller">(formal story)</span></h4>
@@ -264,7 +264,7 @@ A note to impatient knowledge-representation experts: this intuitive description
 The only bit of thinking you need to do, is to make sure that you (re)formulate your information as a series of <span class="caps">VSM</span>-terms,
 in such a way that you can identify triples among them, with <span class="caps">VSM</span>-connectors.
 And that will be quite easy for more complex cases too. &#8211; But that&#8217;s for after the Full Story :</p>
-<p><span class="ssr ssri">(or jump to <a href="vsm.html#short-story-3">Short Story 3 &rarr;</a>)</span>
+<p><span class="ssr ssri">(or jump to <a href="vsm#short-story-3">Short Story 3 &rarr;</a>)</span>
 <br /></p>
 </div>
 <p><a name="principle-1"></a></p>
@@ -386,7 +386,7 @@ There was once this guy at a conference who mistakenly thought that the connecto
 Because they look a bit like it. &#8211; He later admitted he had been answering an email during my presentation, though.
 (I thank him for immunizing us against one more possible misunderstanding though).
 </span></span>Though it should be possible to create computer-assistance.</p>
-<p><span class="ssr ssri">(you could jump to <a href="vsm.html#short-story-4">Short Story 4 &rarr;</a>)</span>
+<p><span class="ssr ssri">(you could jump to <a href="vsm#short-story-4">Short Story 4 &rarr;</a>)</span>
 <br /></p>
 </div>
 <p><a name="principle-3"></a></p>
@@ -416,7 +416,7 @@ and in this footnote on &#8216;context&#8217;:<span class="note fun popupHolder"
  by anchoring down at least one more aspect of how it happens.<br />
   (Meanwhile, other unknowns that could be specified about it, still remain:
  where he eats, together with who, how quickly, etc., but that would lead us to
- <a href="vsmgraph.html#principle-4">Principle 4</a> on a further page already).
+ <a href="vsmgraph#principle-4">Principle 4</a> on a further page already).
 </span></span>).</p>
 <hr />
 <p>Fig. 3a-c show longer <span class="caps">VSM</span>-sentences created in this way, representing information curated from scientific publications. For example in Fig. 3a, the second trident triple from the left expresses that &#8220;the-being-twisted-of-leaf-lamina  pertains-to  Oryza-that-underexpresses-<span class="caps">YAB3</span>-by-<span class="caps">RNA</span>-interference&#8221;. Here, the term &#8220;in&#8221; will have been linked by the curator to the concept &#8220;pertaining-to&#8221; rather than &#8220;is-located-in&#8221;. Each term represents an identifier from a controlled vocabulary, e.g. &#8220;leaf lamina&#8221; is provided by PO (Plant Ontology)  and &#8220;twisted&#8221; by <span class="caps">PATO</span> (Phenotype And Trait Ontology).</p>
@@ -441,7 +441,7 @@ Some of their terms come from ontologies, some others are yet to be added to off
 <p>So with a connection loop, any interpretation would get stuck in an infinite semantic loop. Therefore, with tridents (and bidents and list-connectors, see later), one must only create hierarchical structures.</p>
 <p>This may also be clear intuitively, because two distinct apples are at play here, so two &#8220;apple&#8221; <span class="caps">VSM</span> term concepts are needed.</p>
 <p><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">18</span><span class="popx popup">
-In other words, two distinct instances of &#8220;apple&#8221; are needed here. Each instance would be stored with its own (instance-) identifier. This, however, is a more technical aspect of <span class="caps">VSM</span> that is covered by <a href="vsmgraph.html"><span class="caps">VSM</span>-Graphs</a>, see later.
+In other words, two distinct instances of &#8220;apple&#8221; are needed here. Each instance would be stored with its own (instance-) identifier. This, however, is a more technical aspect of <span class="caps">VSM</span> that is covered by <a href="vsmgraph"><span class="caps">VSM</span>-Graphs</a>, see later.
 </span></span>(Note that if the sentence would mention one and the same apple twice, then a coreference connector would be needed; see later).</p>
 <p><img class="i40" src="img/Fig4.png" alt="" /></p>
 <p class="caption"><b>Figure 4. Tridents must never create semantic loops.</b>
@@ -472,7 +472,7 @@ Still, the Full Story discusses some limitations to ensure computer-understandin
 	<li>there is a <strong>list connector</strong>, to capture e.g. &#8220;A, B, and C&#8221;, or &#8220;either A, B, or C&#8221;;</li>
 	<li>there is a <strong>coreference connector</strong>, the third and final connector you&#8217;d need for complex cases.</li>
 </ul>
-<p><span class="ssr ssri">(you could skip past all that, and jump to <a href="vsm.html#short-story-5">Short Story 5 &rarr;</a>)</span>
+<p><span class="ssr ssri">(you could skip past all that, and jump to <a href="vsm#short-story-5">Short Story 5 &rarr;</a>)</span>
 <br /></p>
 </div>
 <h5>The Full Story</h5>
@@ -592,10 +592,10 @@ Our test-users literally loved all this.<span class="note fun popupHolder"><span
 <p><br />Boom!
 <br />Now we have a curation technology that works just like what exists, but is better at the same time (with term lookup),
 and that is immediately extensible to its full power!
-<br />So <span class="caps">VSM</span> is: easy to use, extremely flexible, and ready to be computed upon! Exactly what we <a href="intro.html#new-tech">wanted</a>.
+<br />So <span class="caps">VSM</span> is: easy to use, extremely flexible, and ready to be computed upon! Exactly what we <a href="intro#new-tech">wanted</a>.
 <br /><br /></p>
-<p><span class="ssr ssri">(you could jump to the <a href="summary.html">Summary &rarr;</a>
-or the <a href="examples.html">Examples &rarr;</a> or the <a href="discussion.html">Discussion &rarr;</a> page)</span></p>
+<p><span class="ssr ssri">(you could jump to the <a href="summary">Summary &rarr;</a>
+or the <a href="examples">Examples &rarr;</a> or the <a href="discussion">Discussion &rarr;</a> page)</span></p>
 <p><br /></p>
 </div>
 <h5>The Full Story</h5>
@@ -617,22 +617,22 @@ In the <span class="caps">VSM</span>-template in (a), the first two empty fields
 <h4>3.4. General and Data terms</h4>
 <p>As <span class="caps">VSM</span> terms are embedded into a particular context, they represent specific concepts. Ontologies, however, define relations between general concepts, i.e. concepts that are not bound to a particular context. In addition, <span class="caps">RDF</span> is able to work with literal text-strings or data, which do not represent any &#8216;concept&#8217;. In order to support all these three fundamentally different types, the <span class="caps">VSM</span> UI may let the user change a term&#8217;s type between specific, general, or data (via Ctrl+click); and then shows them with a different background color. Then, a <span class="caps">VSM</span>-sentence could express information like &#8220;duck [in general] is-a-type-of bird [in general] according-to ontology-version-X [specific]&#8221;, or &#8220;bird [in general] has 2 wings&#8221;, or &#8220;chicken [in general] has-alias hen [literal string]&#8221;, or &#8220;proteinX has-sequence <span class="caps">MRHIAHTQ</span> [literal,&nbsp;data]&#8221;.</p>
 <p>In fact, the distinction between general and specific concepts is described in 📖 <strong>The Fourth Founding Principle of <span class="caps">VSM</span></strong>,
-but we can explain that much better after we show a picture of VSMGraphs, later on the <a href="vsmgraph.html">VSMGraphs</a> page.</p>
+but we can explain that much better after we show a picture of VSMGraphs, later on the <a href="vsmgraph">VSMGraphs</a> page.</p>
 <p>Note that in case one would use <span class="caps">VSM</span> as an interface to generate <span class="caps">RDF</span> or <span class="caps">OWL</span> models, <span class="caps">VSM</span> does not impose the use of either <span class="caps">OWL</span> Instances or <span class="caps">OWL</span> Classes.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">29</span><span class="popx popup"> In the <span class="caps">VSM</span> view, the only difference between (<span class="caps">VSM</span>&#8216;s) <em>specific</em> and <em>general</em>
 is whether a concept is thought of as being attached to any <em>explicit or implicit context</em>, or <em>not</em>, respectively.
 </span></span>Still, it makes sense to translate (the default, specific) <span class="caps">VSM</span>-terms to <span class="caps">OWL</span> Instances, as bioscience findings are typically reported only under particular experimental conditions or biological context.</p>
-<p>A further treatise on the meaning of general vs. specific concepts in <span class="caps">VSM</span>, a topic that covers the subject of semantics alone, falls outside the scope of this page and will be discussed <a href="vsmgraph.html">later</a>. The focus of this page is to present <span class="caps">VSM</span> as a user-oriented method for the construction of any contextualized knowledge; a method that is founded on <span class="caps">VSM</span>&#8216;s well-defined and human-thought inspired semantics, and reflected in a robust, intuitive, and general-purpose UI design.</p>
+<p>A further treatise on the meaning of general vs. specific concepts in <span class="caps">VSM</span>, a topic that covers the subject of semantics alone, falls outside the scope of this page and will be discussed <a href="vsmgraph">later</a>. The focus of this page is to present <span class="caps">VSM</span> as a user-oriented method for the construction of any contextualized knowledge; a method that is founded on <span class="caps">VSM</span>&#8216;s well-defined and human-thought inspired semantics, and reflected in a robust, intuitive, and general-purpose UI design.</p>
 <p><br /></p>
-<p style="text-align:right"><br />An overview of <span class="caps">VSM</span> is on <a class="next" href="summary.html">the Summary page<i class="arrow right"></i></a></p>
-<p style="text-align:right"><br />Many interactive examples are on <a class="next" href="examples.html">the Examples page<i class="arrow right"></i></a></p>
-<p style="text-align:right"><br />More about <span class="caps">VSM</span>&#8216;s implications and roll-out, is on <a class="next" href="discussion.html">the Discussion page<i class="arrow right"></i></a></p>
-<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to the <a href="intro.html">Introduction</a></p>
+<p style="text-align:right"><br />An overview of <span class="caps">VSM</span> is on <a class="next" href="summary">the Summary page<i class="arrow right"></i></a></p>
+<p style="text-align:right"><br />Many interactive examples are on <a class="next" href="examples">the Examples page<i class="arrow right"></i></a></p>
+<p style="text-align:right"><br />More about <span class="caps">VSM</span>&#8216;s implications and roll-out, is on <a class="next" href="discussion">the Discussion page<i class="arrow right"></i></a></p>
+<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to the <a href="intro">Introduction</a></p>
 <div class="forPrint"> <br /><br /> <ol class="noteList fun">
 <br><hr><p>Blue notes list:</p>
-<li class="item"><span class="nr">1</span> Please read the <a href="intro.html">Introduction page</a> if you still need to understand why this is important.<br>Or at least read the Blue Boxes with our key concepts:
-  &#8216;<a href="intro.html#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro.html#context">Context&nbsp;details</a>&#8216;,
-  &#8216;<a href="intro.html#computable-information">Computable&nbsp;Information</a>&#8216;.
-  <br>See also the introduction&#8217;s <a href="intro.html#new-tech">Venn diagram</a>.
+<li class="item"><span class="nr">1</span> Please read the <a href="intro">Introduction page</a> if you still need to understand why this is important.<br>Or at least read the Blue Boxes with our key concepts:
+  &#8216;<a href="intro#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro#context">Context&nbsp;details</a>&#8216;,
+  &#8216;<a href="intro#computable-information">Computable&nbsp;Information</a>&#8216;.
+  <br>See also the introduction&#8217;s <a href="intro#new-tech">Venn diagram</a>.
   </li>
 <li class="item"><span class="nr">2</span> This &#8216;statement&#8217; form is inspired by controlled languages.
   But unlike them, <span class="caps">VSM</span> does not use their complicated rules on word order.
@@ -726,13 +726,13 @@ but it will be a crucial insight for working with more advanced cases that need 
  But after we add the &#8220;eats with fork&#8221; trident, we narrow down &#8220;eats&#8221;&#8216;s meaning
  by anchoring down at least one more aspect of how it happens.<br>(Meanwhile, other unknowns that could be specified about it, still remain:
  where he eats, together with who, how quickly, etc., but that would lead us to
- <a href="vsmgraph.html#principle-4">Principle 4</a> on a further page already).
+ <a href="vsmgraph#principle-4">Principle 4</a> on a further page already).
 </li>
 <li class="item"><span class="nr">17</span> E.g. both triple statements &#8220;cat is alive&#8221; and &#8220;cat is dead&#8221; can be true. But they are true in their own specific context.
  We can make this context explicit by expanding the statements to e.g. &#8220;cat is alive in 2020&#8243; and &#8220;cat is dead in 2090&#8243;.
 </li>
 <li class="item"><span class="nr">18</span>
-In other words, two distinct instances of &#8220;apple&#8221; are needed here. Each instance would be stored with its own (instance-) identifier. This, however, is a more technical aspect of <span class="caps">VSM</span> that is covered by <a href="vsmgraph.html"><span class="caps">VSM</span>-Graphs</a>, see later.
+In other words, two distinct instances of &#8220;apple&#8221; are needed here. Each instance would be stored with its own (instance-) identifier. This, however, is a more technical aspect of <span class="caps">VSM</span> that is covered by <a href="vsmgraph"><span class="caps">VSM</span>-Graphs</a>, see later.
 </li>
 <li class="item"><span class="nr">19</span>
 You could also read it as<br>&#8220;mouse [specified-to-be] white&#8221;, or as<br>&#8220;mouse [has-color] white&#8221;.
@@ -839,7 +839,7 @@ But the <span class="caps">VSM</span>-term&#8217;s ID and associated meaning rem
 
 <br><br><br><br><br><br><br>
 
-<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+<div class="footer">Site by &nbsp;<a href="about">Steven Vercruysse &amp; al.</a></div>
 
 
 </body>

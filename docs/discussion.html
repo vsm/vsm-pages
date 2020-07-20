@@ -47,21 +47,21 @@
     <a class="_fill" href="">&nbsp;</a>
     <!--
     <div class="dropdown">
-      <a id="intro"  href="intro.html" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
+      <a id="intro"  href="intro" class="dropbtn">Introduction</a> <!--href="javascript:void(0)"- ->
       <div class="dropcont">
-        <a href="intro.html#fun-intro">General Intro</a>
-        <a href="intro.html#deeper-intro">Deeper Intro</a>
+        <a href="intro#fun-intro">General Intro</a>
+        <a href="intro#deeper-intro">Deeper Intro</a>
       </div>
     </div>
     -->
-    <a id="intro"      href="intro.html">Introduction</a>
-    <a id="vsm"        href="vsm.html">How VSM works</a>
-    <a id="summary"    href="summary.html">Summary</a>
-    <a id="examples"   href="examples.html">Examples</a>
-    <a id="discussion" href="discussion.html">Discussion</a>
-    <a id="vsmgraph"   href="vsmgraph.html">Graphs</a>
-    <a id="scicura"    href="scicura.html">SciCura</a>
-    <a id="about"      href="about.html">About</a>
+    <a id="intro"      href="intro">Introduction</a>
+    <a id="vsm"        href="vsm">How VSM works</a>
+    <a id="summary"    href="summary">Summary</a>
+    <a id="examples"   href="examples">Examples</a>
+    <a id="discussion" href="discussion">Discussion</a>
+    <a id="vsmgraph"   href="vsmgraph">Graphs</a>
+    <a id="scicura"    href="scicura">SciCura</a>
+    <a id="about"      href="about">About</a>
     <a class="_logo"   href="https://vsmjs.github.io"><img src="img/vsmjs-logo.png" height="35"></a>
   </div>
 </div>
@@ -91,7 +91,7 @@ function setNavbarAActive(id) {
   <h2>5. &nbsp; Discussion</h2>
 <p class="smaller"><i>(This is older text. The latest version is in the <b>official publication</b>, see <a href="https://vsmjs.github.io">vsmjs.github.io</a>.)</i></p>
 <h3>i. Novelty</h3>
-<p><span class="caps">VSM</span> is an entirely new and simplified approach for capturing knowledge. It makes it easier for curators to make the shift from thinking in natural language to formulating in structured statements. We described how to build <span class="caps">VSM</span>-sentences: diverse statements that can contain highly contextualized information, yet in a format that is both easily readable by humans and comprehensible to algorithms. <span class="caps">VSM</span>&#8216;s terms enable a user to disambiguate concepts with the help of ontologies and identifiers. <span class="caps">VSM</span>&#8216;s connectors enable a user to disambiguate the internal structure of information, and support a uniform and intuitive method for creating statements with full structural transparency. Tridents, bidents, and lists cover many use cases; coreferences support advanced cases. The three Founding Principles <a href="vsm.html#principle-1">&gt;</a> cover conceptual descriptions for working with terms and connectors. Templates make <span class="caps">VSM</span> as easy as filling in spreadsheets or forms, or easier because of autocomplete support. Extra features make <span class="caps">VSM</span> even more expressive.</p>
+<p><span class="caps">VSM</span> is an entirely new and simplified approach for capturing knowledge. It makes it easier for curators to make the shift from thinking in natural language to formulating in structured statements. We described how to build <span class="caps">VSM</span>-sentences: diverse statements that can contain highly contextualized information, yet in a format that is both easily readable by humans and comprehensible to algorithms. <span class="caps">VSM</span>&#8216;s terms enable a user to disambiguate concepts with the help of ontologies and identifiers. <span class="caps">VSM</span>&#8216;s connectors enable a user to disambiguate the internal structure of information, and support a uniform and intuitive method for creating statements with full structural transparency. Tridents, bidents, and lists cover many use cases; coreferences support advanced cases. The three Founding Principles <a href="vsm#principle-1">&gt;</a> cover conceptual descriptions for working with terms and connectors. Templates make <span class="caps">VSM</span> as easy as filling in spreadsheets or forms, or easier because of autocomplete support. Extra features make <span class="caps">VSM</span> even more expressive.</p>
 <p><span class="caps">VSM</span> thus forms a bridge between computers and humans, making computational comprehension and meaningful processing of extremely diverse, human-readable quasi-sentences a reality. We believe it is the solution to a long-standing problem for curation in the biosciences, and likely beyond.</p>
 <p>Table 1 compares <span class="caps">VSM</span> with other knowledge representation and tooling methods, on aspects such as ease-of-use and semantic internals. Controlled languages are <span class="caps">VSM</span>&#8216;s closest relative, but <span class="caps">VSM</span> replaces their many rules by just a few connector types, and their fixed keywords and symbols by an approach that treats all terms equivalently, and that can use synonyms for readability. Form-based entry methods are easy to use but poor on inherent semantics; <span class="caps">VSM</span>-templates copy their ease-of-use, and are extensible. <span class="caps">RDF</span>&#8216;s high expressivity is enabled by triples which are also present in <span class="caps">VSM</span>. But while <span class="caps">RDF</span> is designed for IT experts, <span class="caps">VSM</span> is designed with scientific domain-experts in mind: the biologists and curators. <span class="caps">VSM</span> should not be confused with text annotation, which is the tagging of entities and relations in natural language sentences as they appear in a paper. <span class="caps">VSM</span> should also not be confused with parse trees, which are generated by text-mining algorithms for top-down syntactic analysis of natural language; in contrast to bottom-up information construction with <span class="caps">VSM</span>.</p>
 <p><img class="i100" src="img/FigTable1.png" alt="" /></p>
@@ -144,10 +144,10 @@ now, last but certainly not least: Communication of the ideas behind <span class
 <p>We envision that <span class="caps">VSM</span> will first be applied in new curation projects by scientists who would otherwise use spreadsheets or develop a local UI. Such practical use-cases will be instructive to inspire new ways forward. We still have a lot to learn about how to apply <span class="caps">VSM</span> in various use-cases, and how to benefit from it, so it is important to recognize that this is just a first step.</p>
 <p>It has not escaped our attention that <span class="caps">VSM</span>&#8216;s expressiveness enables a &#8216;general purpose&#8217; curation platform, rather than the current &#8216;single purpose&#8217; platforms. <span class="caps">VSM</span>&#8216;s ease-of use may also facilitate a general crowdsourcing approach, to cover entire biological domains or indeed the entire life sciences. Although this would require a heavy investment in software development, it could pave the way to a platform that allows for full digital summaries of any research paper. <span class="caps">VSM</span>-based curation thus would provide the scientific community with the tools for converting new and existing knowledge into a structured knowledge resource. The content of a paper could be presented in what resembles a wiki page, but with information that is both human- and computer-understood. While &#8216;digital abstracts&#8217; have long been a dream, <span class="caps">VSM</span> provides a major step in that direction.</p>
 <p><br /></p>
-<p style="text-align:right"><br />Next! :&nbsp; Read about an application of <span class="caps">VSM</span> on <a class="next" href="scicura.html">the SciCura page<i class="arrow right"></i></a></p>
-<p style="text-align:right"><br />Or first take a peek at <a class="next" href="vsmgraph.html">the VSMGraphs page<i class="arrow right"></i></a></p>
-<p style="text-align:right"><br />Or skip to <a class="next" href="about.html">the About page<i class="arrow right"></i></a></p>
-<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm.html">How <span class="caps">VSM</span> Works</a> or the <a href="summary.html">Summary</a> or the <a href="examples.html">Examples</a> page</p>
+<p style="text-align:right"><br />Next! :&nbsp; Read about an application of <span class="caps">VSM</span> on <a class="next" href="scicura">the SciCura page<i class="arrow right"></i></a></p>
+<p style="text-align:right"><br />Or first take a peek at <a class="next" href="vsmgraph">the VSMGraphs page<i class="arrow right"></i></a></p>
+<p style="text-align:right"><br />Or skip to <a class="next" href="about">the About page<i class="arrow right"></i></a></p>
+<p style="text-align:left" class="prev"><br /><br /><i class="arrow left"></i>or go back to <a href="vsm">How <span class="caps">VSM</span> Works</a> or the <a href="summary">Summary</a> or the <a href="examples">Examples</a> page</p>
 <div class="forPrint"> <br /><br /> <ol class="noteList fun">
 <br><hr><p>Blue notes list:</p>
 <li class="item"><span class="nr">1</span>
@@ -188,7 +188,7 @@ now, last but certainly not least: Communication of the ideas behind <span class
 
 <br><br><br><br><br><br><br>
 
-<div class="footer">Site by &nbsp;<a href="about.html">Steven Vercruysse &amp; al.</a></div>
+<div class="footer">Site by &nbsp;<a href="about">Steven Vercruysse &amp; al.</a></div>
 
 
 </body>
