@@ -11,19 +11,19 @@
 
   <meta itemprop="name" content="How to Easily Plant Complex Ideas into Computers">
   <meta itemprop="description" content="VSM: Intuitive representation of knowledge in computable form.">
-  <meta itemprop="image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png">
+  <meta itemprop="image" content="https://vsm.github.io/vsm-pages/img/FB-2.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@stcruy">
   <meta name="twitter:title" content="How to Easily Plant Complex Ideas into Computers">
   <meta name="twitter:description" content="VSM: Intuitive representation of knowledge in computable form.">
   <meta name="twitter:creator" content="@stcruy">
-  <meta name="twitter:image:src" content="https://vsmjs.github.io/vsm-pages/img/TW-2.png">
+  <meta name="twitter:image:src" content="https://vsm.github.io/vsm-pages/img/TW-2.png">
 
   <meta property="og:title" content="How to Easily Plant Complex Ideas into Computers" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://vsmjs.github.io/vsm-pages" />
-  <meta property="og:image" content="https://vsmjs.github.io/vsm-pages/img/FB-2.png" />
+  <meta property="og:url" content="https://vsm.github.io/vsm-pages" />
+  <meta property="og:image" content="https://vsm.github.io/vsm-pages/img/FB-2.png" />
   <meta property="og:description" content="VSM: Intuitive representation of knowledge in computable form." />
   <meta property="og:site_name" content="The VSM-pages" />
   <meta property="fb:admins" content="404986372864030" />
@@ -67,7 +67,7 @@
     <a id="vsmgraph"   href="vsmgraph">Graphs</a>
     <a id="scicura"    href="scicura">SciCura</a>
     <a id="about"      href="about">About</a>
-    <a class="_logo"   href="https://vsmjs.github.io"><img src="img/vsmjs-logo.png" height="35"></a>
+    <a class="_logo"   href="https://vsm.github.io"><img src="img/vsm-logo.png" height="35"></a>
   </div>
 </div>
 <img id="infv" style="position:absolute;top:0;left:0;" width="1" height="1">
@@ -84,7 +84,7 @@ function toggleNavbarIcon() {
 }
 function setNavbarAActive(id) {
   document.getElementById(id).className += ' active';
-  if ((window.location + '').includes('https://vsmjs.github.io')) {
+  if ((window.location + '').includes('https://vsm.github.io')) {
     var u = 'http://scicura.org';
     document.getElementById('infv').src = u + '/infv/' + id;
   }
@@ -101,7 +101,7 @@ function setNavbarAActive(id) {
 var showMain = 1;
 </script>
 <h2>2. &nbsp; <span class="caps">VSM</span> &nbsp;<span class="smaller">(Visual Syntax Method)</span></h2>
-<p class="smaller"><i>(This is older text. The latest version is in the <b>official publication</b>, see <a href="https://vsmjs.github.io">vsmjs.github.io</a>.)</i></p>
+<p class="smaller"><i>(This is older text. The latest version is in the <b>official publication</b>, see <a href="https://vsm.github.io">vsm.github.io</a>.)</i></p>
 <h4>i. Goal</h4>
 <p>With developing <span class="caps">VSM</span>, we aimed for a method that enables people to consider any <a href="intro#piece-of-information">unit of information</a>, and <a href="intro#biocuration">reformulate</a> it into a semantically precise, <a href="intro#computable-information">computable form</a> that clarifies its full meaning and <a href="intro#context">context</a>.<script>function togglePopup(e) {  e = e || window.event;  e = e.target || e.srcElement || e;  var s = e.nextSibling.className;  hidePopups(e, 1);  if(s.indexOf('showPopup') < 0)  e.nextSibling.className = (s + ' showPopup');  return false;}function hidePopups(e, sk) {  if(!sk) {    e = e || window.event;  e = e.target || e.srcElement || e;    if(e.className.indexOf('popx') >= 0) return;  }  var a = document.getElementsByClassName('showPopup');  for(var i=a.length-1; i>=0; i--)  a[i].className = a[i].className.replace('showPopup', '');}document.body.addEventListener('click', hidePopups, false);document.addEventListener('keydown', function(e) {  if((e||window.event).keyCode==27 ) hidePopups(e);});</script><span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">1</span><span class="popx popup"> Please read the <a href="intro">Introduction page</a> if you still need to understand why this is important.<br />Or at least read the Blue Boxes with our key concepts:
   &#8216;<a href="intro#piece-of-information">Piece&nbsp;of&nbsp;Information</a>&#8216;, &#8216;<a href="intro#context">Context&nbsp;details</a>&#8216;,
@@ -127,8 +127,8 @@ var showMain = 1;
   But unlike them, <span class="caps">VSM</span> does not use their complicated rules on word order.
   Instead, <span class="caps">VSM</span> uses a simpler and more powerful way to clarify structure, as we will show. </span></span>that is flexible and intuitive for humans to work with. Just as a natural language consist of words and a grammar, <span class="caps">VSM</span> has two building blocks too: <em><span class="caps">VSM</span>-terms</em> and <em><span class="caps">VSM</span>-connectors</em>. <span class="caps">VSM</span>&#8216;s rules describe how these can be meaningfully combined into virtually limitless combinations, in order to semantically represent essentially any type of complex information.</p>
 <h4>iii. Current status</h4>
-<p>We have built a prototype <span class="caps">VSM</span> user-interface, for the purpose of demonstrating <span class="caps">VSM</span>&#8216;s utility. It is embedded in the <a href="examples">page</a> with interactive examples. We have also been using it at our lab for a specific biocuration <a href="scicura">project</a>, to test its use in real life. A full-fledged and well-designed, easily reusable web-component for curation based on <span class="caps">VSM</span>, however, needs a large programming effort. This is currently happening in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
-There we&#8217;re building several modules that culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
+<p>We have built a prototype <span class="caps">VSM</span> user-interface, for the purpose of demonstrating <span class="caps">VSM</span>&#8216;s utility. It is embedded in the <a href="examples">page</a> with interactive examples. We have also been using it at our lab for a specific biocuration <a href="scicura">project</a>, to test its use in real life. A full-fledged and well-designed, easily reusable web-component for curation based on <span class="caps">VSM</span>, however, needs a large programming effort. This is currently happening in the <a href="https://github.com/vsm">&#8216;vsm&#8217; organization</a> on GitHub.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">3</span><span class="popx popup">
+There we&#8217;re building several modules that culminate in the <a href="https://github.com/vsm/vsm-box">vsm-box</a> web-component.
 </span></span></p>
 <h4>iv. Caveat</h4>
 <p>Even though <span class="caps">VSM</span>&#8216;s design incorporates several ideas from existing technologies, we would like to alert the reader that it also includes significant differences. As such, it has been our repeated experience that experts with backgrounds in related areas may make initial assumptions that cause them to misunderstand key concepts of <span class="caps">VSM</span>. In what follows, we address such assumptions through extensive clarifications, but we like to advise people familiar with related technologies to be especially mindful of these intentional differences.</p>
@@ -189,7 +189,7 @@ or a &#8216;unit of meaning&#8217;. A term can consist of one or more words, for
 </span></span><br />In order to embed a <span class="caps">VSM</span>-box component into other software, one must link it to one or more of these term-lists; this gives the user access to available terminology and IDs.</p>
 <p>If a term occurs in multiple lists, then the autocomplete helps the user to disambiguate between the available concepts/IDs. For example for a mouse and a human gene with the same name, the selection panel would also display the species of each. Once selected, only the term remains visible to the user while the ID is stored in the background, by the curation system. The <acronym title="User Interface"><span class="caps">UI</span></acronym> can still show full information when mouse-hovering a term, or could display a clarifying icon or other customizations.<span class="note fun popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup"> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
 <br />In the Full Story sections, we also discuss possible alternatives or extensions.
-Some of these are already implemented in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub, and some are plans or ideas for implementation.
+Some of these are already implemented in the <a href="https://github.com/vsm">&#8216;vsm&#8217; organization</a> on GitHub, and some are plans or ideas for implementation.
 </span></span></p>
 <p>In addition to supporting the above terms with multiple meanings, or <strong>homonyms</strong>, a <span class="caps">VSM</span> UI also supports <strong>synonyms</strong>: multiple terms may be used to represent the same concept. This enhances user-friendliness in several ways.<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">4</span><span class="popx popup"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/23110757">Jointly creating digital abstracts: dealing with synonymy and polysemy</a>, <span class="caps">BMC</span> Res Notes, 2012. </span></span>First, it enables <span class="caps">VSM</span>-sentences to correspond better to the text of the publication that is curated, because gene and ontology terms often have many synonyms that are frequently used in the biological literature. When curating, synonyms (linked to the correct ID) may make it easier to mentally map a long <span class="caps">VSM</span>-sentence onto terminology used in the publication, especially for subsequent curators who double-check the <span class="caps">VSM</span>-sentence. One could still add a <acronym title="user interface"><span class="caps">UI</span></acronym>-option to display terms by their official name if wished.
 <br />Second, some official terms may be excessively long (e.g. in GO<span class="note dry popupHolder"><span class="popx nr" onclick="return togglePopup(this)">5</span><span class="popx popup">
@@ -499,8 +499,8 @@ This figure also shows that numbers can be represented with <span class="caps">V
 <br />For this, the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers, by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
 <br />(This was not yet implemented in the prototype used on these web pages,
-but it is implemented now in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module
-(see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>), which supports &#8216;vsm-box&#8217;).
+but it is implemented now in the <a href="https://github.com/vsm/vsm-dictionary">vsm-dictionary</a> module
+(see its <a href="https://github.com/vsm/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>), which supports &#8216;vsm-box&#8217;).
 </span></span>Bidents are drawn with a tiny indicator for the omitted leg, to remind the user of their semantic equivalence with tridents.</p>
 <p><a name="list-connector"></a></p>
 <h3>2.4. Group types that combine items : the list&#8209;connector</h3>
@@ -638,7 +638,7 @@ is whether a concept is thought of as being attached to any <em>explicit or impl
   But unlike them, <span class="caps">VSM</span> does not use their complicated rules on word order.
   Instead, <span class="caps">VSM</span> uses a simpler and more powerful way to clarify structure, as we will show. </li>
 <li class="item"><span class="nr">3</span>
-There we&#8217;re building several modules that culminate in the <a href="https://github.com/vsmjs/vsm-box">vsm-box</a> web-component.
+There we&#8217;re building several modules that culminate in the <a href="https://github.com/vsm/vsm-box">vsm-box</a> web-component.
 </li>
 <li class="item"><span class="nr">4</span>
  To use a <span class="caps">VSM</span>-box in a real application, it must be linked to some dictionary/ies, e.g. some of the many available
@@ -651,7 +651,7 @@ There we&#8217;re building several modules that culminate in the <a href="https:
 </li>
 <li class="item"><span class="nr">5</span> The <span class="caps">VSM</span>-box UI that we use in the Short Story and other examples, is just a prototype and demo implementation.
 <br>In the Full Story sections, we also discuss possible alternatives or extensions.
-Some of these are already implemented in the <a href="https://github.com/vsmjs">&#8216;vsmjs&#8217; organization</a> on GitHub, and some are plans or ideas for implementation.
+Some of these are already implemented in the <a href="https://github.com/vsm">&#8216;vsm&#8217; organization</a> on GitHub, and some are plans or ideas for implementation.
 </li>
 <li class="item"><span class="nr">6</span>
 &bull; I like to say that they are different &#8216;avatars&#8217;: i.e.  manifestations, appearances, different lexical forms that represents the same thing.
@@ -752,8 +752,8 @@ This figure also shows that numbers can be represented with <span class="caps">V
 <br>For this, the autocomplete <acronym title="User Interface"><span class="caps">UI</span></acronym> needs to support the entry of numbers, by immediately creating a new <span class="caps">VSM</span>-term for any of them as needed,
 after the user presses Enter.
 <br>(This was not yet implemented in the prototype used on these web pages,
-but it is implemented now in the <a href="https://github.com/vsmjs/vsm-dictionary">vsm-dictionary</a> module
-(see its <a href="https://github.com/vsmjs/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>), which supports &#8216;vsm-box&#8217;).
+but it is implemented now in the <a href="https://github.com/vsm/vsm-dictionary">vsm-dictionary</a> module
+(see its <a href="https://github.com/vsm/vsm-dictionary/blob/master/Dictionary.spec.md">spec</a>), which supports &#8216;vsm-box&#8217;).
 </li>
 <li class="item"><span class="nr">22</span>
 &#8220;them&#8221; is a somewhat arbitrary chosen label for the referring (child) term. It &#8216;reads&#8217; rather nicely in Fig. 8b2, though less so in 8b3. Any other label can be used too, like &#8220;it&#8221; or &#8220;these&#8221;.
